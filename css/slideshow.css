@@ -1,0 +1,45 @@
+/* slideshow per le foto */
+ul.slideshow {
+    list-style: none;
+    width: 950px;
+    height: 450px;
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+    padding: 0;
+}
+ul.slideshow li {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    left: 0;
+    right: 0;
+}
+ul.slideshow li.show {
+    z-index: 25;
+}
+ul img {
+    border: none;
+}
+#slideshow-caption {
+    width: 950px;
+    height: 90px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    background-color: rgba(255, 255, 255, 0.9);
+}
+#slideshow-caption .slideshow-caption-container {
+    padding: 20px 25px 0 25px;
+    z-index: 75;
+}
+#slideshow-caption p {
+    padding: 0;
+    font-style: italic;
+    font-weight: 600;
+    font-variant: 'Open Sans', Verdana, sans-serif;
+    line-height: 40px;
+    color: #cc6600;
+    font-size: 26px;
+}

@@ -1,0 +1,64 @@
+/* selettore universale e proprietà del corpo */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    font: 15px/26px 'Open Sans', Verdana, sans-serif;
+    color: #333333;
+    font-weight: 400;
+    background: #ffffff url('../img/background.png') top center repeat;
+}
+
+/* collegamenti */
+a,
+a:hover,
+a:visited {
+    outline: none;
+    color: #cc6600;
+    text-decoration: none;
+}
+
+/* titoli: principale e per sezione */
+h1 {
+    float: left;
+    font-size: 26px;
+    margin: 30px 30px 0 30px;
+    line-height: 30px;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 22px;
+    margin: 0 0 30px 30%;
+}
+
+/* testo, enfasi e immagini */
+p,
+img {
+    margin: 0 auto; 
+    width: 100%; 
+}
+strong {
+    font-weight: 600;
+}
+
+/* elenchi */
+ul {
+    margin: 2px 0 22px 0px;
+}
+ul li {
+    list-style-type: none;
+    padding: 2px 0 2px 15%;
+    line-height: 1.5em;
+}
+
+/* mappa */
+iframe {
+    width: 100% !important;
+    height: 100% !important;
+    border: 0;
+    min-height: 300px;
+}
