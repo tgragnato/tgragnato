@@ -1,23 +1,69 @@
 <?php
+/**
+ * ownCloud - convert
+ *
+ * This file is licensed under the Affero General Public License version 3 or
+ * later. See the COPYING file.
+ *
+ * @author Tommaso Gragnato <gragnato.tommaso@gmail.com>
+ * @copyright Tommaso Gragnato 2015
+ */
 
+// check auth
 OCP\JSON::checkLoggedIn();
 OCP\JSON::checkAppEnabled('convert');
-
-$filePath = filter_input(INPUT_POST, 'filePath', FILTER_SANITIZE_STRING);
-$outPath = filter_input(INPUT_POST, 'outPath', FILTER_SANITIZE_STRING);
-
 $user = \OCP\User::getUser();
 
-$outputMessage = '';
-
+// ajax request variables
+$filePath = filter_input(INPUT_POST, 'filePath', FILTER_SANITIZE_STRING);
+$outPath = filter_input(INPUT_POST, 'outPath', FILTER_SANITIZE_STRING);
 $fullInPath = \OC\Files\Filesystem::getLocalFile($filePath);
+$fullOutPath = \OC\Files\Filesystem::getLocalFile($outPath);
 
-$progressFilePath = substr($fullInPath, 0, strpos($fullInPath, 'files')) . 'files/convertlog.txt';
+// building command to transcode a mp4 video in h264/aac
+if (substr($fullOutPath, -4) === '.mp4') {
 
-$ffmpegCommand = 'ffmpeg -y -i ' .$fullInPath. ' -threads 1 -strict -2 /home/ocdev/public_html/convert'.$outPath.' </dev/null 1> ' .$progressFilePath.'  2>&1 &';
+  // codec search
+  $aac = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Audio: | grep aac');
+  $aac = ($aac == "") ? false : true;
+  $h264 = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Video: | grep h264');
+  $h264 = ($h264 == "") ? false : true;
+  $hack = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Audio: | grep 5.1');
+  $hack = ($hack == "") ? false : true;
 
-$ffmpegOutput = shell_exec($ffmpegCommand);
+  // try a bitstream copy for performance, hack libfdk limitations
+  $cmd = 'nohup avconv  -i "'.$fullInPath;
+  if ($h264) {
+    if ($aac) {
+      $cmd = $cmd.'" -c:v copy -c:a copy -movflags faststart "';
+    } else {
+      if ($hack) {
+        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -movflags faststart "';
+      } else {
+        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -profile:a aac_he_v2 -movflags faststart "';
+      }
+    }
+  } else {
+    if ($aac) {
+      $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a copy -movflags faststart "';
+    } else {
+      if ($hack) {
+        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -movflags faststart "';
+      } else {
+        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -profile:a aac_he_v2 -movflags faststart "';
+      }
+    }
+  }
+  $cmd = $cmd.$fullOutPath.'" > /dev/null 2>&1 &';
 
-echo($outPath);
+// building command to transcode a mp3 audio plus a generic fallback
+} else if (substr($fullOutPath, -4) === '.mp3') {
+  $cmd = 'nohup avconv -i "'.$fullInPath.'" -c:a libmp3lame "'.$fullOutPath.'" > /dev/null 2>&1 &';
+} else {
+  $cmd = 'nohup avconv -i "'.$fullInPath.'" "'.$outPath.'" > /dev/null 2>&1 &';
+}
+
+// execution stage
+shell_exec($cmd);
 
 ?>
