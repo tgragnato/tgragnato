@@ -83,6 +83,7 @@ $(document).ready(function() {
       } 
     });
     hideDropDown();
+    location.reload();
   }
 
   function hideDropDown() {
