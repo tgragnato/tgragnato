@@ -35,26 +35,26 @@ if (substr($fullOutPath, -4) === '.mp4') {
   $cmd = 'nohup avconv  -i "'.$fullInPath;
   if ($h264) {
     if ($aac) {
-      $cmd = $cmd.'" -c:v copy -c:a copy -movflags faststart "';
+      $cmd = $cmd.'" -c:v copy -c:a copy ';
     } else {
       if ($hack) {
-        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -movflags faststart "';
+        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac ';
       } else {
-        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -profile:a aac_he_v2 -movflags faststart "';
+        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -profile:a aac_he_v2 ';
       }
     }
   } else {
     if ($aac) {
-      $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a copy -movflags faststart "';
+      $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a copy ';
     } else {
       if ($hack) {
-        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -movflags faststart "';
+        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac ';
       } else {
-        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -profile:a aac_he_v2 -movflags faststart "';
+        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -profile:a aac_he_v2 ';
       }
     }
   }
-  $cmd = $cmd.$fullOutPath.'" > /dev/null 2>&1 &';
+  $cmd = $cmd.'-movflags faststart "'.$fullOutPath.'" > /dev/null 2>&1 &';
 
 // building command to transcode a mp3 audio plus a generic fallback
 } else if (substr($fullOutPath, -4) === '.mp3') {
