@@ -1,0 +1,56 @@
+---
+---
+@charset 'utf-8';
+
+// Carattere
+$base-font-family: 'Open Sans', Verdana, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+// Colori
+$text-color:       #111;
+$background-color: #333333;
+$brand-color:      #cc6600;
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Sfondo
+$background-image:      'img/background.png';
+$background-origin:     top;
+$background-position:   center;
+$background-repeat:     repeat;
+
+// Larghezza dell'area contenuti
+$content-width:    800px;
+$on-palm:          600px;
+$on-laptop:        800px;
+
+// Altezza dell'intestazione
+$header-size:      56px;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+// Importa i parziali da `sass_dir` (in predefinito da `_sass`)
+@import
+        'font',
+        'base',
+        'layout',
+        'syntax-highlighting',
+        'extended'
+;
