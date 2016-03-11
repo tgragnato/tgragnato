@@ -8,4 +8,7 @@ disclaimer: >
   Questo sito NON utilizza cookie.
   NON effettua profilazione dei visitatori.
 url: "www.gragnatomarco.it"
-exclude: ["LICENSE"]
+exclude:
+  - LICENSE
+  - CNAME
+  - README
