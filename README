@@ -11,3 +11,8 @@ You'll need a Libav linked to (at least) the :
 - Fraunhofer AAC encoder library [https://github.com/mstorsjo/fdk-aac]
 - Lame MP3 encoder library [http://lame.sourceforge.net]
 - X264 encoder library for h264 [http://www.videolan.org/developers/x264.html]
+
+This app is based on the work of sbowenwilliams ,
+I fixed various issues and customized the functionalities :
+- http://apps.owncloud.com/content/show.php/convert?content=168978
+- https://github.com/sbowenwilliams/convert
