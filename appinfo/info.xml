@@ -5,6 +5,6 @@
   <description>transcoding utility</description>
   <licence>agpl</licence>
   <author>Tommaso Gragnato</author>
-  <version>0.1</version>
+  <version>0.2</version>
   <requiremin>7</requiremin>
 </info>
