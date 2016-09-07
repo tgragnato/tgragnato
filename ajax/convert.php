@@ -24,43 +24,34 @@ $fullOutPath = \OC\Files\Filesystem::getLocalFile($outPath);
 if (substr($fullOutPath, -4) === '.mp4') {
 
   // codec search
-  $aac = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Audio: | grep aac');
+  $aac = shell_exec('ffprobe "'.$fullInPath.'" 2>&1 | grep Audio: | grep aac');
   $aac = ($aac == "") ? false : true;
-  $h264 = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Video: | grep h264');
+  $h264 = shell_exec('ffprobe "'.$fullInPath.'" 2>&1 | grep Video: | grep h264');
   $h264 = ($h264 == "") ? false : true;
-  $hack = shell_exec('avprobe "'.$fullInPath.'" 2>&1 | grep Audio: | grep 5.1');
-  $hack = ($hack == "") ? false : true;
 
-  // try a bitstream copy for performance, hack libfdk limitations
-  $cmd = 'nohup avconv  -i "'.$fullInPath;
+  // building command to transcode to a mp4 video
+  $cmd = 'nohup ffmpeg  -i "'.$fullInPath;
   if ($h264) {
     if ($aac) {
+      // try a bitstream copy for performance
       $cmd = $cmd.'" -c:v copy -c:a copy ';
     } else {
-      if ($hack) {
-        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac ';
-      } else {
-        $cmd = $cmd.'" -c:v copy -c:a libfdk_aac -profile:a aac_he_v2 ';
-      }
+      $cmd = $cmd.'" -c:v copy -c:a aac ';
     }
   } else {
     if ($aac) {
       $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a copy ';
     } else {
-      if ($hack) {
-        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac ';
-      } else {
-        $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a libfdk_aac -profile:a aac_he_v2 ';
-      }
+      $cmd = $cmd.'" -c:v libx264 -preset slow -tune film -profile:v high -level 42 -c:a aac ';
     }
   }
   $cmd = $cmd.'-movflags faststart "'.$fullOutPath.'" > /dev/null 2>&1 &';
 
-// building command to transcode a mp3 audio plus a generic fallback
+// building command to transcode a mp3 audio
 } else if (substr($fullOutPath, -4) === '.mp3') {
-  $cmd = 'nohup avconv -i "'.$fullInPath.'" -c:a libmp3lame "'.$fullOutPath.'" > /dev/null 2>&1 &';
+  $cmd = 'nohup ffmpeg -i "'.$fullInPath.'" -c:a libmp3lame "'.$fullOutPath.'" > /dev/null 2>&1 &';
 } else {
-  $cmd = 'nohup avconv -i "'.$fullInPath.'" "'.$outPath.'" > /dev/null 2>&1 &';
+  $cmd = 'nohup ffmpeg -i "'.$fullInPath.'" "'.$outPath.'" > /dev/null 2>&1 &';
 }
 
 // execution stage
