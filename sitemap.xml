@@ -1,0 +1,38 @@
+---
+layout: null
+images:
+  - loc: home_1.jpg
+    cap: una fase del ciclo di lavorazione
+    tit: manovia
+  - loc: home_2.jpg
+    cap: applicazione del guardolo
+    tit: guardolo
+  - loc: home_3.jpg
+    cap: prodotto finito
+    tit: montato
+  - loc: home_4.jpg
+    cap: fasciatura con treccia
+    tit: fasciatura
+  - loc: logo.jpg
+    cap: logo
+    tit: gragnato marco
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+    xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+    xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>{{ site.url }}/index.html</loc>
+    <changefreq>monthly</changefreq>
+    {% for image in page.images %}
+    <image:image>
+      <image:loc>{{ site.images | prepend: site.url }}/{{ image.loc }}</image:loc>
+      <image:caption>{{ image.cap }}</image:caption>
+      <image:title>{{ image.tit }}</image:title>
+      <image:license>https://raw.githubusercontent.com/{{ site.data.contacts.github }}/master/LICENSE</image:license>
+    </image:image>
+    {% endfor %}
+  </url>
+</urlset>
