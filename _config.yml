@@ -24,6 +24,7 @@ defaults:
 exclude:
   - LICENSE
   - README
+  - CNAME
 
 markdown: kramdown
 kramdown:
