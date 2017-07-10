@@ -1,0 +1,16 @@
+// Importing font styles
+@mixin font-face ($family, $style, $weight, $local1, $local2, $remote, $format) {
+  @font-face {
+    font-family: $family;
+    font-style: $style;
+    font-weight: $weight;
+    src: local($local1), local($local2), url('#{$fontsdir}/#{$remote}'), format($format);
+  }
+}
+
+// ⚠️♻️ Go away or I will replace you with a very small shell script
+@include font-face ('Open Sans', normal, 300, 'Open Sans Light', 'OpenSans-Light', 'OpenSans300.ttf', 'truetype');
+@include font-face ('Open Sans', normal, 400, 'Open Sans', 'OpenSans', 'OpenSans400.ttf', 'truetype');
+@include font-face ('Open Sans', normal, 600, 'Open Sans Semibold', 'OpenSans-Semibold', 'OpenSans600.ttf', 'truetype');
+@include font-face ('Open Sans', normal, 700, 'Open Sans Bold', 'OpenSans-Bold', 'OpenSans700.ttf', 'truetype');
+@include font-face ('Open Sans', italic, 600, 'Open Sans Semibold Italic', 'OpenSans-SemiboldItalic', 'OpenSansItalic.ttf', 'truetype');

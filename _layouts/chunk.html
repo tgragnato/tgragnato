@@ -1,0 +1,37 @@
+<section id='{{ page.title }}'>
+
+  {% if page.right.img or page.left.iframe %}
+  <div class='column-wrapper'>
+
+    <div class='column column-left'>
+    {% if page.left.iframe %}
+      <iframe src='{{ page.left.iframe }}'></iframe>
+    {% else %}
+      {% include cheader.html %}
+      <div class='section-content'>
+        {{ content }}
+      </div>
+    {% endif %}
+    </div>
+
+    <div class='column column-right'>
+      {% if page.right.img %}
+      <img alt='{{ page.right.img }}' src='{{ site.images }}/{{ page.right.img }}'>
+      {% else %}
+      {% include cheader.html %}
+      <div class='section-content'>
+        {{ content }}
+      </div>
+      {% endif %}
+    </div>
+
+  </div>
+  {% else %}
+
+  {% include cheader.html %}
+  <div class='section-content'>
+    {{ content }}
+  </div>
+  {% endif %}
+
+</section>

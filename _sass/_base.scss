@@ -1,41 +1,93 @@
-// Resetta alcuni elementi base
-body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, hr, dl, dd, ol, ul, figure {
+// Reset some basic elements
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+hr,
+dl,
+dd,
+ol,
+ul,
+figure {
   margin: 0;
   padding: 0;
 }
 
-// Stile di base
+// Basic styling
 body {
-  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
-  color: $text-color;
   background-color: $background-color;
-  -webkit-text-size-adjust: 100%;
-  -webkit-font-feature-settings: 'kern' 1;
-  -moz-font-feature-settings: 'kern' 1;
-  -o-font-feature-settings: 'kern' 1;
-  font-feature-settings: 'kern' 1;
-  font-kerning: normal;
-
-  // Sfondo
   background-image: url($background-image);
   background-origin: $background-origin;
   background-position: $background-position;
   background-repeat: $background-repeat;
+
+  // Text
+  color: $text-color;
+  font: $base-font-weight #{$base-font-size}/#{$base-line-height} $base-font-family;
+
+  // Spacing adjustments for typeset text
+  -moz-font-feature-settings: 'kern' 1;
+  -o-font-feature-settings: 'kern' 1;
+  -webkit-font-feature-settings: 'kern' 1;
+  font-feature-settings: 'kern' 1;
+  font-kerning: normal;
+  -webkit-text-size-adjust: 100%;
 }
 
-// Imposta `margin-bottom` per mantenere il ritmo verticale
-h1, h2, h3, h4, h5, h6, p, blockquote, pre, ul, ol, dl, figure,
+// 💚💙 this one ❗️❕
+::selection {
+  background: $alt-brand-color;
+  text-shadow: none;
+}
+
+// Set `margin-bottom` to maintain vertical rhythm
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+ul,
+ol,
+dl,
+figure,
+section,
+article,
 %vertical-rhythm {
   margin-bottom: $spacing-unit / 2;
 }
 
-// Immagini
+// Set `margin-left` to maintain left indentation
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+%left-indentation {
+  margin-left: $spacing-unit;
+}
+
+// Images
 img {
   max-width: 100%;
   vertical-align: middle;
+  width: 100%;
 }
 
-// Figure
+// Figures
 figure > img {
   display: block;
 }
@@ -44,54 +96,74 @@ figcaption {
   font-size: $small-font-size;
 }
 
-// Liste
-ul, ol {
-  margin-left: $spacing-unit;
-}
-
+// Lists
 li {
   > ul,
   > ol {
-     margin-bottom: 0;
+    margin-bottom: 0;
+  }
+  list-style: none;
+
+  &,
+  p {
+    margin-left: 0;
   }
 }
 
-// Intestazioni
-h1, h2, h3, h4, h5, h6 {
-  font-weight: $base-font-weight;
+// Headings
+h1,
+h2 {
+  font-family: $title-font-family;
+  font-size: #{$title-font-size}/#{$base-line-height};
+  font-weight: $title-font-weight;
 }
 
-// Collegamenti
+h3,
+h4,
+h5,
+h6 {
+  font-family: $base-font-family;
+  font-size: #{$title-font-size}/#{$base-line-height};
+  font-weight: $title-font-weight;
+  text-transform: capitalize;
+}
+
+// Links
 a {
   color: $brand-color;
   text-decoration: none;
 
-  // migliora la leggibilità
-  &:hover, &:visited {
-    text-decoration: none;
+  &:visited {
+    color: $brand-color-dark;
+  }
+
+  &:hover {
+    color: $text-color;
+    text-decoration: underline;
   }
 }
 
 // Blockquotes
 blockquote {
+  border-left: 4px solid $grey-color;
   color: $grey-color;
-  border-left: 4px solid $grey-color-light;
-  padding-left: $spacing-unit / 2;
   font-size: 18px;
-  letter-spacing: -1px;
   font-style: italic;
+  letter-spacing: -1px;
+  padding-left: $spacing-unit / 2;
 
   > :last-child {
     margin-bottom: 0;
   }
 }
 
-// Formattazione del codice
-pre, code {
-  font-size: 15px;
+// Code formatting
+pre,
+code {
+  background-color: $background-alt;
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  font-size: 15px;
 }
 
 code {
@@ -99,55 +171,110 @@ code {
 }
 
 pre {
-  padding: 8px 12px;
   overflow-x: auto;
+  padding: 8px 12px;
 
   > code {
     border: 0;
-    padding-right: 0;
     padding-left: 0;
+    padding-right: 0;
   }
 }
 
 // Wrapper
 .wrapper {
-  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
-  max-width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: $spacing-unit;
-  padding-left: $spacing-unit;
   @extend %clearfix;
+
+  margin-left: auto;
+  margin-right: auto;
+  max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+  max-width: calc(#{$content-width} - (#{$spacing-unit} * 2));
+  padding-left: $spacing-unit;
+  padding-right: $spacing-unit;
 
   @include media-query($on-laptop) {
     max-width: -webkit-calc(#{$content-width} - (#{$spacing-unit}));
-    max-width:         calc(#{$content-width} - (#{$spacing-unit}));
-    padding-right: $spacing-unit / 2;
+    max-width: calc(#{$content-width} - (#{$spacing-unit}));
     padding-left: $spacing-unit / 2;
+    padding-right: $spacing-unit / 2;
   }
 }
 
 // Clearfix
 %clearfix {
-
-  &:after {
+  &:before {
     content: '';
     display: table;
+  }
+
+  &:after {
     clear: both;
+    content: '';
+    display: table;
   }
 }
 
-// Icone
+// Icons
 .icon {
 
   > svg {
     display: inline-block;
-    width: 16px;
     height: 16px;
     vertical-align: middle;
+    width: 16px;
 
     path {
       fill: $grey-color;
     }
   }
+}
+
+// Tables
+table {
+  background-color: transparent;
+  border-collapse: collapse;
+
+  display: block;
+  overflow: auto;
+  width: 100%;
+
+  // For Firefox to horizontally scroll wider tables.
+  word-break: normal;
+  word-break: keep-all;
+
+  th {
+    color: $brand-color;
+    font-weight: bold;
+  }
+
+  th,
+  td {
+    border: 1px solid $grey-color;
+    padding: 6px 13px;
+  }
+
+  tr {
+    background-color: rgba($white, $alpha-channel-full);
+    border-top: 1px solid $brand-color;
+
+    &:nth-child(2n) {
+      background-color: rgba($white, $alpha-channel);
+    }
+  }
+}
+
+// Iframes
+iframe {
+  border: 0;
+  height: 100% !important;
+  min-height: 300px;
+  width: 100% !important;
+}
+
+// Sections & Articles
+section,
+article {
+  background-color: rgba($white, $alpha-channel-full);
+  border-top: thin $section-border-style $brand-color;
+  padding: $spacing-unit;
 }

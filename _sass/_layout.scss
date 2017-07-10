@@ -1,38 +1,43 @@
-// Intestazione
+// Site header
 .site-header {
-  border-top: 5px solid $grey-color-dark;
+  background-color: rgba($brand-color, $alpha-channel);
   border-bottom: 1px solid $grey-color-light;
-  background-color: white;
+  border-top: 5px solid $grey-color-dark;
 
-  // Resta visibile durante le transizioni dello slideshow-caption
-  z-index: 100;
+  -moz-box-shadow: 0 0 3px $black;
+  -webkit-box-shadow: 0 0 3px $black;
+  box-shadow: 0 0 3px $black;
 
-  // Posizione contestuale
+  // I want a fixed header @the top
+  height: $header-size;
+  max-height: $header-size;
+  min-height: $header-size;
   position: fixed;
   top: 0;
   width: 100%;
-  min-height: $header-size;
-  max-height: $header-size;
-  height: $header-size;
-
-  // Visualizza con un carattere più pesante
-  h1 {
-    font-size: 26px;
-    font-weight: 600;
-  }
+  z-index: 75;
 }
 
 .site-title {
-  font-size: 26px;
-  font-weight: 300;
-  line-height: $header-size;
-  letter-spacing: -1px;
-  margin-bottom: 0;
+  color: $grey-color-dark;
   float: left;
-  text-transform: uppercase;
+
+  font-family: $title-font-family;
+  font-size: $title-font-size;
+  font-weight: $title-font-weight;
+  letter-spacing: -1px;
+
+  line-height: $header-size;
+  margin-bottom: 0;
+
+  a {
+    &,
+    &:visited {
+      color: $brand-color-dark;
+    }
+  }
 }
 
-// Menu
 .site-nav {
   float: right;
   line-height: $header-size;
@@ -42,53 +47,50 @@
   }
 
   .page-link {
-    color: $text-color;
-
-    // Per il bordo animato
-    display: block;
-    line-height: $header-size;
-    float: left;
     border-bottom: 4px solid transparent;
+    color: $text-color;
+    display: block;
+    float: left;
+    line-height: $header-size;
 
-    &.active, &:hover {
+    &:hover {
       border-bottom: 4px solid $brand-color;
+      text-decoration: none;
     }
 
-    // Spazio tra gli elementi del nav, ma non sul primo
+    // Gaps between nav items, but not on the last one
     &:not(:last-child) {
       margin-right: 20px;
     }
   }
 
   @include media-query($on-palm) {
-    position: absolute;
-    top: 9px;
-    right: $spacing-unit / 2;
 
-    // Sfondo
     background-color: $background-color;
     background-image: url($background-image);
     background-origin: $background-origin;
     background-position: $background-position;
     background-repeat: $background-repeat;
 
-    // Definisci
     border: 1px solid $grey-color-dark;
     border-radius: 5px;
+    position: absolute;
+    right: $spacing-unit / 2;
     text-align: right;
+    top: 9px;
 
     .menu-icon {
       display: block;
       float: right;
-      width: 36px;
       height: 26px;
       line-height: 0;
       padding-top: 10px;
       text-align: center;
+      width: 36px;
 
       > svg {
-        width: 18px;
         height: 15px;
+        width: 18px;
 
         path {
           fill: $grey-color-dark;
@@ -108,28 +110,28 @@
 
     .page-link {
       display: block;
+      float: none;
+      line-height: $base-line-height;
+      margin-left: 20px;
       padding: 5px 10px;
 
-      line-height: $base-line-height;
-      float: none;;
-      border-bottom: 0;
-
-      &.active, &:hover {
-        border-bottom: 0;
+      &:hover {
+        border-bottom: 4px solid transparent;
       }
 
       &:not(:last-child) {
         margin-right: 0;
       }
-      margin-left: 20px;
     }
   }
 }
 
-// Piè di pagina
+// Site footer
 .site-footer {
+  background-color: rgba($white, $alpha-channel-full);
   border-top: 1px solid $grey-color-light;
   padding: $spacing-unit 0;
+  z-index: 50;
 }
 
 .footer-heading {
@@ -137,86 +139,92 @@
   margin-bottom: $spacing-unit / 2;
 }
 
-// Liste senza stile
-.without-dots {
-  list-style: none;
-  margin-left: 0;
-}
-
-// Layout a doppia colonna
-.col-wrapper {
-  font-size: 15px;
-  color: $grey-color;
-  margin-left: -$spacing-unit / 2;
+// Two column responsive layout
+.column-wrapper {
   @extend %clearfix;
+  color: $grey-color;
+  font-size: 15px;
+  margin-left: -$spacing-unit / 2;
 }
 
-.col {
+.column {
   float: left;
   margin-bottom: $spacing-unit / 2;
   padding-left: $spacing-unit / 2;
+
+  @include media-query($on-palm) {
+    float: none;
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
+  }
 }
 
-.col-left {
+.column-same {
+  width: -webkit-calc(50% - (#{$spacing-unit} / 2));
+  width: calc(50% - (#{$spacing-unit} / 2));
+}
+
+.column-left {
   width: -webkit-calc(45% - (#{$spacing-unit} / 2));
-  width:         calc(45% - (#{$spacing-unit} / 2));
+  width: calc(45% - (#{$spacing-unit} / 2));
 }
 
-.col-right {
+.column-right {
   width: -webkit-calc(55% - (#{$spacing-unit} / 2));
-  width:         calc(55% - (#{$spacing-unit} / 2));
+  width: calc(55% - (#{$spacing-unit} / 2));
 }
 
 @include media-query($on-laptop) {
-  .col-left,.col-right {
-    width: -webkit-calc(50% - (#{$spacing-unit} / 2));
-    width:         calc(50% - (#{$spacing-unit} / 2));
+  .column-left,
+  .column-right {
+    width: -webkit-calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
-}
 
-@include media-query($on-palm) {
-  .col {
+  .column-same {
     float: none;
     width: -webkit-calc(100% - (#{$spacing-unit} / 2));
-    width:         calc(100% - (#{$spacing-unit} / 2));
+    width: calc(100% - (#{$spacing-unit} / 2));
   }
 }
 
-// Pagine
+// Page & Sections
 .page-content {
-  padding: $spacing-unit 0;
-  margin-top: $header-size;
+  margin-top: $header-size + $spacing-unit;
+  margin-bottom: $spacing-unit;
+  z-index: 25;
 }
 
 .page-heading {
-  font-size: 20px;
+  font-size: $title-font-size;
 }
 
-// Post
-.post-list {
-  margin-left: 0;
+.page-list {
   list-style: none;
+  margin-left: 0;
 
   > li {
     margin-bottom: $spacing-unit;
   }
 }
 
-.post-meta {
-  font-size: $small-font-size;
-  color: $grey-color;
+.section-title {
+  font-size: 36px;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    font-size: 30px;
+  }
 }
 
-.post-link {
-  display: block;
-  font-size: 24px;
-}
-
-.post-header {
+.page-header {
   margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.page-title {
+  @extend %vertical-rhythm;
+  @extend %left-indentation;
   font-size: 42px;
   letter-spacing: -1px;
   line-height: 1;
@@ -226,11 +234,27 @@
   }
 }
 
-.post-content {
-  margin-bottom: $spacing-unit;
+.page-meta,
+.section-meta {
+  @extend %vertical-rhythm;
+  @extend %left-indentation;
+  font-size: 22px;
+  letter-spacing: -1px;
+  line-height: 1;
+
+  @include media-query($on-laptop) {
+    font-size: 18px;
+  }
+}
+
+.page-content,
+.section-content {
 
   h2 {
     font-size: 32px;
+    &:not(:first-child) {
+      margin-top: $spacing-unit;
+    }
 
     @include media-query($on-laptop) {
       font-size: 28px;
@@ -238,18 +262,18 @@
   }
 
   h3 {
-    font-size: 26px;
+    font-size: 22px;
 
     @include media-query($on-laptop) {
-      font-size: 22px;
+      font-size: 18px;
     }
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 18px;
 
     @include media-query($on-laptop) {
-      font-size: 18px;
+      font-size: 16px;
     }
   }
 

@@ -1,0 +1,21 @@
+---
+title: home
+slides:
+  - img: home_1.jpg
+    caption: Una fase del ciclo di lavorazione
+  - img: home_2.jpg
+    caption: Applicazione del guardolo
+  - img: home_3.jpg
+    caption: Un prodotto finito
+  - img: home_4.jpg
+    caption: Fasciatura con treccia
+---
+
+<ul class='slideshow'>
+  {% for slide in page.slides %}
+  {% if forloop.first %}<li class='show'>{% else %}<li>{% endif %}
+    <img src='{{ site.images }}/{{ slide.img }}' alt='{{ slide.img }}'>
+    <p>{{ slide.caption }}</p>
+  </li>
+  {% endfor %}
+</ul>

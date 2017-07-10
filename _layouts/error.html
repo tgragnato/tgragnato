@@ -1,0 +1,28 @@
+---
+layout: default
+---
+
+{% if page.title or page.description %}
+<header class='page-header'>
+  {% if page.title %}
+  <h1 class='page-title'>
+    {{ page.title | escape }}
+  </h1>
+  {% endif %}
+  {% if page.description %}
+  <p class='page-meta'>
+    {{ page.description | escape }}
+  </p>
+  {% endif %}
+</header>
+{% endif %}
+
+<div class='page column-wrapper section-content'>
+  <div class='column column-left'>
+    <img src='{{ site.images }}/logo.jpg' alt='logo.jpg'>
+  </div>
+
+  <div class='column column-right'>
+    {{ content }}
+  </div>
+</div>

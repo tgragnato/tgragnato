@@ -1,85 +1,24 @@
 ---
+title: Homepage
+description: >
+
+  L'intenzione è quella di mantenere l'intero sito in una singola pagina
+  utilizzando dei chunk per raggruppare contenuti logicamente correlati.
+
+  Utilizzo a questo fine la collezione Jekyll `chunks` e il layout `chunk`.
+
+  Ricordati di impostare un titolo univoco mandatorio ad ogni sezione:
+  usa la variabile `title` del `front matter`, la generazione degli `hashref`
+  dell'intestazione è in questo modo completamente automatica.
+
+  Evita di impostare la variabile `description` nel `front matter` se vuoi
+  evitare che il titolo e la descrizione vengano inclusi nell'output generato.
+
+  PROFIT
+
 layout: page
 ---
 
-<!-- sezione per la presentazione iniziale -->
-<section id='home'>
-  <div class='wrapper'>
-    <ul class='slideshow'>
-      <li class='show'>
-        <img src='img/home_1.jpg' alt=''>
-        <p>Una fase del ciclo di lavorazione</p>
-      </li>
-      <li>
-        <img src='img/home_2.jpg' alt=''>
-        <p>Applicazione del guardolo</p>
-      </li>
-      <li>
-        <img src='img/home_3.jpg' alt=''>
-        <p>Un prodotto finito</p>
-      </li>
-      <li>
-        <img src='img/home_4.jpg' title=''>
-        <p>Fasciatura con treccia</p>
-      </li>
-    </ul>
-  </div>
-</section>
-
-<!-- sezione per le lavorazioni -->
-<section id='lavorazioni'>
-  <div class='wrapper'>
-    <div class='col-wrapper'>
-
-      <div class='col col-left'>
-        <h2>per la calzatura</h2>
-        <ul>
-          <li>assemblaggi</li>
-          <li>ripiegatura e fasciatura manuale del sottopiede</li>
-          <li>applicazione manuale del guardolo</li>
-          <li>fasciatura di
-            <ul>
-              <li>zeppe</li>
-              <li>zepponi</li>
-              <li>tacchi</li>
-              <li>...</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-
-      <div class='col col-right'>
-        <img src='img/logo.jpg' alt='logo'>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- sezione per le informazioni personali -->
-<section id='contatti'>
-  <div class='wrapper'>
-    <div class='col-wrapper'>
-
-      <div class='col col-left'>
-        <iframe src='{{ site.map }}'></iframe>
-      </div>
-
-      <div class='col col-right'>
-        <h2>come trovarmi</h2>
-        <ul class='without-dots'>
-          <li>Indirizzo:</li>
-          <li>Via Ca' di Mezzo 147D</li>
-          <li>37012 Bussolengo (VR)</li>
-          <li><br></li>
-          <li>Numero di telefono:</li>
-          <li><strong>{{ site.telefono }}</strong></li>
-          <li><br></li>
-          <li>Posta elettronica:</li>
-          <li><a href='mailto:{{ site.mail }}'>{{ site.email }}</a></li>
-        </ul>
-      </div>
-
-    </div>
-  </div>
-</section>
+{% for chunk in site.chunks %}
+{{ chunk.output }}
+{% endfor %}

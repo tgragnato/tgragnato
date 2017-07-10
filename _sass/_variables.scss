@@ -1,0 +1,47 @@
+// Liquid + SCSS partials != <3
+// `Update this accordingly to {{ site.baseurl }}`
+$fontsdir:              '/gmarco/fonts';
+$imagesdir:             '/gmarco/images';
+
+// Font styling for texts
+$base-font-family:      'Open Sans', Verdana, sans-serif;
+$base-font-size:        16px;
+$base-font-weight:      400;
+$small-font-size:       $base-font-size * .875;
+$base-line-height:      1.5;
+
+// Font styling for headings
+$title-font-family:     $base-font-family;
+$title-font-size:       20px;
+$title-font-weight:     400;
+
+// Basic separation
+$spacing-unit:          30px;
+$section-border-style:  dashed;
+
+// Colors
+$text-color:            #111;
+$brand-color:           #c60;
+$brand-color-dark:      darken($brand-color, 15%);
+$grey-color:            #828282;
+$grey-color-light:      lighten($grey-color, 40%);
+$grey-color-dark:       darken($grey-color, 25%);
+$alt-brand-color:       $brand-color-dark;
+$black:                 #000;
+$white:                 #fff;
+
+// Background
+$background-color:      #e6e6da;
+$background-alt:        $background-color;
+$background-image:      '#{$imagesdir}/background.png';
+$background-origin:     'top';
+$background-position:   'center';
+$background-repeat:     'repeat';
+
+// Width of the content area
+$content-width:         1024px;
+
+// for the fixed header that stays @the top
+$header-size:           56px;
+$alpha-channel:         .3;
+$alpha-channel-full:    .6;

@@ -1,30 +1,32 @@
 <head>
 
-  <!-- titolo della pagina web -->
-  <title>{{ site.title }}</title>
-
-  <!-- meta informazioni -->
   <meta charset='utf-8'>
   <meta http-equiv='X-UA-Compatible' content='IE=edge'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
-  <meta name='description' content='{{ site.description }}'>
-  <meta name='keywords' content='Gragnato Marco Bussolengo Verona Artigiano Calzature'>
+
+  <title>{{ site.data.base.surname }} {{ site.data.base.name }}</title>
+  <meta name='description' content='{{ site.data.base.description }}'>
   <meta name='author' content='Tommaso Gragnato'>
 
-  <!-- collegamento canonico e foglio di stile -->
-  <link rel='canonical' href='{{ site.url }}'>
-  <link rel='stylesheet' href='style.css'>
+  <style type='text/css'>
+    {% capture include_to_scssify %}
+    @import
+      'variables',
+      'fonts',
+      'responsive',
+      'base',
+      'layout',
+      'slideshow'
+    ;
+    {% endcapture %}
+    {{ include_to_scssify | scssify }}
+  </style>
 
-  <!-- javascript -->
-  <script type='text/javascript' src='https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js'></script>
+  {% if page.title == "Homepage" %}
   <script type='text/javascript'>
-  window.setInterval(function slide() {
-      var actual = $('ul.slideshow').children('li.show').first(),
-        next = actual.next();
-      next = (next.length) ? next : actual.prevAll().last() ;
-      next.addClass('show');
-      actual.removeClass('show');
-    }, 5000);
+    {% include jquery.js %}
+    {% include script.js %}
   </script>
+  {% endif %}
 
 </head>

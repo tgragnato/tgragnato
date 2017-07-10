@@ -1,10 +1,14 @@
 <header class='site-header'>
   <div class='wrapper'>
 
-    <!-- il titolo è un collegamento alla sezione di presentazione -->
-    <h1 class='site-title'>Gragnato<a href='#home'>Marco</a></h1>
+    <h1 class='site-title'>
+      {{ site.data.base.surname }}
+      <a href='{{ site.url }}'>
+        {{ site.data.base.name }}
+      </a>
+    </h1>
 
-    <!-- icone svg per il menu responsivo sul lato destro -->
+    {% if page.title == "Homepage" %}
     <nav class='site-nav'>
       <a href='#' class='menu-icon'>
         <svg viewBox='0 0 18 15'>
@@ -14,13 +18,13 @@
         </svg>
       </a>
 
-      <!-- Collegamenti del menu -->
-      <div class='trigger' id='menu'>
-        <a class='page-link' href='#home'>Home</a>
-        <a class='page-link' href='#lavorazioni'>Lavorazioni</a>
-        <a class='page-link' href='#contatti'>Contatti</a>
+      <div class='trigger'>
+        {% for hashref in site.chunks %}
+        <a class='page-link' href='#{{ hashref.title }}'>{{ hashref.title | capitalize }}</a>
+        {% endfor %}
       </div>
     </nav>
+    {% endif %}
 
   </div>
 </header>
