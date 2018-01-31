@@ -16,6 +16,10 @@ images:
   - loc: logo.jpg
     cap: logo
     tit: gragnato marco
+  - loc: slide_1.jpg
+  - loc: slide_2.jpg
+  - loc: slide_3.jpg
+  - loc: slide_4.jpg
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
@@ -29,8 +33,8 @@ images:
     {% for image in page.images %}
     <image:image>
       <image:loc>{{ site.images | prepend: site.url }}/{{ image.loc }}</image:loc>
-      <image:caption>{{ image.cap }}</image:caption>
-      <image:title>{{ image.tit }}</image:title>
+      {% if image.cap %}<image:caption>{{ image.cap }}</image:caption>{% else %}<image:caption>{{ site.data.base.name }} {{ site.data.base.surname }}</image:caption>{% endif %}
+      {% if image.tit %}<image:title>{{ image.tit }}</image:title>{% else %}<image:title>{{ site.data.base.name }} {{ site.data.base.surname }}</image:title>{% endif %}
       <image:license>https://raw.githubusercontent.com/{{ site.data.contacts.github }}/master/LICENSE</image:license>
     </image:image>
     {% endfor %}
