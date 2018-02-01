@@ -20,6 +20,10 @@ images:
   - loc: slide_2.jpg
   - loc: slide_3.jpg
   - loc: slide_4.jpg
+  - loc: slide_5.jpg
+  - loc: slide_6.jpg
+  - loc: slide_7.jpg
+  - loc: slide_8.jpg
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset
