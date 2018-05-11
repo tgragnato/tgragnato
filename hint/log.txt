@@ -1,0 +1,95 @@
+[Debug] Received login_confirm – Object (angular.min.js, line 118)
+Object
+[Debug] Received login_confirm – Object (angular.min.js, line 118)
+Object
+[Debug] Received login_confirm – Object (angular.min.js, line 118)
+Object
+[Debug] Received fw_settings – Object (angular.min.js, line 118)
+Object
+[Debug] Received voice_log – Object (angular.min.js, line 118)
+Object
+[Debug] Received pc_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received family_device_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received family_device_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received pc_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received family_device_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received family_device_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received connected_device_list – Object (angular.min.js, line 118)
+Object
+[Debug] Received speedLog_read – Object (angular.min.js, line 118)
+Object
+[Debug] Received diagnostic – Object (angular.min.js, line 118)
+Object
+[Debug] Received led_status – Object (angular.min.js, line 118)
+Object
+[Debug] Received wl_eco – Object (angular.min.js, line 118)
+Object
+[Debug] Received wl_WPS_status – Object (angular.min.js, line 118)
+Object
+[Debug] Received wl2g_sec – Object (angular.min.js, line 118)
+Object
+[Debug] Received fw_settings – Object (angular.min.js, line 118)
+Object
+[Debug] Received wl_guestaccess – Object (angular.min.js, line 118)
+Object
+[Error] Error: JSON Parse error: Invalid escape character I
+parse@[native code]
+dc@http://192.168.1.1/js/angular.min.js:91:471
+http://192.168.1.1/js/angular.min.js:92:379
+q@http://192.168.1.1/js/angular.min.js:7:359
+gd@http://192.168.1.1/js/angular.min.js:92:361
+f@http://192.168.1.1/js/angular.min.js:94:300
+http://192.168.1.1/js/angular.min.js:131:21
+$digest@http://192.168.1.1/js/angular.min.js:142:425
+$apply@http://192.168.1.1/js/angular.min.js:146:120
+l@http://192.168.1.1/js/angular.min.js:97:328
+J@http://192.168.1.1/js/angular.min.js:102:35
+onload@http://192.168.1.1/js/angular.min.js:103:5
+	(funzione anonima) (angular.min.js:90:234)
+	(funzione anonima) (angular.min.js:131:105)
+	$digest (angular.min.js:142:426)
+	$apply (angular.min.js:146:121)
+	l (angular.min.js:97:329)
+	J (angular.min.js:102)
+	onload (angular.min.js:103)
+[Error] Error: JSON Parse error: Invalid escape character I
+parse@[native code]
+dc@http://192.168.1.1/js/angular.min.js:91:471
+http://192.168.1.1/js/angular.min.js:92:379
+q@http://192.168.1.1/js/angular.min.js:7:359
+gd@http://192.168.1.1/js/angular.min.js:92:361
+f@http://192.168.1.1/js/angular.min.js:94:300
+http://192.168.1.1/js/angular.min.js:131:21
+$digest@http://192.168.1.1/js/angular.min.js:142:425
+$apply@http://192.168.1.1/js/angular.min.js:146:120
+l@http://192.168.1.1/js/angular.min.js:97:328
+J@http://192.168.1.1/js/angular.min.js:102:35
+onload@http://192.168.1.1/js/angular.min.js:103:5
+	(funzione anonima) (sharedServices.js:22)
+	(funzione anonima) (angular.min.js:131)
+	$digest (angular.min.js:142:426)
+	$apply (angular.min.js:146:121)
+	l (angular.min.js:97:329)
+	J (angular.min.js:102)
+	onload (angular.min.js:103)
+[Error] Error: undefined is not an object (evaluating 'data.wl0_enabled')
+http://192.168.1.1/app/services/wifiService.js:66:26
+http://192.168.1.1/js/angular.min.js:131:21
+$digest@http://192.168.1.1/js/angular.min.js:142:425
+$apply@http://192.168.1.1/js/angular.min.js:146:120
+l@http://192.168.1.1/js/angular.min.js:97:328
+J@http://192.168.1.1/js/angular.min.js:102:35
+onload@http://192.168.1.1/js/angular.min.js:103:5
+	(funzione anonima) (angular.min.js:90:234)
+	(funzione anonima) (angular.min.js:131:105)
+	$digest (angular.min.js:142:426)
+	$apply (angular.min.js:146:121)
+	l (angular.min.js:97:329)
+	J (angular.min.js:102)
+	onload (angular.min.js:103)
