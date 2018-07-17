@@ -3,7 +3,7 @@
 ## SEARCH-LAB security assessment
 
 The 53 unique vulnerabilities [identified in 2014](Security advisory.pdf) are now actively being exploited in the wild.
-Remote attacker can execute arbitrary code and gain full control over the device.
+Remote attackers can execute arbitrary code and gain full control over the device.
 
 ## Implants
 
