@@ -1,5 +1,7 @@
 # FastGATE Python tool
-https://github.com/Nimayer/fastgate-toolkit/wiki
+See wiki for more info: https://github.com/Nimayer/fastgate-toolkit/wiki
+
+Remote exploitation: https://github.com/tgragnato/FASTGate-RCE
 
 Python tools for Fastweb FastGATE exploits.
 
