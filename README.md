@@ -2,7 +2,7 @@
 
 ## SEARCH-LAB security assessment
 
-The 53 unique vulnerabilities [identified in 2014](Security advisory.pdf) are now actively being exploited in the wild.
+The 53 unique vulnerabilities [identified in 2014](https://tgragnato.it/AAA-tgragnato/D-Link/plain/Security%20advisory.pdf) are now actively being exploited in the wild.
 Remote attackers can execute arbitrary code and gain full control over the device.
 
 ## Implants
