@@ -1,5 +1,5 @@
 
-url: http://www.gragnatomarco.it
+url: https://www.gragnatomarco.it
 
 images: /images
 fonts: /fonts
@@ -23,7 +23,6 @@ defaults:
 exclude:
   - LICENSE
   - README
-  - CNAME
 
 markdown: kramdown
 kramdown:
