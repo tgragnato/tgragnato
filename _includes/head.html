@@ -8,23 +8,11 @@
   <meta name='description' content='{{ site.data.base.description }}'>
   <meta name='author' content='Tommaso Gragnato'>
 
-  <style type='text/css'>
-    {% capture include_to_scssify %}
-    @import
-      'variables',
-      'fonts',
-      'responsive',
-      'base',
-      'layout',
-      'slideshow'
-    ;
-    {% endcapture %}
-    {{ include_to_scssify | scssify }}
-  </style>
+  <link rel='stylesheet' href='/style.css'>
 
   {% if page.title == "Homepage" %}
+  <script type='text/javascript' src='/jquery.js'></script>
   <script type='text/javascript'>
-    {% include jquery.js %}
     {% include script.js %}
   </script>
   {% endif %}
