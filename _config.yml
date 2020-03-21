@@ -1,8 +1,8 @@
 
 url: https://www.gragnatomarco.it
 
-images: /images
-fonts: /fonts
+images: images
+fonts: fonts
 
 collections:
   chunks:
