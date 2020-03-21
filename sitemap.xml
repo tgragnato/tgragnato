@@ -39,7 +39,6 @@ images:
       <image:loc>{{ site.images | prepend: site.url }}/{{ image.loc }}</image:loc>
       {% if image.cap %}<image:caption>{{ image.cap }}</image:caption>{% else %}<image:caption>{{ site.data.base.name }} {{ site.data.base.surname }}</image:caption>{% endif %}
       {% if image.tit %}<image:title>{{ image.tit }}</image:title>{% else %}<image:title>{{ site.data.base.name }} {{ site.data.base.surname }}</image:title>{% endif %}
-      <image:license>https://raw.githubusercontent.com/{{ site.data.contacts.github }}/master/LICENSE</image:license>
     </image:image>
     {% endfor %}
   </url>
