@@ -1,0 +1,14 @@
+url: "https://tgragnato.it"
+title: Tommaso Gragnato
+
+exclude:
+  - _site
+  - .sass-cache
+  - .jekyll-cache
+  - .jekyll-metadata
+  - vendor/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README
