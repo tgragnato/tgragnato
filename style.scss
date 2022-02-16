@@ -1,12 +1,15 @@
 ---
 ---
+
 @import 'grechen';
+@import 'darkmode';
+
 body {
     font-family: sans-serif;
     width: auto;
-    max-width: 700px;
-    padding: 0 15px;
-    margin: 80px auto;
+    max-width: 38em;
+    padding: 1em 2em;
+    margin: 1em auto;
 }
 h1 {
     font-family: "GrechenFuemen", serif;
@@ -14,4 +17,8 @@ h1 {
 code {
     font-family: monospace;
     -webkit-font-smoothing: antialiased;
+}
+a, a:any-link {
+    color: black;
+    text-decoration: none;
 }
