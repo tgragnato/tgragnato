@@ -10,5 +10,6 @@ exclude:
   - gemfiles/
   - Gemfile
   - Gemfile.lock
+  - CNAME
   - LICENSE
   - README
