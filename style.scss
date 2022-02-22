@@ -4,15 +4,9 @@
 @charset "utf-8";
 
 @import 'darkmode';
-@import 'grechen';
 
 @import 'base/generic';
 
-body {
-    max-width: 38em;
-    padding: 1em 2em;
-    margin: 1em auto;
-}
-h1 {
-    font-family: "GrechenFuemen", serif;
-}
+@import 'layout/body';
+@import 'layout/header';
+@import 'layout/section';
