@@ -1,0 +1,25 @@
+@import "../utilities/derived-variables"
+@import '../grechen'
+
+$header-background-color: $scheme-main-bis !default
+$header-color: false !default
+
+$header-padding: 1.5rem !default
+$header-padding-desktop: 3rem !default
+$header-padding-medium: 9rem !default
+$header-padding-large: 18rem !default
+
+header
+  background-color: $header-background-color
+  padding: $header-padding
+  // Responsiveness
+  +desktop
+    padding: $header-padding-desktop
+    // Sizes
+    &.is-medium
+      padding: $header-padding-medium
+    &.is-large
+      padding: $header-padding-large
+  font-family: "GrechenFuemen", serif
+  @if $header-color
+    color: $header-color

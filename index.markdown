@@ -2,8 +2,6 @@
 layout: default
 ---
 
-# {{ site.title }}
-
 GitHub: [https://github.com/tgragnato](https://github.com/tgragnato)
 
 HN: [https://news.ycombinator.com/threads?id=tg180](https://news.ycombinator.com/threads?id=tg180)

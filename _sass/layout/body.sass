@@ -1,0 +1,11 @@
+@import "../utilities/derived-variables"
+
+body
+    margin: $gap auto
+    max-width: 100vw
+    +tablet-only
+        max-width: $tablet - ( 2 * $gap )
+    +desktop-only
+        max-width: $desktop - ( 2 * $gap )
+    +widescreen
+        max-width: $widescreen - ( 2 * $gap )
