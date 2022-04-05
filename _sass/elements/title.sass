@@ -1,4 +1,5 @@
 @import "../utilities/mixins"
+@import '../grechen'
 
 $title-color: $text-strong !default
 $title-family: false !default
@@ -19,9 +20,12 @@ $subtitle-strong-color: $text-strong !default
 $subtitle-strong-weight: $weight-semibold !default
 $subtitle-negative-margin: -1.25rem !default
 
+h2,
+h3,
 .title,
 .subtitle
-  @extend %block
+  //@extend %block
+  font-family: "GrechenFuemen", serif
   word-break: break-word
   em,
   span
@@ -33,6 +37,8 @@ $subtitle-negative-margin: -1.25rem !default
   .tag
     vertical-align: middle
 
+h2,
+h3,
 .title
   color: $title-color
   @if $title-family
