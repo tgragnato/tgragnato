@@ -2,4 +2,6 @@
     <h1>
         {% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}
     </h1>
+    {% if page.description %}<p class="subtitle">{{ page.description }}</p>{% endif %}
+    {% if page.date %}<p class="subtitle">{{ page.date | date: "%d-%m-%Y"  }}</p>{% endif %}
 </header>
