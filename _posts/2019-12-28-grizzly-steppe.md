@@ -111,3 +111,38 @@ Implant: [aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801](aeac
 [e2f3caade127e855fdec68faf8eea845fed9ae98ea17cd74644e57de91fb6e11](/samples/e2f3caade127e855fdec68faf8eea845fed9ae98ea17cd74644e57de91fb6e11)
 
 [fd39d2837b30e7233bc54598ff51bdc2f8c418fa5b94dea2cadb24cf40f395e5](/samples/fd39d2837b30e7233bc54598ff51bdc2f8c418fa5b94dea2cadb24cf40f395e5)
+
+---
+
+## Cozy Bear
+
+CozyBear, CozyDuke, APT29, IRON RITUAL, IRON HEMLOCK, NobleBaron, Dark Halo, StellarParticle, NOBELIUM, UNC2452, YTTRIUM, The Dukes is likely Russia's Foreign Intelligence Service (SVR).
+The group targets government networks in Europe and NATO member countries, research institutes, and think tanks.
+
+### MiniDuke
+
+MiniDuke is a toolset consisting of multiple droppers, loaders and implants.
+
+[dd215d76bcfd72ebcfb50ccfeb9fb1703af4bbf4821de225009f43fc4e08e432](/samples/dd215d76bcfd72ebcfb50ccfeb9fb1703af4bbf4821de225009f43fc4e08e432)
+
+[c485cbcd5b21db8029654bd47879f086feed41492aebed33a9afe9d73f5069e7](/samples/c485cbcd5b21db8029654bd47879f086feed41492aebed33a9afe9d73f5069e7)
+
+Implants:
+
+[b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae](/samples/b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae)
+
+[6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536](/samples/6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536)
+
+Trojan: [01468b1d3e089985a4ed255b6594d24863cfd94a647329c631e4f4e52759f8a9](/samples/01468b1d3e089985a4ed255b6594d24863cfd94a647329c631e4f4e52759f8a9)
+
+Agent: [43cd9ef6904c35c6854bf59d99731a05048af9e870261064a255db0181930fad](/samples/43cd9ef6904c35c6854bf59d99731a05048af9e870261064a255db0181930fad)
+
+### Other Implants
+
+[b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae](/samples/b101cd29e18a515753409ae86ce68a4cedbe0d640d385eb24b9bbb69cf8186ae)
+
+[6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536](/samples/6c1bce76f4d2358656132b6b1d471571820688ccdbaca0d86d0ca082b9390536)
+
+[b77ff307ea74a3ab41c92036aea4a049b3c2e69b12a857d26910e535544dfb05](/samples/b77ff307ea74a3ab41c92036aea4a049b3c2e69b12a857d26910e535544dfb05)
+
+[2cea2a1f53dac3f4fff156eacc2ecc8e98b1a64f0f5b5ee1c42c69d9a226c55c](/samples/2cea2a1f53dac3f4fff156eacc2ecc8e98b1a64f0f5b5ee1c42c69d9a226c55c)
