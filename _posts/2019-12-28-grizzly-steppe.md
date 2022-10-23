@@ -165,3 +165,25 @@ The group targets defense and aviation companies, ICS and critical infrastructur
 SSHd: [64a186acc13fd08ccc250f1e20880fe6bb9a053a3ad82c288bbc9d7150404be3](/samples/64a186acc13fd08ccc250f1e20880fe6bb9a053a3ad82c288bbc9d7150404be3)
 
 Downloader: [cb3306aecb05fccaac51a036f361991745a4ef90d8d9ec713d783c88605ea556](/samples/cb3306aecb05fccaac51a036f361991745a4ef90d8d9ec713d783c88605ea556)
+
+---
+
+## Voodoo Bear
+
+Voodoo Bear, ELECTRUM, Telebots, IRON VIKING, Black Energy, Quedagh is likely Russia's General Staff Main Intelligence Directorate (GRU) Main Center for Special Technologies (GTsST) military unit 74455.
+
+[9e9a6f1d046e0f5da10aa0e18bba248df4f818d342ed359c35fdb000f1354819](/samples/9e9a6f1d046e0f5da10aa0e18bba248df4f818d342ed359c35fdb000f1354819)
+
+### Grey Energy
+
+Grey Energy is the successor to Voodoo Bear, which "dissolved" after terrorizing Ukraine. It’s also closely related to TeleBots, responsible for NotPetya.
+
+[1b17ce735512f3104557afe3becacd05ac802b2af79dab5bb1a7ac8d10dccffd](/samples/1b17ce735512f3104557afe3becacd05ac802b2af79dab5bb1a7ac8d10dccffd)
+
+[1bb78a73f28617bf8209dae0be4ced07dcd44420b541d7147a0f978237f9b3e2](/samples/1bb78a73f28617bf8209dae0be4ced07dcd44420b541d7147a0f978237f9b3e2)
+
+[6c52a5850a57bea43a0a52ff0e2d2179653b97ae5406e884aee63e1cf340f58b](/samples/6c52a5850a57bea43a0a52ff0e2d2179653b97ae5406e884aee63e1cf340f58b)
+
+[8c3f4d8c90ba7124591f6d4a4b739f63179c220bb7cd6ce10752b13cecefa574](/samples/8c3f4d8c90ba7124591f6d4a4b739f63179c220bb7cd6ce10752b13cecefa574)
+
+[b60c0c04badc8c5defab653c581d57505b3455817b57ee70af74311fa0b65e22](/samples/b60c0c04badc8c5defab653c581d57505b3455817b57ee70af74311fa0b65e22)
