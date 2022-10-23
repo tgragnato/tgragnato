@@ -146,3 +146,22 @@ Agent: [43cd9ef6904c35c6854bf59d99731a05048af9e870261064a255db0181930fad](/sampl
 [b77ff307ea74a3ab41c92036aea4a049b3c2e69b12a857d26910e535544dfb05](/samples/b77ff307ea74a3ab41c92036aea4a049b3c2e69b12a857d26910e535544dfb05)
 
 [2cea2a1f53dac3f4fff156eacc2ecc8e98b1a64f0f5b5ee1c42c69d9a226c55c](/samples/2cea2a1f53dac3f4fff156eacc2ecc8e98b1a64f0f5b5ee1c42c69d9a226c55c)
+
+---
+
+## Energetic Bear
+
+Energetic Bear, TEMP.Isotope, DYMALLOY, Berserk Bear, TG-4192, Crouching Yeti, IRON LIBERTY is likely Russia's Federal Security Service (FSB) Center 16.
+The group targets defense and aviation companies, ICS and critical infrastructure.
+
+[49ea7a8eacaf7a6988ce73362dd515835aaee1a87da9a663f7e1619b788081bc](/samples/49ea7a8eacaf7a6988ce73362dd515835aaee1a87da9a663f7e1619b788081bc)
+
+[4a753bce8a3a802246230a793599c00778328a02173e56563245cefb6b79fc9a](/samples/4a753bce8a3a802246230a793599c00778328a02173e56563245cefb6b79fc9a)
+
+[501addba8dca294be2ed39bffbd8927652672306e0c9181a7f9b7e66715aa626](/samples/501addba8dca294be2ed39bffbd8927652672306e0c9181a7f9b7e66715aa626)
+
+[5bc56078af7bed0447796450b847b90a598d8a36bf2811d6b461d4f0fe597a72](/samples/5bc56078af7bed0447796450b847b90a598d8a36bf2811d6b461d4f0fe597a72)
+
+SSHd: [64a186acc13fd08ccc250f1e20880fe6bb9a053a3ad82c288bbc9d7150404be3](/samples/64a186acc13fd08ccc250f1e20880fe6bb9a053a3ad82c288bbc9d7150404be3)
+
+Downloader: [cb3306aecb05fccaac51a036f361991745a4ef90d8d9ec713d783c88605ea556](/samples/cb3306aecb05fccaac51a036f361991745a4ef90d8d9ec713d783c88605ea556)
