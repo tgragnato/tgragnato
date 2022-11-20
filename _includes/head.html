@@ -4,5 +4,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="noindex, nofollow, noarchive, notranslate, noimageindex, nosnippet">
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+    <meta name='author' content='{{ site.title | escape }}'>
+    <meta name='keywords' content='{{ site.title | escape }} {% if page.title %}{{ page.title | escape }}{% endif %} {% if page.description %}{{ page.description | escape }}{% endif %}'>
+    {% if page.description %}<meta name='description' content='{{ page.description | escape }}'>{% endif %}
+    {% for address in site.data.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <link rel='preload' href='/style.css' as='style'>
+    <link rel='preload' href='/fonts/GrechenFuemen-Regular.woff2' as='font'>
     <link rel='stylesheet' href='/style.css'>
 </head>
