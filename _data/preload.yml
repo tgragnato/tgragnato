@@ -1,0 +1,6 @@
+
+- href: /style.css
+  as: style
+
+- href: /fonts/GrechenFuemen-Regular.woff2
+  as: font
