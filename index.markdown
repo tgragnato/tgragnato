@@ -4,6 +4,8 @@ layout: default
 
 GitHub: [https://github.com/tgragnato](https://github.com/tgragnato)
 
+LinkedIn: [linkedin.com/in/tommaso-g-50450a22b](linkedin.com/in/tommaso-g-50450a22b)
+
 HN: [https://news.ycombinator.com/threads?id=tg180](https://news.ycombinator.com/threads?id=tg180)
 
 Email: tgragnato「単価記号」icloud
