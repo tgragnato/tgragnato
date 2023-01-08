@@ -15,4 +15,4 @@ exclude:
   - Gemfile.lock
   - CNAME
   - LICENSE
-  - README
+  - README.md
