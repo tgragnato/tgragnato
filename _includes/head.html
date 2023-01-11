@@ -6,6 +6,7 @@
     <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
     <meta name='author' content='{{ site.title | escape }}'>
     <meta name='keywords' content='{{ site.title | escape }} {% if page.title %}{{ page.title | escape }}{% endif %} {% if page.description %}{{ page.description | escape }}{% endif %}'>
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     {% if page.description %}<meta name='description' content='{{ page.description | escape }}'>{% endif %}
     {% for address in site.data.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
     <meta http-equiv="x-dns-prefetch-control" content="on">
