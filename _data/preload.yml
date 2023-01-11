@@ -4,3 +4,15 @@
 
 - href: /fonts/GrechenFuemen-Regular.woff2
   as: font
+
+- href: /fonts/square-github.svg
+  as: image
+
+- href: /fonts/square-hn.svg
+  as: image
+
+- href: /fonts/square-linkedin.svg
+  as: image
+
+- href: /fonts/tor.svg
+  as: image

@@ -2,10 +2,22 @@
 
 $footer-background-color: $scheme-main-bis !default
 $footer-color: false !default
-$footer-padding: 3rem 1.5rem 6rem !default
 
-.footer
+$footer-padding: 1.5rem !default
+$footer-padding-desktop: 3rem !default
+$footer-padding-medium: 9rem !default
+$footer-padding-large: 18rem !default
+
+footer
   background-color: $footer-background-color
   padding: $footer-padding
+  // Responsiveness
+  +desktop
+    padding: $footer-padding-desktop
+    // Sizes
+    &.is-medium
+      padding: $footer-padding-medium
+    &.is-large
+      padding: $footer-padding-large
   @if $footer-color
     color: $footer-color
