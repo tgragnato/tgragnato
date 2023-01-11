@@ -9,7 +9,12 @@
 
 @import 'layout/body';
 @import 'layout/header';
+@import 'layout/footer';
 @import 'layout/section';
+
+@import 'grid/columns';
+@import 'helpers/spacing';
 
 @import 'elements/title';
 @import 'elements/content';
+@import 'elements/image';
