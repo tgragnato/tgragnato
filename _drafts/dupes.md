@@ -1,7 +1,9 @@
-#!/usr/bin/env ruby
-# Copyright © 2017 rmNULL (https://github.com/and-the-rest/dirty-scripts)
-# Copyright © 2017 Tommaso Gragnato <gragnato.tommaso@icloud.com>
+---
+title: dupes
+layout: default
+---
 
+```ruby
 require 'find'
 require 'digest/sha2'
 require 'optparse'
@@ -95,3 +97,4 @@ hashes.each_pair do |hash, paths|
 
   end
 end
+```

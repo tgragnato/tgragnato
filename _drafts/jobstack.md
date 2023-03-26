@@ -1,12 +1,9 @@
-package main
+---
+title: Job stack
+layout: default
+---
 
-import (
-	"fmt"
-	"log"
-	"sync"
-	"time"
-)
-
+```go
 type job string
 type stack struct {
 	sync.Mutex
@@ -79,3 +76,4 @@ func main() {
 	pippo := <-done
 	log.Printf("fine del main %v", pippo)
 }
+```
