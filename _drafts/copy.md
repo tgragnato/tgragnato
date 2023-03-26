@@ -1,3 +1,9 @@
+---
+title: Copy
+layout: default
+---
+
+```c
 #include <sys/types.h>
 #include <fcntl.h>
 #include <stdlib.h>
@@ -30,3 +36,4 @@ int main(int argc, char *argv[]) {
   if (byte_letti == 0) exit(0);
   else exit(5);
 }
+```

@@ -1,3 +1,7 @@
+---
+title: Quotes
+layout: default
+---
 
 We can lick gravity but sometimes the paperwork is overwhelming.
 
