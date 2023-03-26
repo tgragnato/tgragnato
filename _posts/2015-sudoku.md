@@ -1,0 +1,166 @@
+# Copyright © 2015 Tommaso Gragnato <gragnato.tommaso@icloud.com>
+
+# Allow: oggetto che maniene i valori ammissibili di ogni cella
+# N: dimensione di una sottomatrice
+class @Allow
+  constructor: (@N) ->
+    array: new Array(N * N)
+    i = N * N
+    while (i--)
+      array[i] = true
+    return this
+
+  # length: numero di valori ammissibili
+  length: () ->
+    i = N * N
+    counter = 0
+    while (i--)
+      counter++ if array[i] is true
+    return counter
+
+  # minus: se viene aggiunto un numero lo tolgo dagli ammissibili
+  minus: (num) ->
+    num--;
+    if(num > -1 && num < N * N && array[num])
+      array[num] = false
+      return yes
+    else
+      return no
+
+# SudokuLogic: oggetto che memorizza e crea la griglia di gioco
+# N: dimensione di una sottomatrice
+# lev: livello (facile 1, medio 2, difficile 3)
+class @SudokuLogic
+  constructor: (@N, @lev) ->
+    grid: new Array(N * N * N * N) #(NxN)^2 caselle del sudoku
+    NPERM = N * 14 # numero di permutazioni
+
+    # Da "http://en.wikipedia.org/wiki/Sudoku_solving_algorithms"
+    #
+    # Le griglie vuote possono essere risolte molto rapidamente.
+    #
+    # final int n = 3;
+    # final int[][] field = new int[n*n][n*n];
+    #     for (int i = 0; i < n*n; i++)
+    #         for (int j = 0; j < n*n; j++)
+    #             field[i][j] = (i*n + i/n + j) % (n*n) + 1;
+    #
+    # Producendo il seguente Sudoku 9x9:
+    # +-----------------------+
+    # | 1 2 3 | 4 5 6 | 7 8 9 |
+    # | 4 5 6 | 7 8 9 | 1 2 3 |
+    # | 7 8 9 | 1 2 3 | 4 5 6 |
+    # |-------+-------+-------|
+    # | 2 3 4 | 5 6 7 | 8 9 1 |
+    # | 5 6 7 | 8 9 1 | 2 3 4 |
+    # | 8 9 1 | 2 3 4 | 5 6 7 |
+    # |-------+-------+-------|
+    # | 3 4 5 | 6 7 8 | 9 1 2 |
+    # | 6 7 8 | 9 1 2 | 3 4 5 |
+    # | 9 1 2 | 3 4 5 | 6 7 8 |
+    # +-----------------------+
+    for row in [0 .. N * N]
+      for col in [0 .. N * N]
+        grid[row * N * N + col] = (row * N + Math.floor(row / N) + col) % (N * N) + 1
+
+    # Per generare un sudoku casuale effettuo NPERM permutazioni
+    # scambio tra loro coppie di numeri ( p1 e p2 )
+    for i in [0 .. NPERM]
+      p1 = Math.ceil(Math.random() * N * N)
+      while yes
+        p2 = Math.ceil(Math.random() * N * N)
+        break unless p1 is p2
+      for row in [0 .. N * N]
+        for col in [0 .. N * N]
+          if grid[row * N * N + col] is p1
+            grid[row * N * N + col] = p2
+          else if grid[row * N * N + col] is p2
+            grid[row * N * N + col] = p1
+
+    # scambio tra loro coppie di colonne con uguale indice in sottomatrici NxN
+    # nb: non posso effettuare permutazioni casuali tra righe con uguale
+    # indice in sottomatrici NxN poiche' avendo gia' permutato le colonne
+    # dovrei valutare ad ogni scambio i vincoli posti dalle regole
+    # su ciascuna sottomatrice... Non mi pare il caso
+    for i in [0 .. NPERM]
+      p1 = Math.floor(Math.random() * N)
+      p2 = Math.floor(Math.random() * N)
+      for row in [0 .. N * N]
+        # scambio la (i % N)-esima colonna tra p1 e p2
+        tmp = grid[row * N * N + (p1 * N + i % N)]
+        grid[row * N * N + (p1 * N + i % N)] = grid[row * N * N + (p2 * N + i % N)]
+        grid[row * N * N + (p2 * N + i % N)] = tmp
+
+    # scambio coppie di colonne all'interno di ciascuna sottomatrice NxN
+    for i in [0 .. NPERM]
+      # scelgo le due colonne p1 e p2 (N col. per sottomatrice)
+      p1 = Math.floor(Math.random() * N)
+      p2 = Math.floor(Math.random() * N)
+      for row in [0 .. N * N]
+        tmp = grid[row * N * N + (i % N * N + p1)]
+        grid[row * N * N + (i % N * N + p1)] = grid[row * N * N + (i % N * N + p2)]
+        grid[row * N * N + (i % N * N + p2)] = tmp
+
+    # scambio coppie di righe all'interno di ciascuna sottomatrice NxN
+    for i in [0 .. NPERM]
+      # scelgo le due righe p1 e p2 (N righe per sottomatrice)
+      p1 = Math.floor(Math.random() * N)
+      p2 = Math.floor(Math.random() * N)
+      for col in [0 .. N * N]
+        tmp = grid[(i % N * N + p1) * N * N + col]
+        grid[(i % N * N + p1) * N * N + col] = grid[(i % N * N + p2) * N * N + col]
+        grid[(i % N * N + p2) * N * N + col] = tmp
+
+    lgrid: grid.slice 0 # griglia con n° givens (in base al livello e alla dimensione)
+
+    # All'aumentare della dimensione della griglia la generazione del livello
+    # va in un loop infinito e non riesce a rimuovere numeri.
+    # Il numero di givens percentuali necessari alla risoluzione deve crescere
+    # all'aumentare della dimensione.
+    # Il fattore correttivo è testato sino a N = 5
+    givens = (lev < 2) ? 6 : (lev > 2) ? 2 : 3
+    givens = Math.floor(N * N * N * N / givens)
+    givens = Math.floor(givens * 2 / 3) if N > 3
+
+    # Garantisco l'unicita' della soluzione del Sudoku
+    # garantendo che per ogni passo, la cella che vado ad
+    # eliminare ammetta un unico valore in base a quelle date
+    while yes
+
+      # scelgo una cella che non sia gia' stata eliminata
+      while yes
+        cell = Math.floor(Math.random() * N * N * N * N)
+        break unless easy[cell] instanceof Allow
+
+      # sostituisco il valore numerico con l'oggetto Allow
+      lgrid[cell] = new Allow N
+
+      # calcolo le coordinate su una ipotetica griglia bidimensionale
+      row = Math.floor(cell / (N * N))
+      col = cell % (N * N)
+
+      # Elimino dai valori possibili quelli determinati nella
+      for k in [0 .. N * N]
+        # 1: verticale
+        val = lgrid[row * N * N + k] instanceof Allow ? -1 : lgrid[row * N * N + k]
+        lgrid[cell].minus val
+        # 2: orizzontale
+        val = lgrid[k * N * N + col] instanceof Allow ? -1 : lgrid[k * N * N + col]
+        lgrid[cell].minus val
+        # 3: sottomatrice
+        sr = Math.floor(row / N) + Math.floor(k / N)
+        sc = Math.floor(col / N) + (k % N)
+        val = lgrid[sr * N * N + sc] instanceof Allow ? -1 : lgrid[sr * N * N + sc]
+        lgrid[cell].minus val
+
+      # ripristino il valore se ho piu' di una soluzione
+      lgrid[cell] = grid[cell] unless lgrid[cell].length is 1
+      break unless lgrid[cell].length isnt 1
+
+    return this
+
+  getComplete: () ->
+    return grid.slice 0
+
+  getUncomplete: () ->
+    return lgrid.slice 0
