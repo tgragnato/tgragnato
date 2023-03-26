@@ -1,6 +1,9 @@
-#!/usr/bin/env ruby
-# Copyright © 2017 Tommaso Gragnato <gragnato.tommaso@icloud.com>
+---
+title: Portchk
+layout: default
+---
 
+```ruby
 require 'socket'
 require 'timeout'
 
@@ -23,3 +26,4 @@ begin
 rescue Timeout::Error
   puts "connect(#{where}, #{port}) failed"
 end
+```
