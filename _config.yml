@@ -1,6 +1,9 @@
 url: "https://tgragnato.it"
 title: Tommaso Gragnato
 
+markdown: kramdown
+highlighter: rouge
+
 plugins:
   - jekyll-sitemap
 
