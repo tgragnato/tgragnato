@@ -42,7 +42,7 @@ Social networks analysis theoretically requires the deployment of a GraphDB, but
 DPI makes possible to analyse the structure of communications beyond packet headers: the content is inspected to detect the identifying portions of the payload.
 And modern internet protocols are very leaky: it's possible to extract a huge number of informations even when the content of the communications is encrypted.
 
-![SORM](/images/2018-07-13-SORM.png)
+![SORM](/images/2018-07-13-SORM.png){:loading="lazy"}
 
 Quite every activity on the internet begins with a DNS request, which is by default a cleartext protocol. DNS encryption began gaining traction only recently, but due to the limited support of the endpoints, its use is not widespread or still experimental.
 Examples are DNS over TLS, DoH and DNSCrypt.
@@ -64,7 +64,7 @@ All these data can be extracted, stored and analysed with instruments such as Ex
 
 Routers routinely stores information about our communications: NetFlow is a feature that was introduced by Cisco and collects the source, destination and the type of the traffic that enters or exits an interface; many vendors promptly started providing similar network flow monitoring technologies.
 
-![Netflow](/images/2018-07-13-Netflow.png)
+![Netflow](/images/2018-07-13-Netflow.png){:loading="lazy"}
 
 Mobile devices can be tracked as they move through Wi-Fi-rich environments through their MAC address. Randomising the address means replacing that uniquely identifier with randomly generated values, but the feature is loosely implemented by manufacturers.
 
@@ -81,7 +81,7 @@ Metadata extraction can be additionally augmented by machine learning using patt
 The processing of complex and heterogeneous information makes this type of analysis not generally possible in real time.
 An example of a system of this kind is Skynet. The leaked presentations make easy to assume sources and methods: state level actors are actively engaging in tracking foreigners with SS7 probes, and Harvard suggested the usage of a variant of the random decision forest algorithm.
 
-![Pattern of Life](/images/2018-07-13-Pattern-Of-Life.png)
+![Pattern of Life](/images/2018-07-13-Pattern-Of-Life.png){:loading="lazy"}
 
 The random forest is a method for classification and regression that correct for possible overfitting to the training set. Indeed, a vast amount of pattern of life analysis can be modelled upon two distinct class of problems:
 
@@ -94,14 +94,14 @@ A series of highly correlated selectors identify a session, which is a stream of
 Traffic and timing correlation attacks are able to extract information from VPNs and most low-latency mix networks.
 The issue can be mitigated with the adoption of link padding or covert traffic, by an appropriate decoupling of the data-streams of each single user, with steganography, and by randomising the inter-arrival time of the packets.
 
-![inter-arrival time](/images/2018-07-13-Inter-Arrival-Time.png)
+![inter-arrival time](/images/2018-07-13-Inter-Arrival-Time.png){:loading="lazy"}
 
 ### Aiding exploitation
 
 VPNs were developed to allow remote users to securely access trusted networks from untrusted networks; to provide a virtual layer of confidentiality, data integrity and authentication; not to provide endpoint security, but considering the paths that are traversed by the exit traffic is rarely done.
 The possibility of an AS-level adversary is not unrealistic, and these attackers have the ability to monitor a portion of Internet traffic. What is in the toolkit arsenal of an opponent positioned at the level of an IX?
 
-![make data happen](/images/2018-07-13-Make-Data-Happen.png)
+![make data happen](/images/2018-07-13-Make-Data-Happen.png){:loading="lazy"}
 
 An adversary that is able to secure a privileged position at an IX is able to reuse the traffic analysis systems that are already available for peering QoS and traffic filtering/shaping, “hijacking” them for building selectors. Once a session is identified by a strong selector, an exploit can be “shoot”.
 A targeted attack has a high level of accuracy, is more stealth of an exploit chain with lateral movements, is more likely to bypass IDS/IPS and is more difficult to be detected by the SIEMs.
@@ -115,7 +115,7 @@ Targeted DNS rebinding attacks are extremely useful because enterprises consider
 2. IP addresses can be spoofed at the IX/AS-level, making the attacks not directly attributable.
 3. Any kind of unencrypted traffic (or traffic encrypted in the wrong way) may be the subject of a MITM or MOTS attack.
 
-![Golden Shield](/images/2018-07-13-Golden-Shield.png)
+![Golden Shield](/images/2018-07-13-Golden-Shield.png){:loading="lazy"}
 
 ### Hacking the backbone
 
@@ -135,7 +135,7 @@ In April Route53 DNS servers were hijacked with the intent to steal cryptocurren
 
 This week Bitcanal, a firm long accused of helping spammers hijack large swaths of dormant Internet address space, was summarily kicked off the Internet after a half-dozen of the company’s bandwidth providers chose to sever ties with the company.
 
-![Bitcanal](/images/2018-07-13-Bitcanal.png)
+![Bitcanal](/images/2018-07-13-Bitcanal.png){:loading="lazy"}
 
 If IP-based transmission are not hardened, then one might think that access to the telephone network is more carefully guarded.
 
@@ -199,7 +199,7 @@ to something more advanced such as
 
 In order to illustrate how obfuscation can be applied or not I am going to introduce a partial reverse engineering of two malware implants: the first has been extracted from a botnet that tried to scan for vulnerabilities some of my servers, the second is sift; they’re vastly different in complexity but both targets Linux x86_64 systems and as such are meaningfully comparable.
 
-![2pn4yRMh8T1G.so](/images/2018-07-13-2pn4yRMh8T1G.png)
+![2pn4yRMh8T1G.so](/images/2018-07-13-2pn4yRMh8T1G.png){:loading="lazy"}
 
 This is the result of the automatic decompilation of *e29afce3afe992b57c7b03660d4ec5fcdcf2b694f580d221121d9cd9e04e15d5* `2pn4yRMh8T1G.so` (with virtual addressing and symbol demangling).
 
@@ -207,7 +207,7 @@ The names of the functions are clearly visible and give an exact indication of w
 There are many versions of this same implant, despite the reverse engineering being trivial on them all detection amongst av-engines varies greatly, as is shown by the VirusTotal results.
 etp.db is an encrypted sqlite database, and is the only thing that the attackers protected.
 
-![sift-linux](/images/2018-07-13-sift_-linux-x86_64.png)
+![sift-linux](/images/2018-07-13-sift_-linux-x86_64.png){:loading="lazy"}
 
 This is the most meaningful result that radare2 is able to give for *45a2b42847fe717dbb29bde5d99729db3bbe57b4d03a43d0d582d6ec31489fd4* `sift_-linux-x86_64_v.2.1.0.0` without incurring in a deadlock.
 
@@ -237,11 +237,11 @@ Many service providers have ToS that do not allow the service to be used in part
 
 When a network is air-gapped the exfiltration is usually performed exploiting the weakest point in the architectural organisation of the local network.
 
-![USBStealer](/images/2018-07-13-USBStealer.png)
+![USBStealer](/images/2018-07-13-USBStealer.png){:loading="lazy"}
 
 In most systems you need to exchange data, and the usage of a physical medium to move data between the trusted host and the untrusted host is usually reasonable and common practice. The physical medium can be compromised and infected so that it can be used to carry both the intended and the malware data, this is known as bridging the air-gap.
 
-![Tempest](/images/2018-07-13-Tempest.png)
+![Tempest](/images/2018-07-13-Tempest.png){:loading="lazy"}
 
 When an organisation adapt its internal workflow over a unidirectional network with data flowing from the untrusted network to the trusted network, it’s imperative for exfiltration to jump the air-gap. This can be done with side and covert channels: power fluctuations, em and acoustic emanations, mechanical vibrations, or hardware implants delivered by compromising the supply chain of the targeted organisation.
 
@@ -334,7 +334,7 @@ One of the latest approaches is security by isolation, in which the key concept 
 
 In security by isolation the idea is to make a system trustworthy by breaking it into smaller isolated pieces that make the software inside them untrusted (so that if it gets compromised or malfunctions, then it cannot affect the other entities in the system), granting the security of the system through a minimisation of the attack surface of the software that performs the operations of isolations between the various security domains.
 
-![Isolation](/images/2018-07-13-Isolation.png)
+![Isolation](/images/2018-07-13-Isolation.png){:loading="lazy"}
 
 The security by isolation approach turned out to be very tricky to implement. The three main problems to solve are:
 
@@ -349,7 +349,7 @@ However sophisticated attackers continuously apply newer methods to break the pe
 
 Traffic analysis can be used to perform passive reconnaissance, to aid exploitation and to provide analysts useful elements to understand how to circumvent the mechanisms of security domains.
 
-![VFSWrite](/images/2018-07-13-VFSWrite.png)
+![VFSWrite](/images/2018-07-13-VFSWrite.png){:loading="lazy"}
 
 A simple bug in any of the kernel components (think to the hundreds of third party drivers with thousands or millions of LOC) allows to bypass each and every one of the isolation mechanisms provided by the kernel to the rest of the system.
 Process separation, carefully planned ACLs, etc can be silently bypassed escalating to negative protection rings.

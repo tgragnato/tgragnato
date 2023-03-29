@@ -11,21 +11,21 @@ Remote attackers can execute arbitrary code and gain full control over the devic
 
 ## Implants
 
-![automatic decompilation](/images/2018-07-01-automatic-decompilation.png)
+![automatic decompilation](/images/2018-07-01-automatic-decompilation.png){:loading="lazy"}
 
 The automatic decompilation of the implants is trivial.
 
-![implant.c](/images/2018-07-01-implant.png)
+![implant.c](/images/2018-07-01-implant.png){:loading="lazy"}
 
 The names of the functions are clearly visible and give an exact indication of what the implant does,
 the IP of the C&C is directly exposed, the download of the secondary stage was not protected.
 
-![IP of the C&C](/images/2018-07-01-C2-IP.png)
+![IP of the C&C](/images/2018-07-01-C2-IP.png){:loading="lazy"}
 
 Despite the reverse engineering being trivial on them all detection amongst av-engines varies greatly,
 as is shown by the VirusTotal results.
 
-![VirusTotal results](/images/2018-07-01-VirusTotal.png)
+![VirusTotal results](/images/2018-07-01-VirusTotal.png){:loading="lazy"}
 
 etp.db is an encrypted sqlite database, and is the only thing that the attackers protected.
 
