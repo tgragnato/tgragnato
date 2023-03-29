@@ -89,9 +89,9 @@ But even once one has all the data, there are foibles to it, which need to be co
 
 In macOS 13 the binary is amusingly still there, even on Apple Silicon. (the build system may not be as sophisticated as one could naively think)
 
-![eficheck-standalone decompilation](/images/2017-03-23-Decompilation.png)
+![eficheck-standalone decompilation](/images/2017-03-23-Decompilation.png){:loading="lazy"}
 
 The firmware check is now done in a much more robust way, during the bootstrap process.
 The root of trust is delegated to the verification of the Secure Enclave Boot ROM signatures.
 
-[![Apple Silicon Bootstrap](/images/2017-03-23-AppleSilicon-Boot.png)](https://support.apple.com/guide/security/boot-process-secac71d5623/web)
+[![Apple Silicon Bootstrap](/images/2017-03-23-AppleSilicon-Boot.png)](https://support.apple.com/guide/security/boot-process-secac71d5623/web){:loading="lazy"}
