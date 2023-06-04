@@ -1,12 +1,8 @@
 ---
-title: Микро Миниатюра
-description: Транзисторные Усилители
+title: Микро Миниатюра / Micro Miniatura
+description: Транзисторные Усилители / Amplificatori e Transistor
 layout: default
 ---
-
-[
-    ![2023-03-12-Micro-Miniature](/images/2023-03-12-Micro-Miniature.png)
-](/documents/2023-03-12-Micro-Miniature.pdf)
 
 Во время эпохи Советского Союза технология транзисторов и усилителей находилась в активной стадии развития.
 
@@ -16,7 +12,7 @@ layout: default
 
 Однако из-за изоляции Советского Союза от международного рынка распространение инноваций в области технологии транзисторов и доступ к последним открытиям часто ограничивались. Многие разработки и исследования оставались в военной или промышленной сфере, и лишь немногая информация доходила до широкой публики.
 
-### Italiano
+---
 
 Durante l'era dell'Unione Sovietica, la tecnologia dei transistor e degli amplificatori era in pieno sviluppo.
 
@@ -25,3 +21,9 @@ Negli anni '50 e '60, l'Unione Sovietica ha fatto importanti progressi nella ric
 Nel corso degli anni, i transistor sovietici sono diventati sempre più affidabili, compatti e potenti. Sono stati utilizzati in una vasta gamma di applicazioni, compresi dispositivi di comunicazione, sistemi di controllo, calcolatori e apparati di misura scientifica. L'industria elettronica sovietica ha raggiunto importanti traguardi nella produzione di transistor ad alta frequenza, a basso rumore e ad alta potenza.
 
 Tuttavia, a causa dell'isolamento dell'Unione Sovietica dal mercato internazionale, la diffusione delle innovazioni nella tecnologia dei transistor e l'accesso alle ultime scoperte erano spesso limitati. Molti sviluppi e ricerche rimanevano confinati nell'ambito militare o nell'industria, e solo poche informazioni raggiungevano il pubblico in generale.
+
+---
+
+[
+    ![2023-03-12-Micro-Miniature](/images/2023-03-12-Micro-Miniature.png){:loading="lazy"}
+](/documents/2023-03-12-Micro-Miniature.pdf)
