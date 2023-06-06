@@ -2,6 +2,7 @@
 title: Fondamenti SEO con Cloudflare
 description: Una guida completa su come Cloudflare può migliorare la SEO del tuo sito web
 layout: default
+lang: it
 ---
 
 L'obiettivo della SEO è posizionare le pagine il più in alto possibile nella SERP, il che alla fine porta più traffico al sito web.
