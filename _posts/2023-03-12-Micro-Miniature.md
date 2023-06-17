@@ -26,5 +26,5 @@ Tuttavia, a causa dell'isolamento dell'Unione Sovietica dal mercato internaziona
 ---
 
 [
-    ![2023-03-12-Micro-Miniature](/images/2023-03-12-Micro-Miniature.png){:loading="lazy"}
+    ![2023-03-12-Micro-Miniature](/images/2023-03-12-Micro-Miniature.webp){:loading="lazy"}
 ](/documents/2023-03-12-Micro-Miniature.pdf)
