@@ -9,8 +9,8 @@ L'obiettivo della SEO è posizionare le pagine il più in alto possibile nella S
 
 Tra i vari fattori che influenzano il posizionamento nei motori di ricerca ci sono: qualità e dinamismo dei contenuti, struttura della pagina, numero di link in inbound/outbound, UX (attraverso i core web vitals), ...
 
-![2023-06-04-Introduction](/images/2023-06-04-Introduction.png){:loading="lazy"}
-![2023-06-04-Estimated-Traffic](/images/2023-06-04-Estimated-Traffic.png){:loading="lazy"}
+![2023-06-04-Introduction](/images/2023-06-04-Introduction.webp){:loading="lazy"}
+![2023-06-04-Estimated-Traffic](/images/2023-06-04-Estimated-Traffic.webp){:loading="lazy"}
 
 ## Verifica del corretto setup dei redirect
 
