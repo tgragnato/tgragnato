@@ -3,4 +3,6 @@
 
 User-agent: *
 Allow: /
+Disallow: /samples/
+Disallow: /cdn-cgi/
 Sitemap: {{ site.url }}/sitemap.xml
