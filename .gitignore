@@ -1,0 +1,13 @@
+*.o
+*.a
+
+/.vscode/
+
+/test32
+/test64
+/testst
+
+/examples/reduce
+/examples/squidgrep
+
+/ebmbtreebench/ebmbtreebench
