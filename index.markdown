@@ -36,13 +36,17 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 
 [`tgragnato` - A ✨special✨ repository dedicated to my profile README and my Jekyll website](https://github.com/tgragnato/tgragnato)
 
+[`ebmbtreebench` - A naive measurement tool for ebmb trees](https://github.com/tgragnato/ebmbtreebench)
+
+[`magnetico` - An updated version of the famous "Autonomous (self-hosted) BitTorrent DHT search engine suite"](https://github.com/tgragnato/magnetico)
+
 [`snowflake` - Pluggable Transport using WebRTC, inspired by Flashproxy. A custom fork with mine opinionated patches](https://github.com/tgragnato/snowflake)
 
 [`amule` - An aMule fork. Personal companion of tgragnato/homebre-amule](https://github.com/tgragnato/amule)
 
 [`homebrew-amule` - A custom homebrew tap for aMule](https://github.com/tgragnato/homebrew-amule)
 
-[`proxy` - Extremely simple and custom SNI proxy for OpenBSD](https://github.com/tgragnato/proxy)
+[`pure` - A collection of software and tools that I use to manage my network and my storage ](https://github.com/tgragnato/pure)
 
 [`pilsung` - 북쪽 필성。 붉은별 사용자용체계。 pilsung 암호화 알고리즘](https://github.com/tgragnato/pilsung)
 
