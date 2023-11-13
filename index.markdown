@@ -6,9 +6,12 @@ description: >
 
     Hi there 👋 I'm Tommaso <br><br>
 
-    - 🔭 I’m currently working with PHP and Go <br>
-    - 🌱 I’m currently learning Ruby and Javascript <br>
-    - 💬 Ask me about anything that has to do with networking
+    - 🔧 I am a backend developer currently engaged in platform engineering roles <br>
+    - 💼 I strive to leverage my knowledge and expertise to create and manage robust and scalable infrastructures <br>
+    - 🚀 My focus is on security, containerization and orchestration, monitoring and logging <br>
+    - 🔭 I am presently involved in projects that involve working with Go and/or PHP <br>
+    - 🌱 I am actively engaged in expanding my skill set by delving into the realms of Ruby and Javascript <br>
+    - 💬 I'm always eager to engage in discussions and share my knowledge about networking and censorship circumvention
 
 ---
 
@@ -57,3 +60,13 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 [`socialhub` - GraphQLHub demo](https://github.com/tgragnato/socialhub)
 
 [`owncloud-convert` - Converts videos stored in Owncloud at the click of a button](https://github.com/tgragnato/owncloud-convert)
+
+---
+
+## Quotes
+
+> Humans are allergic to change. They love to say, "We've always done it this way." I try to fight that. `Grace Murray Hopper`
+
+> We can lick gravity but sometimes the paperwork is overwhelming. `Wernher Magnus Maximillian Frieier Von Braun`
+
+> It’s often easier to ask forgiveness than to ask for permission. `Grace Murray Hopper`
