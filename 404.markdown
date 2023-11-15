@@ -1,17 +1,43 @@
 ---
 layout: default
+title: The page you’re looking for can’t be found.
+description: Sorry! Error 404
 ---
 
-Email: tgragnato「単価記号」icloud
+# Oops! Page Not Found
 
-PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
+It seems you've followed an invalid link or the page you were looking for has been moved.
 
-[https://keys.openpgp.org/vks/v1/by-fingerprint/A283C77FBE2B15D87EF416E9B7E4732B4DE74631](https://keys.openpgp.org/vks/v1/by-fingerprint/A283C77FBE2B15D87EF416E9B7E4732B4DE74631)
+Go back to the ***[Home Page](/)*** to check out the latest articles.
 
-[https://gitlab.torproject.org/tgragnato.gpg](https://gitlab.torproject.org/tgragnato.gpg) - [http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/tgragnato.gpg](http://eweiibe6tdjsdprb4px6rqrzzcsi22m4koia44kc5pcjr7nec2rlxyad.onion/tgragnato.gpg)
+If you think this is an error, please contact me.
 
 ---
 
-{% for post in site.posts %}
-[{% if post.date %}{{ post.date | date: "%d-%m-%Y" }} - {% endif %} {{ post.title }}{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
-{% endfor %}
+# Oops! Pagina non trovata
+
+Sembra che tu abbia seguito un link non valido o che la pagina che stavi cercando sia stata spostata.
+
+Torna alla ***[pagina iniziale](/)*** per controllare gli ultimi articoli.
+
+Se pensi che si tratti di un errore, per favore contattami.
+
+---
+
+# あれっ！ページが見つかりません
+
+おっと、無効なリンクをたどったか、お探しのページが移動されたようです。
+
+***[ホームページに戻る](/)***して最新の記事を確認してください。
+
+もしエラーだと思われる場合は、お手数ですがご連絡ください。
+
+---
+
+# Ой! Страница не найдена
+
+Похоже, вы перешли по недействительной ссылке или страница, которую вы искали, была перемещена.
+
+Вернитесь на ***[Главную страницу](/)*** и проверьте последние статьи.
+
+Если вы считаете, что это ошибка, пожалуйста, свяжитесь со мной.
