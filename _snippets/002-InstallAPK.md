@@ -1,6 +1,5 @@
 ---
 title: InstallAPK
-layout: default
 ---
 
 ```java

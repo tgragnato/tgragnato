@@ -32,6 +32,11 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 {% for post in site.posts %}
 [{% if post.date %}{{ post.date | date: "%d-%m-%Y" }} - {% endif %} `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
 {% endfor %}
+{% for page in site.html_pages %}
+{% if page.url != '/404.html' and page.url != '/' %}
+[日付不明 - `{{ page.title }}`{% if page.index_description %} - {{ page.index_description }}{% elsif page.description %} - {{ page.description }}{% endif %}]({{ page.url }})
+{% endif %}
+{% endfor %}
 
 ---
 

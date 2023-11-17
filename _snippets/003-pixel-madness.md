@@ -1,6 +1,5 @@
 ---
 title: Pixel madness
-layout: default
 ---
 
 ```
