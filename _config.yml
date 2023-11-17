@@ -19,3 +19,7 @@ exclude:
   - CNAME
   - LICENSE
   - README.md
+
+collections:
+  snippets:
+    output: false

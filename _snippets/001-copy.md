@@ -1,6 +1,5 @@
 ---
 title: Copy
-layout: default
 ---
 
 ```c

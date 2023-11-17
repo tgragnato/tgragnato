@@ -1,6 +1,5 @@
 ---
-title: dupes
-layout: default
+title: Dupes
 ---
 
 ```ruby

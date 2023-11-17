@@ -1,6 +1,5 @@
 ---
 title: Portchk
-layout: default
 ---
 
 ```ruby
