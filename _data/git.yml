@@ -1,0 +1,48 @@
+
+- title: tgragnato
+  text: A ✨special✨ repository dedicated to my profile README and my Jekyll website
+  href: https://github.com/tgragnato/tgragnato
+
+- title: ebmbtreebench
+  text: A naive measurement tool for ebmb trees
+  href: https://github.com/tgragnato/ebmbtreebench
+
+- title: magnetico
+  text: An updated version of the famous "Autonomous (self-hosted) BitTorrent DHT search engine suite"
+  href: https://github.com/tgragnato/magnetico
+
+- title: snowflake
+  text: Pluggable Transport using WebRTC, inspired by Flashproxy. A custom fork with mine opinionated patches
+  href: https://github.com/tgragnato/snowflake
+
+- title: amule
+  text: An aMule fork. Personal companion of tgragnato/homebre-amule
+  href: https://github.com/tgragnato/amule
+
+- title: homebrew-amule
+  text: A custom homebrew tap for aMule
+  href: https://github.com/tgragnato/homebrew-amule
+
+- title: pure
+  text: A collection of software and tools that I use to manage my network and my storage
+  href: https://github.com/tgragnato/pure
+
+- title: pilsung
+  text: 북쪽 필성。 붉은별 사용자용체계。 pilsung 암호화 알고리즘
+  href: https://github.com/tgragnato/pilsung
+
+- title: dns323-toolchain
+  text: D-Link DNS-323 cross compilation toolchain
+  href: https://github.com/tgragnato/dns323-toolchain
+
+- title: migration
+  text: Simple tool that mirrors Paradox database as SQLite at runtime. Tuned for Mosaico Sorgente Aperto.
+  href: https://github.com/tgragnato/migration
+
+- title: socialhub
+  text: GraphQLHub demo
+  href: https://github.com/tgragnato/socialhub
+
+- title: owncloud-convert
+  text: Converts videos stored in Owncloud at the click of a button
+  href: https://github.com/tgragnato/owncloud-convert
