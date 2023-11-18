@@ -1,4 +1,24 @@
 <footer>
+    <div>
+        {% if page.url != '/' %}
+        {% for page in site.html_pages %}
+        {% if page.url != '/404.html' %}
+        <p>
+            <a href="{{ page.url }}">日付不明 - <code class="language-plaintext highlighter-rouge">{{ page.title }}</code>{% if page.index_description %} - {{ page.index_description }}{% elsif page.description %} - {{ page.description }}{% endif %}</a>
+        </p>
+        {% endif %}
+        {% endfor %}
+        {% for post in site.posts %}
+        {% if post.url != page.url %}
+        <p>
+            <a href="{{ post.url }}">{{ post.date | date: "%d-%m-%Y" }} - <code class="language-plaintext highlighter-rouge">{{ post.title }}</code>{% if post.description %} - {{ post.description }}{% endif %}</a>
+        </p>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <hr>
+    </div>
+
     <div class="columns is-mobile">
 
         <div class="column">
