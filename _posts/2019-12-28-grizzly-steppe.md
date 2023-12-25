@@ -52,7 +52,7 @@ It uses TLS, but is able to fallback on unencrypted channels.
 
 [4845761c9bed0563d0aa83613311191e075a9b58861e80392914d61a21bad976](/samples/4845761c9bed0563d0aa83613311191e075a9b58861e80392914d61a21bad976)
 
-Implant: [40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f](40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f)
+Implant: [40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f](/samples/40ae43b7d6c413becc92b07076fa128b875c8dbb4da7c036639eccf5a9fc784f)
 
 ### Go
 
@@ -68,9 +68,7 @@ The group uses multiple languages to create their trojans, probably to impair de
 Cannon is a trojan that uses email protocols for reconnaissance communications.
 It can download and execute a payload.
 
-Trojan: [aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801](/samples/aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801)
-
-Implant: [aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801](aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801)
+[aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801](/samples/aeaca9985b50ebe1db0fcda9b3fbf02275d17737b748963b63c14da3e988d801)
 
 ### Various Implants
 
