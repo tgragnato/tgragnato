@@ -3,10 +3,6 @@
   text: A ✨special✨ repository dedicated to my profile README and my Jekyll website
   href: https://github.com/tgragnato/tgragnato
 
-- title: ebmbtreebench
-  text: A naive measurement tool for ebmb trees
-  href: https://github.com/tgragnato/ebmbtreebench
-
 - title: magnetico
   text: An updated version of the famous "Autonomous (self-hosted) BitTorrent DHT search engine suite"
   href: https://github.com/tgragnato/magnetico
