@@ -78,7 +78,7 @@ int main(int argc, char **argv) {
 
 > plot '100000.csv' using 1:2 with linespoints title 'insertion time', '100000.csv' using 1:3 with linespoints title 'listing time', '100000.csv' using 1:4 with linespoints title 'lookup time'
 
-![100k lookups](/images/2023-09-20-100000.png){:loading="lazy"}
+![100k lookups](/images/2023-09-20-100000.webp){:loading="lazy"}
 
 ```
 1, 0.000004, 0.000001, 0.009432
@@ -97,7 +97,7 @@ int main(int argc, char **argv) {
 
 > plot '1000000.csv' using 1:2 with linespoints title 'insertion time', '1000000.csv' using 1:3 with linespoints title 'listing time', '1000000.csv' using 1:4 with linespoints title 'lookup time'
 
-![1m lookups](/images/2023-09-20-1000000.png){:loading="lazy"}
+![1m lookups](/images/2023-09-20-1000000.webp){:loading="lazy"}
 
 ```
 1, 0.000004, 0.000000, 0.096662
@@ -116,7 +116,7 @@ int main(int argc, char **argv) {
 
 > plot '1000000.csv' using 1:2 with linespoints title 'insertion time', '1000000.csv' using 1:3 with linespoints title 'listing time', '1000000.csv' using 1:4 with linespoints title 'lookup time'
 
-![10m lookups](/images/2023-09-20-10000000.png){:loading="lazy"}
+![10m lookups](/images/2023-09-20-10000000.webp){:loading="lazy"}
 
 ```
 1, 0.000005, 0.000000, 0.999802
