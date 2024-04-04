@@ -10,6 +10,7 @@ plugins:
 exclude:
   - _site
   - .sass-cache
+  - .github
   - .jekyll-cache
   - .jekyll-metadata
   - vendor/
