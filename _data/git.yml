@@ -12,7 +12,7 @@
   href: https://github.com/tgragnato/snowflake
 
 - title: amule
-  text: An aMule fork. Personal companion of tgragnato/homebre-amule
+  text: An aMule fork. Personal companion of tgragnato/homebrew-amule
   href: https://github.com/tgragnato/amule
 
 - title: homebrew-amule
@@ -22,6 +22,10 @@
 - title: pure
   text: A collection of software and tools that I use to manage my network and my storage
   href: https://github.com/tgragnato/pure
+
+- title: vaban
+  text: Simple and Really Fast Varnish Cache Cluster Manager (for Varnish 6.x/7.x)
+  href: https://github.com/tgragnato/vaban
 
 - title: pilsung
   text: 북쪽 필성。 붉은별 사용자용체계。 pilsung 암호화 알고리즘
