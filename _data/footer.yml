@@ -1,0 +1,20 @@
+
+- href: https://github.com/tgragnato
+  src: /fonts/square-github.svg
+  alt: GitHub
+
+- href: https://linkedin.com/in/tommaso-g-50450a22b
+  src: /fonts/square-linkedin.svg
+  alt: LinkedIn
+
+- href: https://news.ycombinator.com/user?id=tgragnato
+  src: /fonts/square-hn.svg
+  alt: Hacker News
+
+- href: https://gitlab.torproject.org/tgragnato
+  src: /fonts/tor.svg
+  alt: Tor Project
+
+- href: https://signal.me/#eu/iN-evzfy1ywTQ4WRFeumNrXHYS90EdCWyu_3MT8AzGf46ktEL0RC-ZJnbaow6UD4
+  src: /fonts/square-signal.svg
+  alt: Signal

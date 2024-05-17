@@ -20,30 +20,12 @@
     </div>
 
     <div class="columns is-mobile">
-
+        {% for footer in site.data.footer %}
         <div class="column">
-            <a href="https://github.com/tgragnato">
-                <img class="image is-32x32 m-auto" src="/fonts/square-github.svg" alt="GitHub" />
+            <a href="{{ footer.href }}">
+                <img class="image is-32x32 m-auto" src="{{ footer.src }}" alt="{{ footer.alt }}" />
             </a>
         </div>
-
-        <div class="column">
-            <a href="https://linkedin.com/in/tommaso-g-50450a22b">
-                <img class="image is-32x32 m-auto" src="/fonts/square-linkedin.svg" alt="LinkedIn" />
-            </a>
-        </div>
-
-        <div class="column">
-            <a href="https://news.ycombinator.com/threads?id=tg180">
-                <img class="image is-32x32 m-auto" src="/fonts/square-hn.svg" alt="HN" />
-            </a>
-        </div>
-
-        <div class="column">
-            <a href="https://gitlab.torproject.org/tgragnato">
-                <img class="image is-32x32 m-auto" src="/fonts/tor.svg" alt="Tor Project" />
-            </a>
-        </div>
-
+        {% endfor %}
       </div>
 </footer>
