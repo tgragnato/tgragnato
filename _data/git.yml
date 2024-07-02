@@ -27,10 +27,6 @@
   text: Simple and Really Fast Varnish Cache Cluster Manager (for Varnish 6.x/7.x)
   href: https://github.com/tgragnato/vaban
 
-- title: pilsung
-  text: 북쪽 필성。 붉은별 사용자용체계。 pilsung 암호화 알고리즘
-  href: https://github.com/tgragnato/pilsung
-
 - title: dns323-toolchain
   text: D-Link DNS-323 cross compilation toolchain
   href: https://github.com/tgragnato/dns323-toolchain
