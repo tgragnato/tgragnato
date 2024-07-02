@@ -23,7 +23,7 @@
         {% for footer in site.data.footer %}
         <div class="column">
             <a href="{{ footer.href }}">
-                <img class="image is-32x32 m-auto" src="{{ footer.src }}" alt="{{ footer.alt }}" />
+                <img class="image is-32x32 m-auto" src="{{ footer.src }}" alt="{{ footer.alt }}" loading="lazy" />
             </a>
         </div>
         {% endfor %}
