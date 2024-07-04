@@ -3,6 +3,13 @@ title: EBMBTreeBench
 description: a naive measurement tool for ebmb trees
 layout: default
 lang: en
+images:
+  - loc: /images/2023-09-20-100000.webp
+    caption: 100k lookups
+  - loc: /images/2023-09-20-1000000.webp
+    caption: 1m lookups
+  - loc: /images/2023-09-20-10000000.webp
+    caption: 10m lookups
 ---
 
 An elastic binary tree is a kind of binary search tree, it's used by haproxy. This is a simplistic and unprecise benchmark against the reference implementation.
