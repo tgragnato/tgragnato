@@ -1,0 +1,27 @@
+---
+sitemap: false
+---
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign pages = site.pages | where_exp:'page','page.sitemap != false' | where_exp:'doc','doc.url != "/404.html"' %}
+  {% for page in pages %}
+    <url>
+      <loc>{{ page.url | absolute_url | xml_escape }}</loc>
+      <changefreq>weekly</changefreq>
+    </url>
+  {% endfor %}
+  {% assign posts = site.posts | where_exp:'post','post.sitemap != false' %}
+  {% for post in posts %}
+    <url>
+      <loc>{{ post.url | absolute_url | xml_escape }}</loc>
+      <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
+      <changefreq>monthly</changefreq>
+      {% for image in post.images %}<image:image>
+        <image:loc>{{ image.loc | absolute_url | xml_escape }}</image:loc>
+        <image:title><![CDATA[{{ image.title | default: post.title }}]]></image:title>
+        <image:caption><![CDATA[{{ image.caption | default: post.description }}]]></image:caption>
+      </image:image>{% endfor %}
+    </url>
+  {% endfor %}
+</urlset>

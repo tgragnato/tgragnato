@@ -2,6 +2,33 @@
 title: Traffic Analysis
 description: Exfiltrating (meta)data while minimising lateral movements
 layout: default
+images:
+  - loc: /images/2018-07-13-SORM.webp
+    caption: SORM
+  - loc: /images/2018-07-13-Netflow.webp
+    caption: Netflow
+  - loc: /images/2018-07-13-Pattern-Of-Life.webp
+    caption: Pattern of Life
+  - loc: /images/2018-07-13-Inter-Arrival-Time.webp
+    caption: inter-arrival time
+  - loc: /images/2018-07-13-Make-Data-Happen.webp
+    caption: make data happen
+  - loc: /images/2018-07-13-Golden-Shield.webp
+    caption: Golden Shield
+  - loc: /images/2018-07-13-Bitcanal.webp
+    caption: Bitcanal
+  - loc: /images/2018-07-13-2pn4yRMh8T1G.webp
+    caption: 2pn4yRMh8T1G.so
+  - loc: /images/2018-07-13-sift_-linux-x86_64.webp
+    caption: sift-linux
+  - loc: /images/2018-07-13-USBStealer.webp
+    caption: USBStealer
+  - loc: /images/2018-07-13-Tempest.webp
+    caption: Tempest
+  - loc: /images/2018-07-13-Isolation.webp
+    caption: Isolation
+  - loc: /images/2018-07-13-VFSWrite.webp
+    caption: VFSWrite
 ---
 
 Traffic analysis is a basic part of most SIGINT activities. Whether the eavesdropped communications are IP-based or not; traffic analysis provides a vital window into targets and adversaries' capabilities, actions, and intentions.

@@ -2,6 +2,15 @@
 title: D-Link botnet
 description: Extracting binaries from a botnet of compromised NAS devices
 layout: default
+images:
+  - loc: /images/2018-07-01-automatic-decompilation.webp
+    caption: automatic decompilation
+  - loc: /images/2018-07-01-implant.webp
+    caption: implant.c
+  - loc: /images/2018-07-01-C2-IP.webp
+    caption: IP of the C&C
+  - loc: /images/2018-07-01-VirusTotal.webp
+    caption: VirusTotal results
 ---
 
 ## SEARCH-LAB security assessment

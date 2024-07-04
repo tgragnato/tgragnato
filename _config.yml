@@ -4,9 +4,6 @@ title: Tommaso Gragnato
 markdown: kramdown
 highlighter: rouge
 
-plugins:
-  - jekyll-sitemap
-
 exclude:
   - _site
   - .sass-cache

@@ -3,6 +3,8 @@ title: Микро Миниатюра / Micro Miniatura
 description: Транзисторные Усилители / Amplificatori e Transistor
 layout: default
 lang: ru
+images:
+  - loc: /images/2023-03-12-Micro-Miniature.webp
 ---
 
 Во время эпохи Советского Союза технология транзисторов и усилителей находилась в активной стадии развития.
