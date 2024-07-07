@@ -2,6 +2,7 @@
 title: macOS firmware integrity check
 description: Looking how Apple's security features are implemented across architectures
 layout: default
+lang: en
 images:
   - loc: /images/2017-03-23-EFIcheck-Prompt.webp
     caption: Your computer has detected a potential problem. Send a report to Apple.

@@ -2,6 +2,7 @@
 title: D-Link botnet
 description: Extracting binaries from a botnet of compromised NAS devices
 layout: default
+lang: en
 images:
   - loc: /images/2018-07-01-automatic-decompilation.webp
     caption: automatic decompilation

@@ -2,6 +2,7 @@
 title: Grizzly Steppe
 description: Samples from Russian cyber operations
 layout: default
+lang: en
 ---
 
 ## Fancy Bear
