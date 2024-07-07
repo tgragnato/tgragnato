@@ -2,6 +2,7 @@
 title: Traffic Analysis
 description: Exfiltrating (meta)data while minimising lateral movements
 layout: default
+lang: en
 images:
   - loc: /images/2018-07-13-SORM.webp
     caption: SORM
