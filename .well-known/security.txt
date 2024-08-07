@@ -1,0 +1,6 @@
+---
+sitemap: false
+---
+Contact: {{ site.url }}/#contacts
+Expires: {{ 'now' | date: '%Y-%m-%d' }}T00:00:00.000Z
+Preferred-Languages: it, en, ru, ja, de

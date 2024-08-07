@@ -1,0 +1,11 @@
+---
+sitemap: false
+---
+{
+    "links": [
+        {
+            "rel": "http://nodeinfo.diaspora.software/ns/schema/2.0",
+            "href": "{{ site.url }}/.well-known/nodeinfo-2.0.json"
+        }
+    ]
+}

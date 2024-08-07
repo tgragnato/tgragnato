@@ -17,6 +17,8 @@ exclude:
   - CNAME
   - LICENSE
   - README.md
+include:
+  - .well-known
 
 collections:
   snippets:
