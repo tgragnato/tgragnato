@@ -1,0 +1,28 @@
+---
+sitemap: false
+---
+{
+    "version": "2.0",
+    "software": {
+        "name": "{{ site.url | replace: 'http://', '' | replace: 'https://', '' }}",
+        "version": "{{ 'now' | date: '%Y-%m-%d' }}"
+    },
+    "protocols": [ "activitypub" ],
+    "services": { 
+        "outbound": [],
+        "inbound": []
+    },
+    "usage": {
+        "users": {
+            "total": 1,
+            "activeMonth": 1,
+            "activeHalfyear": 1
+        },
+        "localPosts": {{ site.posts.size | plus: site.pages.size }}
+    },
+    "openRegistrations": false,
+    "metadata": {
+        "nodeName": "{{ site.url | replace: 'http://', '' | replace: 'https://', '' }}",
+        "nodeDescription": "{{ site.title }} {{ site.url | replace: 'http://', '' | replace: 'https://', '' }}"
+    }
+}
