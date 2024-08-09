@@ -4,7 +4,7 @@ sitemap: false
 {
     "links": [
         {
-            "rel": "http://nodeinfo.diaspora.software/ns/schema/2.0",
+            "rel": "{{ site.url }}/.well-known/nodeinfo-2.0-schema.json",
             "href": "{{ site.url }}/.well-known/nodeinfo-2.0.json"
         }
     ]
