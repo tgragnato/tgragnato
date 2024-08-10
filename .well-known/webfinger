@@ -7,7 +7,7 @@ sitemap: false
         "{{ site.url }}/",
         "https://infosec.exchange/@tgragnato",
         "https://infosec.exchange/users/tgragnato"
-    ]
+    ],
     "links": [
         {
             "rel": "http://webfinger.net/rel/profile-page",
