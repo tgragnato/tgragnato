@@ -10,6 +10,8 @@ images:
     caption: 1m lookups
   - loc: /images/2023-09-20-10000000.webp
     caption: 10m lookups
+prefetch:
+  - wtarreau.blogspot.com
 ---
 
 An elastic binary tree is a kind of binary search tree, it's used by haproxy. This is a simplistic and unprecise benchmark against the reference implementation.

@@ -3,6 +3,8 @@ title: BPF HTTP Replay
 description: Midpoint network interception for HTTP traffic mirroring
 layout: default
 lang: en
+preload:
+  - www.youtube-nocookie.com
 ---
 
 <iframe src="https://www.youtube-nocookie.com/embed/PbipefyfkNY?vq=hd1080&rel=0&color=white" width="100%" height="560" title="Fiber Tapping - Monitoring Fiber Optic Connections" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allowfullscreen></iframe>

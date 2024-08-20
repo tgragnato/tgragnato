@@ -30,6 +30,8 @@ images:
     caption: Isolation
   - loc: /images/2018-07-13-VFSWrite.webp
     caption: VFSWrite
+prefetch:
+  - malwarejake.blogspot.com
 ---
 
 Traffic analysis is a basic part of most SIGINT activities. Whether the eavesdropped communications are IP-based or not; traffic analysis provides a vital window into targets and adversaries' capabilities, actions, and intentions.
