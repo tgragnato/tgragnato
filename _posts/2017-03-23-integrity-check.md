@@ -8,6 +8,10 @@ images:
     caption: Your computer has detected a potential problem. Send a report to Apple.
   - loc: /images/2017-03-23-Decompilation.webp
     caption: eficheck-standalone decompilation
+prefetch:
+  - medium.com
+  - en.wikipedia.org
+  - twitter.com
 ---
 
 Background context:

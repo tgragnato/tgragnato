@@ -7,6 +7,8 @@ images:
   - loc: /images/2023-06-04-Introduction.webp
   - loc: /images/2023-06-04-Estimated-Traffic.webp
     caption: Estimated Traffic
+prefetch:
+  - web.dev
 ---
 
 L'obiettivo della SEO è posizionare le pagine il più in alto possibile nella SERP, il che alla fine porta più traffico al sito web.
