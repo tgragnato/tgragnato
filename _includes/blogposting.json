@@ -1,0 +1,20 @@
+{
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "{{ page.title | escape }}",
+    {% if page.description %}"description": "{{ page.description | escape }}",{% endif %}
+    {% if page.images %}
+    "image": [
+        {% for image in page.images %}
+        "{{ image.loc | absolute_url }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+    ],
+    {% endif %}
+    "datePublished": "{{ page.date | date: '%d-%m-%Y' | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date: '%d-%m-%Y' | date_to_xmlschema }}",
+    "author": [{
+        "@type": "Person",
+        "name": "{{ site.title }}",
+        "url": "{{ site.url }}/"
+    }]
+}
