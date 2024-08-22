@@ -4,9 +4,10 @@ description: 17-19 Jul 2024 Messe Berlin
 layout: default
 lang: en
 preload:
-  - www.youtube-nocookie.com
   - blog.cloudflare.com
+  - dhh.dk
   - platformengineering.org
+  - www.youtube-nocookie.com
 ---
 
 > You don't hire for skills, you hire for attitude. You can always teach skills. "Simon Sinek"

@@ -4,9 +4,9 @@ description: Abusing DNS to exploit a command injection and obtain root
 layout: default
 lang: en
 prefetch:
-  - www.fastweb.it
-  - www.exploit-db.com
   - cve.mitre.org
+  - www.exploit-db.com
+  - www.fastweb.it
 ---
 
 This is the combination of already available exploit and attack techniques.
