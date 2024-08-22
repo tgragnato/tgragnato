@@ -9,8 +9,9 @@ images:
   - loc: /images/2017-03-23-Decompilation.webp
     caption: eficheck-standalone decompilation
 prefetch:
-  - medium.com
   - en.wikipedia.org
+  - medium.com
+  - support.apple.com
   - twitter.com
 ---
 
