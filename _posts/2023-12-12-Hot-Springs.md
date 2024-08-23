@@ -90,13 +90,16 @@ To unfold the records, on each row, replace the list of spring conditions with f
 
 So, this row:
 
-.# 1
+`.# 1`
+
 Would become:
 
-.#?.#?.#?.#?.# 1,1,1,1,1
+`.#?.#?.#?.#?.# 1,1,1,1,1`
+
 The first line of the above example would become:
 
-???.###????.###????.###????.###????.### 1,1,3,1,1,3,1,1,3,1,1,3,1,1,3
+`???.###????.###????.###????.###????.### 1,1,3,1,1,3,1,1,3,1,1,3,1,1,3`
+
 In the above example, after unfolding, the number of possible arrangements for some rows is now much larger:
 
 - ???.### 1,1,3 - 1 arrangement
