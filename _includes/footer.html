@@ -1,7 +1,7 @@
 <footer>
+    {% if page.url != '/' %}
     <div itemscope itemtype="https://schema.org/BreadcrumbList">
         {% assign breadcrumbListCounter = 1 %}
-        {% if page.url != '/' %}
         {% for html_page in site.html_pages %}
         {% if html_page.url != '/404.html' and html_page.url != page.url %}
         <p itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
@@ -20,9 +20,9 @@
         {% assign breadcrumbListCounter = breadcrumbListCounter | plus: 1 %}
         {% endif %}
         {% endfor %}
-        {% endif %}
         <hr>
     </div>
+    {% endif %}
 
     <div class="columns is-mobile">
         {% for footer in site.data.footer %}
