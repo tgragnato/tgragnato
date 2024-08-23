@@ -1,4 +1,9 @@
-# Day 6: Wait For It
+---
+title: Wait For It
+description: Advent of Code 2023 [Day 6]
+layout: default
+lang: en
+---
 
 The ferry quickly brings you across Island Island. After asking around, you discover that there is indeed normally a large pile of sand somewhere near here, but you don't see anything besides lots of water and the small island where the ferry has docked.
 
@@ -46,7 +51,83 @@ To see how much margin of error you have, determine the number of ways you can b
 
 Determine the number of ways you could beat the record in each race. What do you get if you multiply these numbers together?
 
-# Part Two
+```go
+type Boat struct {
+	Starting uint
+	Increase uint
+}
+
+func (b *Boat) GetDistance(delay uint, remaining uint) uint {
+	return b.Starting + b.Increase*delay*remaining
+}
+
+type Race struct {
+	Boat
+	Time     uint
+	Distance uint
+}
+
+func (r *Race) GetWinningTimes() (counter uint) {
+	for i := uint(0); i < r.Time; i++ {
+		if r.GetDistance(i, r.Time-i) > r.Distance {
+			counter++
+		}
+	}
+	return
+}
+
+func TestRace_GetWinningTimes(t *testing.T) {
+	tests := []struct {
+		name string
+		Race wait.Race
+		want uint
+	}{
+		{
+			name: "Test 1",
+			Race: wait.Race{
+				Boat: wait.Boat{
+					Starting: 0,
+					Increase: 1,
+				},
+				Time:     7,
+				Distance: 9,
+			},
+			want: 4,
+		},
+		{
+			name: "Test 2",
+			Race: wait.Race{
+				Boat: wait.Boat{
+					Starting: 0,
+					Increase: 1,
+				},
+				Time:     15,
+				Distance: 40,
+			},
+			want: 8,
+		},
+		{
+			name: "Test 3",
+			Race: wait.Race{
+				Boat: wait.Boat{
+					Starting: 0,
+					Increase: 1,
+				},
+				Time:     30,
+				Distance: 200,
+			},
+			want: 9,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			if got := tt.Race.GetWinningTimes(); got != tt.want {
+				t.Errorf("Race.GetWinningMultiplier() = %v, want %v", got, tt.want)
+			}
+		})
+	}
+}
+```
 
 As the race is about to start, you realize the piece of paper with race times and record distances you got earlier actually just has very bad kerning. There's really only one race - ignore the spaces between the numbers on each line.
 
@@ -67,3 +148,80 @@ Distance:  940200
 Now, you have to figure out how many ways there are to win this single race. In this example, the race lasts for 71530 milliseconds and the record distance you need to beat is 940200 millimeters. You could hold the button anywhere from 14 to 71516 milliseconds and beat the record, a total of 71503 ways!
 
 How many ways can you beat the record in this one much longer race?
+
+```go
+func main() {
+	file, err := os.Open("input.txt")
+	if err != nil {
+		log.Println(err.Error())
+	}
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+
+	var (
+		time      []uint      = []uint{}
+		distance  []uint      = []uint{}
+		races     []wait.Race = []wait.Race{}
+		pointer               = &time
+		giantRace wait.Race   = wait.Race{
+			Boat: wait.Boat{
+				Starting: 0,
+				Increase: 1,
+			},
+		}
+		times     []rune = []rune{}
+		distances []rune = []rune{}
+	)
+
+	for scanner.Scan() {
+		for _, value := range strings.Split(strings.Split(scanner.Text(), ":")[1], " ") {
+			if number, err := strconv.Atoi(value); err == nil {
+				*pointer = append(*pointer, uint(number))
+			}
+		}
+		pointer = &distance
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Println(err.Error())
+	}
+
+	if len(time) != len(distance) {
+		log.Fatalln("len(time) != len(distance)")
+	}
+
+	for i := 0; i < len(time); i++ {
+		races = append(races, wait.Race{
+			Boat: wait.Boat{
+				Starting: 0,
+				Increase: 1,
+			},
+			Time:     time[i],
+			Distance: distance[i],
+		})
+
+		times = append(times, []rune(strconv.Itoa(int(time[i])))...)
+		distances = append(distances, []rune(strconv.Itoa(int(distance[i])))...)
+	}
+
+	mul1 := uint(1)
+	for _, race := range races {
+		mul1 *= race.GetWinningTimes()
+	}
+
+	timeValue, _ := strconv.Atoi(string(times))
+	giantRace.Time = uint(timeValue)
+	distanceValue, _ := strconv.Atoi(string(distances))
+	giantRace.Distance = uint(distanceValue)
+	tim2 := giantRace.GetWinningTimes()
+
+	log.Printf("sum: %d, %d\n", mul1, tim2)
+}
+```
+
+## Links
+
+[If you're new to Advent of Code, it's an annual event that takes place throughout December, featuring a series of programming puzzles that get progressively more challenging as Christmas approaches.](https://adventofcode.com/)
+
+- [input.txt](/documents/2023-12-06-input.txt)
+- [Challenge](https://adventofcode.com/2023/day/6)
