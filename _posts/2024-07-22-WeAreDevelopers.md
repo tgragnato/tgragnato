@@ -82,14 +82,14 @@ I agree that 99% of developers will likely never need to deal with these issues,
 
 ## References
 
-- [WeAreDevelopers World Congress 2019 - Official Aftermovie - https://www.youtube-nocookie.com/watch?v=joghxhhhOs0](https://www.youtube-nocookie.com/watch?v=joghxhhhOs0)
+- [WeAreDevelopers World Congress 2019 - Official Aftermovie - https://www.youtube.com/watch?v=joghxhhhOs0](https://www.youtube.com/watch?v=joghxhhhOs0)
 
-- [WeAreDevelopers World Congress 2022 - Official Aftermovie - https://www.youtube-nocookie.com/watch?v=ibHvdCfQHEs](https://www.youtube-nocookie.com/watch?v=ibHvdCfQHEs)
+- [WeAreDevelopers World Congress 2022 - Official Aftermovie - https://www.youtube.com/watch?v=ibHvdCfQHEs](https://www.youtube.com/watch?v=ibHvdCfQHEs)
 
-- [WeAreDevelopers World Congress 2023 - Official Aftermovie - https://www.youtube-nocookie.com/watch?v=y84gv0oacGA](https://www.youtube-nocookie.com/watch?v=y84gv0oacGA)
+- [WeAreDevelopers World Congress 2023 - Official Aftermovie - https://www.youtube.com/watch?v=y84gv0oacGA](https://www.youtube.com/watch?v=y84gv0oacGA)
 
 - [CloudFlare Blog - Marek Majkowski - How to receive a million packets per second - https://blog.cloudflare.com/how-to-receive-a-million-packets/](https://blog.cloudflare.com/how-to-receive-a-million-packets/)
 
 - [Kaspar von Grünberg - How does your DevOps setup stack up against the competition? - https://platformengineering.org/talks-library/how-does-your-devops-setup-stack-up-against-the-competition](https://platformengineering.org/talks-library/how-does-your-devops-setup-stack-up-against-the-competition)
 
-- [Fireside Chat with David Heinemeier Hansson - https://www.youtube-nocookie.com/watch?v=ZsHRjq8uk48](https://www.youtube-nocookie.com/watch?v=ZsHRjq8uk48)
+- [Fireside Chat with David Heinemeier Hansson - https://www.youtube.com/watch?v=ZsHRjq8uk48](https://www.youtube.com/watch?v=ZsHRjq8uk48)
