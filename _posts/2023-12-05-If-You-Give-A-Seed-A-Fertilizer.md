@@ -3,6 +3,8 @@ title: If You Give A Seed A Fertilizer
 description: Advent of Code 2023 [Day 5]
 layout: default
 lang: en
+prefetch:
+  - adventofcode.com
 ---
 
 You take the boat and find the gardener right where you were told he would be: managing a giant "garden" that looks more to you like a farm.

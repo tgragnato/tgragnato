@@ -3,6 +3,8 @@ title: Mirage Maintenance
 description: Advent of Code 2023 [Day 9]
 layout: default
 lang: en
+prefetch:
+  - adventofcode.com
 ---
 
 You ride the camel through the sandstorm and stop where the ghost's maps told you to stop. The sandstorm subsequently subsides, somehow seeing you standing at an oasis!
