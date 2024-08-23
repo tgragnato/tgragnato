@@ -1,4 +1,9 @@
-# Day 11: Cosmic Expansion
+---
+title: Cosmic Expansion
+description: Advent of Code 2023 [Day 11]
+layout: default
+lang: en
+---
 
 You continue following signs for "Hot Springs" and eventually come across an observatory. The Elf within turns out to be a researcher studying cosmic expansion using the giant telescope here.
 
@@ -105,8 +110,6 @@ In this example, after expanding the universe, the sum of the shortest path betw
 
 Expand the universe, then find the length of the shortest path between every pair of galaxies. What is the sum of these lengths?
 
-# Part Two
-
 The galaxies are much older (and thus much farther apart) than the researcher initially estimated.
 
 Now, instead of the expansion you did before, make each empty row or column one million times larger. That is, each empty row should be replaced with 1000000 empty rows, and each empty column should be replaced with 1000000 empty columns.
@@ -114,3 +117,112 @@ Now, instead of the expansion you did before, make each empty row or column one 
 (In the example above, if each empty row or column were merely 10 times larger, the sum of the shortest paths between every pair of galaxies would be 1030. If each empty row or column were merely 100 times larger, the sum of the shortest paths between every pair of galaxies would be 8410. However, your universe will need to expand far beyond these values.)
 
 Starting with the same initial image, expand the universe according to these new rules, then find the length of the shortest path between every pair of galaxies. What is the sum of these lengths?
+
+```go
+type Point struct{ x, y int }
+
+func findEmpty(galaxies []Point) (map[int]struct{}, map[int]struct{}) {
+	eRows := make(map[int]struct{})
+	eCols := make(map[int]struct{})
+
+	for i := 0; i < 140; i++ {
+		foundRow, foundCol := false, false
+
+		for _, g := range galaxies {
+			if g.x == i {
+				foundRow = true
+			}
+			if g.y == i {
+				foundCol = true
+			}
+		}
+
+		if !foundRow {
+			eRows[i] = struct{}{}
+		}
+		if !foundCol {
+			eCols[i] = struct{}{}
+		}
+	}
+	return eRows, eCols
+}
+
+func solution(galaxies []Point, Expansion uint) uint {
+	eRows, eCols := findEmpty(galaxies)
+
+	sum := uint(0)
+	for i := 0; i < len(galaxies)-1; i++ {
+		for j := i + 1; j < len(galaxies); j++ {
+
+			d1 := math.Abs(float64(galaxies[i].x - galaxies[j].x))
+			d2 := math.Abs(float64(galaxies[i].y - galaxies[j].y))
+			distance := uint(d1 + d2)
+
+			min := galaxies[i].x
+			max := galaxies[j].x
+			if max < min {
+				max = galaxies[i].x
+				min = galaxies[j].x
+			}
+
+			for dr := min + 1; dr < max; dr++ {
+				if _, ok := eRows[dr]; ok {
+					distance += Expansion - 1
+				}
+			}
+
+			min = galaxies[i].y
+			max = galaxies[j].y
+			if max < min {
+				max = galaxies[i].y
+				min = galaxies[j].y
+			}
+
+			for dc := min + 1; dc < max; dc++ {
+				if _, ok := eCols[dc]; ok {
+					distance += Expansion - 1
+				}
+			}
+
+			sum += distance
+		}
+	}
+	return sum
+}
+
+func main() {
+	file, err := os.Open("input.txt")
+	if err != nil {
+		log.Println(err.Error())
+	}
+	defer file.Close()
+	scanner := bufio.NewScanner(file)
+
+	var galaxies []Point
+	for x := 0; scanner.Scan(); x++ {
+		line := scanner.Text()
+		for y, char := range line {
+			if char == '#' {
+				galaxies = append(galaxies, Point{x, y})
+			}
+		}
+	}
+
+	if err := scanner.Err(); err != nil {
+		log.Println(err.Error())
+	}
+
+	log.Printf(
+		"count: %d, %d\n",
+		solution(galaxies, 2),
+		solution(galaxies, 1000000),
+	)
+}
+```
+
+## Links
+
+[If you're new to Advent of Code, it's an annual event that takes place throughout December, featuring a series of programming puzzles that get progressively more challenging as Christmas approaches.](https://adventofcode.com/)
+
+- [input.txt](/documents/2023-12-11-input.txt)
+- [Challenge](https://adventofcode.com/2023/day/11)
