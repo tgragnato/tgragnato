@@ -3,6 +3,8 @@ title: Cosmic Expansion
 description: Advent of Code 2023 [Day 11]
 layout: default
 lang: en
+prefetch:
+  - adventofcode.com
 ---
 
 You continue following signs for "Hot Springs" and eventually come across an observatory. The Elf within turns out to be a researcher studying cosmic expansion using the giant telescope here.

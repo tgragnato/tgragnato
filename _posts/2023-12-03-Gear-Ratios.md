@@ -3,6 +3,8 @@ title: Gear Ratios
 description: Advent of Code 2023 [Day 3]
 layout: default
 lang: en
+prefetch:
+  - adventofcode.com
 ---
 
 You and the Elf eventually reach a gondola lift station; he says the gondola lift will take you up to the water source, but this is as far as he can bring you. You go inside.

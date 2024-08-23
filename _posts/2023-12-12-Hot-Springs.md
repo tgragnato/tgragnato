@@ -3,6 +3,8 @@ title: Hot Springs
 description: Advent of Code 2023 [Day 12]
 layout: default
 lang: en
+prefetch:
+  - adventofcode.com
 ---
 
 You finally reach the hot springs! You can see steam rising from secluded areas attached to the primary, ornate building.
