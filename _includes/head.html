@@ -3,11 +3,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow, noarchive">
-    <title>{% if page.override_title %} {{ page.override_title | escape }} | {% else %}{% if page.title %}{{ page.title | escape }} | {% endif %}{% endif %}{{ site.title | escape }}</title>
+    <title>{% if page.override_title %}{{ page.override_title | escape }}{% else %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}</title>
     <meta name='author' content='{{ site.title | escape }}'>
-    <meta name='keywords' content='{{ site.title | escape }} {% if page.title %}{{ page.title | escape }}{% endif %} {% if page.description %}{{ page.description | escape }}{% endif %}'>
+    <meta name='keywords' content='{{ site.title | escape }} {{ page.title | escape }} {{ page.description | escape }}'>
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    {% if page.description %}<meta name='description' content='{{ page.description | escape }}'>{% endif %}
+    <meta name='description' content='{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}'>
     {% for address in site.data.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
     {% for address in page.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
     <meta http-equiv="x-dns-prefetch-control" content="on">
