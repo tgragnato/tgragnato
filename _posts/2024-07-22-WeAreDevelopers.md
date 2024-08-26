@@ -8,6 +8,7 @@ preload:
   - dhh.dk
   - platformengineering.org
   - www.youtube-nocookie.com
+  - www.youtube.com
 ---
 
 > You don't hire for skills, you hire for attitude. You can always teach skills. "Simon Sinek"
