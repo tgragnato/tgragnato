@@ -223,7 +223,12 @@ func main() {
 
 ## Links
 
-[If you're new to Advent of Code, it's an annual event that takes place throughout December, featuring a series of programming puzzles that get progressively more challenging as Christmas approaches.](https://adventofcode.com/)
+[If you're new to Advent of Code, it's an annual event that takes place throughout December, featuring a series of programming puzzles that get progressively more challenging as Christmas approaches.](https://adventofcode.com/2023/day/6)
 
-- [input.txt](/documents/2023-12-06-input.txt)
-- [Challenge](https://adventofcode.com/2023/day/6)
+<details>
+	<summary>Click to show the input</summary>
+	<pre>
+Time:        34     90     89     86
+Distance:   204   1713   1210   1780
+	</pre>
+</details>
