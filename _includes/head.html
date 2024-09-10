@@ -3,11 +3,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow, noarchive">
-    <title>{% if page.override_title %}{{ page.override_title | escape }}{% else %}{{ page.title | escape }}{% endif %} | {{ site.title | escape }}</title>
+    {% if page.override_title %}<title>{{ page.override_title | escape }} | {{ site.title | escape }}</title>
+    <meta property="og:title" content="{{ page.override_title | escape }} | {{ site.title | escape }}" />{% else %}
+    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
+    <meta property="og:title" content="{{ page.title | escape }} | {{ site.title | escape }}" />{% endif %}
     <meta name='author' content='{{ site.title | escape }}'>
     <meta name='keywords' content='{{ site.title | escape }} {{ page.title | escape }} {{ page.description | escape }}'>
-    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta name='description' content='{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}'>
+    <meta property="og:description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}" />
+    {% if page.collection == "posts" %}<meta property="og:type" content="article" />{% else %}<meta property="og:type" content="website" />{% endif %}
+    <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'en' }}" />
     {% for address in site.data.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
     {% for address in page.prefetch %}<link rel='dns-prefetch' href='https://{{address}}/'>{% endfor %}
     <meta http-equiv="x-dns-prefetch-control" content="on">
