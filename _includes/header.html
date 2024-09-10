@@ -1,5 +1,7 @@
 <header>
     <h1>{{ page.title | escape }}</h1>
     <p class="subtitle">{{ page.description }}</p>
+{% if page.collection == 'posts' %}
     {% if page.date %}<p class="subtitle">{{ page.date | date: "%d-%m-%Y" }}</p>{% endif %}
+{% endif %}
 </header>
