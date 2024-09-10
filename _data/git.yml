@@ -5,19 +5,19 @@
 
 - title: magnetico
   text: An updated version of the famous "Autonomous (self-hosted) BitTorrent DHT search engine suite"
-  href: https://github.com/tgragnato/magnetico
+  href: https://tgragnato.it/magnetico/
 
 - title: snowflake
   text: Pluggable Transport using WebRTC, inspired by Flashproxy. A custom fork with mine opinionated patches
   href: https://github.com/tgragnato/snowflake
 
 - title: amule
-  text: An aMule fork. Personal companion of tgragnato/homebrew-amule
+  text: An aMule fork that aims to improve the use the cmake build system
   href: https://github.com/tgragnato/amule
 
-- title: homebrew-amule
-  text: A custom homebrew tap for aMule
-  href: https://github.com/tgragnato/homebrew-amule
+- title: homebrew-tap
+  text: A custom tap for things that are not in homebrew
+  href: https://github.com/tgragnato/homebrew-tap
 
 - title: pure
   text: A collection of software and tools that I use to manage my network and my storage
@@ -26,6 +26,10 @@
 - title: vaban
   text: Simple and Really Fast Varnish Cache Cluster Manager (for Varnish 6.x/7.x)
   href: https://github.com/tgragnato/vaban
+
+- title: goflow
+  text: The high-scalability sFlow/NetFlow/IPFIX collector used internally at Cloudflare [syslog transport]
+  href: https://github.com/tgragnato/goflow
 
 - title: dns323-toolchain
   text: D-Link DNS-323 cross compilation toolchain
