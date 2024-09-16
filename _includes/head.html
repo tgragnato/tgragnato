@@ -12,6 +12,7 @@
     <meta name="description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}">
     <meta property="og:description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}" />
     {% if page.collection == "posts" %}<meta property="og:type" content="article" />{% else %}<meta property="og:type" content="website" />{% endif %}
+    <meta property="og:image" content="{{ site.url }}/icons/apple-touch-icon-precomposed.png" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
     <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
     <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'en' }}" />
