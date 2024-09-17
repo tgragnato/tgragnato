@@ -9,7 +9,7 @@
 
 - title: snowflake
   text: Pluggable Transport using WebRTC, inspired by Flashproxy. A custom fork with mine opinionated patches
-  href: https://github.com/tgragnato/snowflake
+  href: https://tgragnato.it/snowflake/
 
 - title: amule
   text: An aMule fork that aims to improve the use the cmake build system
