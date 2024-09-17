@@ -103,7 +103,7 @@ Shell shoveling and verification is voluntarily omitted.
 
 ## Links
 
-- [http://www.fastweb.it/forum/servizi-rete-fissa-tematiche-tecniche/urgente-vulnerabilita-modem-fastgate-0-00-47-t22720.html](http://www.fastweb.it/forum/servizi-rete-fissa-tematiche-tecniche/urgente-vulnerabilita-modem-fastgate-0-00-47-t22720.html)
+- ~~http://www.fastweb.it/forum/servizi-rete-fissa-tematiche-tecniche/urgente-vulnerabilita-modem-fastgate-0-00-47-t22720.html~~
 - [https://www.exploit-db.com/exploits/44606/](https://www.exploit-db.com/exploits/44606/)
 - [https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6023](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-6023)
 - [https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20122](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2018-20122)
