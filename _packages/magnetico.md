@@ -108,7 +108,7 @@ USERNAME:$2y$12$YE01LZ8jrbQbx6c0s2hdZO71dSjn2p/O9XsYJpz.5968yCysUgiaG
 
 ### Screenshots
 
-![Flow of Operations](https://raw.githubusercontent.com/tgragnato/magnetico/main/doc/operations.svg)
+![Flow of Operations](https://raw.githubusercontent.com/tgragnato/magnetico/main/doc/operations.svg){:loading="lazy"}
 
 ![The Homepage](https://raw.githubusercontent.com/tgragnato/magnetico/main/doc/homepage.png){:loading="lazy"}
 
