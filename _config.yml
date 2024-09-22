@@ -4,6 +4,11 @@ title: Tommaso Gragnato
 markdown: kramdown
 highlighter: rouge
 
+sass:
+  style: compressed
+  sass_dir: _sass
+  sourcemap: development
+
 exclude:
   - _site
   - .sass-cache
