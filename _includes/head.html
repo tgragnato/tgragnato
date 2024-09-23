@@ -3,23 +3,43 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="robots" content="index, follow, noarchive">
-    {% if page.override_title %}<title>{{ page.override_title | escape }} | {{ site.title | escape }}</title>
-    <meta property="og:title" content="{{ page.override_title | escape }} | {{ site.title | escape }}" />{% else %}
-    <title>{{ page.title | escape }} | {{ site.title | escape }}</title>
-    <meta property="og:title" content="{{ page.title | escape }} | {{ site.title | escape }}" />{% endif %}
+    <meta name="twitter:card" content="summary">
+{% assign title = page.title | append: ' | ' | append: site.title | strip_html | escape %}
+{% if page.override_title %}
+    {% assign title = page.override_title | append: ' | ' | append: site.title | strip_html | escape %}
+{% endif %}
+    <title>{{ title }}</title>
+    <meta property="og:title" content="{{ title }}">
+    <meta name="twitter:title" content="{{ title }}">
     <meta name="author" content="{{ site.title | escape }}">
-    <meta name="keywords" content="{{ site.title | escape }} {{ page.title | escape }} {{ page.description | escape }}">
-    <meta name="description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}">
-    <meta property="og:description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}" />
-    {% if page.collection == "posts" %}<meta property="og:type" content="article" />{% else %}<meta property="og:type" content="website" />{% endif %}
-    <meta property="og:image" content="{{ site.url }}/icons/apple-touch-icon-precomposed.png" />
+{% assign description = page.description | append: ' | ' | append: page.title | append: ' | ' | append: site.title | strip_html | escape %}
+{% if description.size < 110 %}
+    {% assign description = description | append: ' | ' | append: page.content | strip_html | escape | truncate: 150, '' %}
+{% endif %}
+    <meta name="keywords" content="{{ description }}">
+    <meta name="description" content="{{ description }}">
+    <meta property="og:description" content="{{ description }}">
+    <meta name="twitter:description" content="{{ description }}">
+{% if page.collection == "posts" %}
+    <meta property="og:type" content="article">
+{% else %}
+    <meta property="og:type" content="website">
+{% endif %}
+    <meta property="og:image" content="{{ site.url }}/icons/apple-touch-icon-precomposed.png">
+    <meta name="twitter:image" content="{{ site.url }}/icons/apple-touch-icon-precomposed.png">
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}">
+    <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'en' }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'en' }}" />
-    {% for address in site.data.prefetch %}<link rel="dns-prefetch" href="https://{{address}}/">{% endfor %}
-    {% for address in page.prefetch %}<link rel="dns-prefetch" href="https://{{address}}/">{% endfor %}
+{% for address in site.data.prefetch %}
+    <link rel="dns-prefetch" href="https://{{address}}/">
+{% endfor %}
+{% for address in page.prefetch %}
+    <link rel="dns-prefetch" href="https://{{address}}/">
+{% endfor %}
     <meta http-equiv="x-dns-prefetch-control" content="on">
-    {% for asset in site.data.preload %}<link rel="preload" href="{{ asset.href }}" as="{{ asset.as }}">{% endfor %}
+{% for asset in site.data.preload %}
+    <link rel="preload" href="{{ asset.href }}" as="{{ asset.as }}">
+{% endfor %}
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">
     <link rel="apple-touch-icon-precomposed" href="/icons/apple-touch-icon-precomposed.png">
@@ -41,11 +61,13 @@
     <link rel="icon" type="image/png" sizes="96x96" href="/icons/favicon-96x96.png">
     <link rel="icon" type="image/png" sizes="144x144"  href="/icons/android-icon-144x144.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="/icons/android-icon-192x192.png">
-    {% if page.collection == 'posts' %}<script type="application/ld+json">{% include blogposting.json %}</script>{% endif %}
-    {% if page.go-import %}<meta name="go-import" content="{{ page.go-import }}">{% endif %}
-    {% if page.go-source %}<meta name="go-source" content="{{ page.go-source }}">{% endif %}
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="{{ page.title | escape }} | {{ site.title | escape }}">
-    <meta name="twitter:description" content="{{ page.description | escape }} | {{ page.title | escape }} | {{ site.title | escape }}">
-    <meta name="twitter:image" content="{{ site.url }}/icons/apple-touch-icon-precomposed.png">
+{% if page.collection == 'posts' %}
+    <script type="application/ld+json">{% include blogposting.json %}</script>
+{% endif %}
+{% if page.go-import %}
+    <meta name="go-import" content="{{ page.go-import }}">
+{% endif %}
+{% if page.go-source %}
+    <meta name="go-source" content="{{ page.go-source }}">
+{% endif %}
 </head>
