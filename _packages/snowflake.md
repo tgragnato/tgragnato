@@ -14,7 +14,7 @@ prefetch:
 
 Go package hosted at [tgragnato/snowflake](https://github.com/tgragnato/snowflake).
 
-Documentation available at [pkg.go.dev](https://pkg.go.dev/github.com/tgragnato/snowflake).
+Documentation available at [pkg.go.dev](https://pkg.go.dev/tgragnato.it/snowflake).
 
 [![Go](https://github.com/tgragnato/snowflake/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/tgragnato/snowflake/actions/workflows/go.yml)
 [![CodeQL](https://github.com/tgragnato/snowflake/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tgragnato/snowflake/actions/workflows/codeql.yml)
