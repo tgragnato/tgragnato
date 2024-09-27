@@ -10,9 +10,11 @@ prefetch:
   - raw.githubusercontent.com
 ---
 
+![Magnetico Image](https://raw.githubusercontent.com/tgragnato/magnetico/refs/heads/main/doc/magnetico.webp)
+
 Go package hosted at [tgragnato/magnetico](https://github.com/tgragnato/magnetico).
 
-Documentation available at [pkg.go.dev](https://pkg.go.dev/github.com/tgragnato/magnetico).
+Documentation available at [pkg.go.dev](https://pkg.go.dev/tgragnato.it/magnetico).
 
 [![Go](https://github.com/tgragnato/magnetico/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/tgragnato/magnetico/actions/workflows/go.yml)
 [![CodeQL](https://github.com/tgragnato/magnetico/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tgragnato/magnetico/actions/workflows/codeql.yml)
