@@ -3,7 +3,7 @@ title: US Covert Communications
 description: Channels uncovered by the counter intelligence of Iran, Russia and China
 layout: default
 lang: en
-preload:
+prefetch:
   - citizenlab.ca
   - foreignpolicy.com
   - www.nytimes.com
