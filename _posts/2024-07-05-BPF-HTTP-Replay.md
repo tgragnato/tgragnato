@@ -3,7 +3,7 @@ title: BPF HTTP Replay
 description: Midpoint network interception for HTTP traffic mirroring
 layout: default
 lang: en
-preload:
+prefetch:
   - www.youtube-nocookie.com
 ---
 

@@ -3,7 +3,7 @@ title: We Are Developers 2024
 description: 17-19 Jul 2024 Messe Berlin
 layout: default
 lang: en
-preload:
+prefetch:
   - blog.cloudflare.com
   - dhh.dk
   - platformengineering.org
