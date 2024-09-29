@@ -31,10 +31,6 @@
   text: The high-scalability sFlow/NetFlow/IPFIX collector used internally at Cloudflare [syslog transport]
   href: https://github.com/tgragnato/goflow
 
-- title: dns323-toolchain
-  text: D-Link DNS-323 cross compilation toolchain
-  href: https://github.com/tgragnato/dns323-toolchain
-
 - title: migration
   text: Simple tool that mirrors Paradox database as SQLite at runtime. Tuned for Mosaico Sorgente Aperto.
   href: https://github.com/tgragnato/migration
