@@ -4,5 +4,4 @@ sitemap: false
 
 User-agent: *
 Allow: /
-Disallow: /cdn-cgi/
 Sitemap: {{ site.url }}/sitemap.xml
