@@ -1,4 +1,5 @@
 ---
+sitemap: false
 ---
 {% assign posts = site.posts | where_exp:'post','post.sitemap != false' %}
 const urlsToCache = [
