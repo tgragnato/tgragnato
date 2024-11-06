@@ -1,4 +1,5 @@
 ---
+sitemap: false
 ---
 {
   "name": "{{ site.title }}",
