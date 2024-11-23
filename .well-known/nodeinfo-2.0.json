@@ -5,7 +5,13 @@ sitemap: false
     "version": "2.0",
     "software": {
         "name": "{{ site.url | replace: 'http://', '' | replace: 'https://', '' }}",
+        "software": "{{ site.url | replace: 'http://', '' | replace: 'https://', '' }}",
         "version": "{{ 'now' | date: '%Y-%m-%d' }}"
+    },
+    "organization": {
+        "name": "{{ site.title }}",
+        "contact": "{{ site.url }}",
+        "account": "{{ site.url }}"
     },
     "protocols": [ "activitypub" ],
     "services": { 
