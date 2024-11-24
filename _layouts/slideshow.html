@@ -1,0 +1,32 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+    {% include head.html %}
+    <body>
+        {% include header.html %}
+        <section class="slideshow">
+{% for image in page.images %}
+          <figure class="slideshow-item{% if loop.first %} is-active{% endif %}">
+            <img src="{{ image.loc }}" alt="{{ image.caption | default: post.description }}">
+            {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
+          </figure>
+{% endfor %}
+          <div class="columns is-mobile">
+            <div class="column">
+              <button class="button is-primary" onclick="prevSlide()">Previous</button>
+            </div>
+            <div class="column">
+              <button class="button is-primary" onclick="nextSlide()">Next</button>
+            </div>
+          </div>
+        </section>
+        <script>{% include slideshow.js %}</script>
+        <section class="content">
+            {{ content }}
+        </section>
+        {% include footer.html %}
+    </body>
+</html>
