@@ -9,8 +9,8 @@ layout: compress
         {% include header.html %}
         <section class="slideshow">
 {% for image in page.images %}
-          <figure class="slideshow-item{% if loop.first %} is-active{% endif %}">
-            <img src="{{ image.loc }}" alt="{{ image.caption | default: post.description }}">
+          <figure class="slideshow-item{% if forloop.first %} is-active{% endif %}">
+            <img src="{{ image.loc }}" alt="{{ image.caption | default: post.description }}" {% unless forloop.first %}loading="lazy"{% endunless %}>
             {% if image.caption %}<figcaption>{{ image.caption }}</figcaption>{% endif %}
           </figure>
 {% endfor %}
