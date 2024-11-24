@@ -34,6 +34,9 @@ self.addEventListener('fetch', event => {
         }
         return fetch(event.request).then(fetchResponse => {
           return caches.open(CACHE_EPOCH).then(cache => {
+            if (!fetchResponse || !fetchResponse.ok) {
+              return fetchResponse;
+            }
             cache.put(event.request, fetchResponse.clone());
             return fetchResponse;
           });
