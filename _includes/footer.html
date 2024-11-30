@@ -6,7 +6,7 @@
         {% if html_page.url != '/404.html' and html_page.url != page.url %}
         <p itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="{{ html_page.url }}"><span itemprop="name">日付不明 - <code class="language-plaintext highlighter-rouge">{{ html_page.title }}</code>{% if html_page.index_description %} - {{ html_page.index_description }}{% elsif html_page.description %} - {{ html_page.description }}{% endif %}</span></a>
-            <meta itemprop="position" content="{{ breadcrumbListCounter }}" />
+            <meta itemprop="position" content="{{ breadcrumbListCounter }}">
         </p>
         {% assign breadcrumbListCounter = breadcrumbListCounter | plus: 1 %}
         {% endif %}
@@ -15,7 +15,7 @@
         {% if post.url != page.url %}
         <p itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="{{ post.url }}"><span itemprop="name">{{ post.date | date: "%d-%m-%Y" }} - <code class="language-plaintext highlighter-rouge">{{ post.title }}</code>{% if post.description %} - {{ post.description }}{% endif %}</span></a>
-            <meta itemprop="position" content="{{ breadcrumbListCounter }}" />
+            <meta itemprop="position" content="{{ breadcrumbListCounter }}">
         </p>
         {% assign breadcrumbListCounter = breadcrumbListCounter | plus: 1 %}
         {% endif %}
@@ -28,7 +28,7 @@
         {% for footer in site.data.footer %}
         <div class="column">
             <a href="{{ footer.href }}">
-                <img class="image is-32x32 m-auto" src="{{ footer.src }}" alt="{{ footer.alt }}" loading="lazy" />
+                <img class="image is-32x32 m-auto" src="{{ footer.src }}" alt="{{ footer.alt }}" loading="lazy">
             </a>
         </div>
         {% endfor %}
