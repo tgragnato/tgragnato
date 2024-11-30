@@ -24,6 +24,7 @@ self.addEventListener('install', event => {
           console.error('[service-worker] Failed to cache: ', error);
         });
       })
+      .then(() => self.skipWaiting())
   );
 });
 
@@ -58,6 +59,6 @@ self.addEventListener('activate', event => {
           }
         })
       )
-    )
+    ).then(() => self.clients.claim())
   );
 });
