@@ -81,6 +81,22 @@ The integration is designed in the persistence layer as a ZMQ PUB firehose, and 
 - `docker run --rm -it ghcr.io/tgragnato/magnetico:latest --help`
 - `docker run --rm -it ghcr.io/tgragnato/magnetico:latest -d --database=zeromq://localhost:5555`
 
+### RabbitMQ
+
+RabbitMQ is an open-source message broker that facilitates communication between distributed systems by queuing and routing messages. It supports multiple messaging protocols and ensures reliable message delivery for scalable applications.
+The integration is designed in the persistence layer following the Publish/Subscribe model, and operates over a durable queue named `magnetico` routed through an exchange.
+
+- `docker run --rm -it ghcr.io/tgragnato/magnetico:latest --help`
+- `docker run --rm -it ghcr.io/tgragnato/magnetico:latest -d --database=amqp://localhost:5672`
+
+### Bitmagnet
+
+Bitmagnet is a self-hosted BitTorrent indexer, DHT crawler, content classifier and torrent search engine with web UI, GraphQL API and Servarr stack integration.
+The integration is designed in the persistence layer as a producer for the import API endpoint, and works under the bitmagnet and bitmagnets URL schemas.
+
+- `docker run --rm -it ghcr.io/tgragnato/magnetico:latest --help`
+- `docker run --rm -it ghcr.io/tgragnato/magnetico:latest -d --database=bitmagnet://localhost:3333/import`
+
 ## Features
 
 Easy installation & minimal requirements:
