@@ -38,7 +38,3 @@
 - title: socialhub
   text: GraphQLHub demo
   href: https://github.com/tgragnato/socialhub
-
-- title: owncloud-convert
-  text: Converts videos stored in Owncloud at the click of a button
-  href: https://github.com/tgragnato/owncloud-convert
