@@ -74,14 +74,15 @@ body
 // Inline
 
 a
-  color: $link-hover
+  color: $link
   cursor: pointer
-  text-decoration: none
+  text-decoration: underline
+  text-decoration-style: dotted
+  text-decoration-color: $red
   strong
     color: currentColor
   &:hover
     color: $link-hover
-    text-decoration: underline
 
 code
   background-color: $code-background
