@@ -224,6 +224,7 @@ main().catch((err) => console.error(err));
 
 <details>
 	<summary>Click to show the input</summary>
+	<pre>
 Button A: X+92, Y+17
 Button B: X+27, Y+61
 Prize: X=9152, Y=6172
