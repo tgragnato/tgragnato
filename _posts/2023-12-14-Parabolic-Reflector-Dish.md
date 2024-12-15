@@ -3,6 +3,7 @@ title: Parabolic Reflector Dish
 description: Advent of Code 2023 [Day 14]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
   - en.wikipedia.org

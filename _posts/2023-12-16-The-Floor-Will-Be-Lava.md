@@ -3,6 +3,7 @@ title: The Floor Will Be Lava
 description: Advent of Code 2023 [Day 16]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

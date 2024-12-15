@@ -3,6 +3,7 @@ title: Cosmic Expansion
 description: Advent of Code 2023 [Day 11]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

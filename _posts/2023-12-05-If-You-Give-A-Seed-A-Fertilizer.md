@@ -3,6 +3,7 @@ title: If You Give A Seed A Fertilizer
 description: Advent of Code 2023 [Day 5]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

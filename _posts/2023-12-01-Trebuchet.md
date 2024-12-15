@@ -3,6 +3,7 @@ title: Trebuchet?!
 description: Advent of Code 2023 [Day 1]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

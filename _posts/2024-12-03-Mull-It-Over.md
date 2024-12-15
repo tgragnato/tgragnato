@@ -3,6 +3,7 @@ title: Mull It Over
 description: Advent of Code 2024 [Day 3]
 layout: default
 lang: en
+tag: aoc24
 prefetch:
   - adventofcode.com
   - deno.com
