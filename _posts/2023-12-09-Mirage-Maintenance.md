@@ -3,6 +3,7 @@ title: Mirage Maintenance
 description: Advent of Code 2023 [Day 9]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

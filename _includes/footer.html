@@ -12,7 +12,7 @@
         {% endif %}
         {% endfor %}
         {% for post in site.posts %}
-        {% if post.url != page.url %}
+        {% if post.url != page.url and page.tag == post.tag %}
         <p itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
             <a itemprop="item" href="{{ post.url }}"><span itemprop="name">{{ post.date | date: "%d-%m-%Y" }} - <code class="language-plaintext highlighter-rouge">{{ post.title }}</code>{% if post.description %} - {{ post.description }}{% endif %}</span></a>
             <meta itemprop="position" content="{{ breadcrumbListCounter }}">

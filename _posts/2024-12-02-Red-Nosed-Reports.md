@@ -3,6 +3,7 @@ title: Red-Nosed Reports
 description: Advent of Code 2024 [Day 2]
 layout: default
 lang: en
+tag: aoc24
 prefetch:
   - adventofcode.com
   - deno.com

@@ -3,6 +3,7 @@ title: Restroom Redoubt
 description: Advent of Code 2024 [Day 14]
 layout: default
 lang: en
+tag: aoc24
 prefetch:
   - adventofcode.com
   - deno.com

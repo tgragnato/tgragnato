@@ -3,6 +3,7 @@ title: Warehouse Woes
 description: Advent of Code 2024 [Day 15]
 layout: default
 lang: en
+tag: aoc24
 prefetch:
   - adventofcode.com
   - deno.com

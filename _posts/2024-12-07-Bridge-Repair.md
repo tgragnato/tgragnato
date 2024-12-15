@@ -3,6 +3,7 @@ title: Bridge Repair
 description: Advent of Code 2024 [Day 7]
 layout: default
 lang: en
+tag: aoc24
 prefetch:
   - adventofcode.com
   - deno.com

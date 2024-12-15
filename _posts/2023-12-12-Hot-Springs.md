@@ -3,6 +3,7 @@ title: Hot Springs
 description: Advent of Code 2023 [Day 12]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

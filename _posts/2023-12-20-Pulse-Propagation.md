@@ -3,6 +3,7 @@ title: Pulse Propagation
 description: Advent of Code 2023 [Day 20]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

@@ -3,6 +3,7 @@ title: Point Of Incidence
 description: Advent of Code 2023 [Day 13]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

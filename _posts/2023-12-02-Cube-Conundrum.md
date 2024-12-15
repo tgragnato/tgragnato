@@ -3,6 +3,7 @@ title: Cube Conundrum
 description: Advent of Code 2023 [Day 2]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---

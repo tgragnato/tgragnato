@@ -3,6 +3,7 @@ title: Camel Cards
 description: Advent of Code 2023 [Day 7]
 layout: default
 lang: en
+tag: aoc23
 prefetch:
   - adventofcode.com
 ---
