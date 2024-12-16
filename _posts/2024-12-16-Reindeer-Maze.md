@@ -396,11 +396,11 @@ function findOptimalPathTiles(grid: string[], minScore: number): number {
 
       if (
         newX < 0 || newY < 0 ||
-        newX >= grid[0].length || newY >= grid.length
+        newX >= grid[0].length || newY >= grid.length ||
+        grid[newY][newX] === "#"
       ) {
         return;
       }
-      if (grid[newY][newX] === "#") return;
 
       const moveCost = 1;
       const turnCost = getTurnCost(position.dir, newDirIndex);
