@@ -60,10 +60,20 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 
 ---
 
-## Advent Of Code
+## Advent Of Code 2024
 
 {% for post in site.posts %}
-{% if post.tag == "aoc23" or post.tag == "aoc24" %}
+{% if post.tag == "aoc24" %}
+[{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
+{% endif %}
+{% endfor %}
+
+---
+
+## Advent Of Code 2023
+
+{% for post in site.posts %}
+{% if post.tag == "aoc23" %}
 [{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
 {% endif %}
 {% endfor %}
