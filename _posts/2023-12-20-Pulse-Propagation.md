@@ -201,7 +201,7 @@ func main() {
 
 	lowCount, highCount := 0, 0
 	for i := 0; i < 1000; i++ {
-		queue := []Pulse{{source: "button", dest: "broadcaster", high: false}}
+		queue := []Pulse{ {source: "button", dest: "broadcaster", high: false} }
 
 		for len(queue) > 0 {
 			pulse := queue[0]
@@ -361,7 +361,7 @@ func main() {
 	buttonPresses := 0
 	for {
 		buttonPresses++
-		queue := []Pulse{{source: "button", dest: "broadcaster", high: false}}
+		queue := []Pulse{ {source: "button", dest: "broadcaster", high: false} }
 
 		for len(queue) > 0 {
 			pulse := queue[0]
