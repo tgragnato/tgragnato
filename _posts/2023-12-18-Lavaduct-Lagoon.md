@@ -94,7 +94,7 @@ func main() {
 		instructions = append(instructions, inst)
 	}
 
-	vertices := []Point{{0, 0}}
+	vertices := []Point{ {0, 0} }
 	boundaries := make(map[Point]bool)
 	currentPos := Point{0, 0}
 	boundaries[currentPos] = true
@@ -199,7 +199,7 @@ func main() {
 	}
 	defer file.Close()
 
-	vertices := []Point{{0, 0}}
+	vertices := []Point{ {0, 0} }
 	currentPos := Point{0, 0}
 	var perimeter int64
 

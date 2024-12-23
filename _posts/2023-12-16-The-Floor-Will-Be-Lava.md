@@ -217,7 +217,7 @@ type Beam struct {
 func simulateBeam(grid []string, startPos Point, startDir Point) int {
 	energized := make(map[Point]bool)
 	visited := make(map[string]bool)
-	beams := []Beam{{startPos, startDir}}
+	beams := []Beam{ {startPos, startDir} }
 
 	for len(beams) > 0 {
 		var newBeams []Beam
