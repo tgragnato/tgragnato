@@ -1,32 +1,66 @@
-name: Test Jekyll build
+name: Pull Requests
 
-on:
-  pull_request:
-    branches: ["main"]
+on: [pull_request]
 
 jobs:
 
   test:
+    name: Test Jekyll build
     runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      packages: read
+      security-events: read
+      pull-requests: read
+
     steps:
+
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Commits linter
-        uses: bugbundle/commits@v1.1.0
-        id: commits
+
       - name: Setup Ruby
         uses: ruby/setup-ruby@4a9ddd6f338a97768b8006bf671dfbad383215f4 # v1.207.0
         with:
           ruby-version: '3.3'
           bundler-cache: true
           cache-version: 0
+
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
+
       - name: Build with Jekyll
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: staging
+
+  commit-lint:
+    name: Commits linter
+    runs-on: ubuntu-latest
+
+    permissions:
+      actions: read
+      contents: read
+      packages: read
+      security-events: read
+      pull-requests: read
+
+    steps:
+
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: ${{ github.event.pull_request.commits }}
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Commits linter
+        uses: bugbundle/commits@v1.1.0
+        id: commits
+
+      - name: Preview the version
+        run: echo ${{ steps.commits.outputs.major }}.${{ steps.commits.outputs.minor }}.${{ steps.commits.outputs.patch }}
 
   auto-approve:
     name: Auto Approve
