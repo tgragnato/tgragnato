@@ -19,7 +19,7 @@ Fast delivery is one of the most demanded things in the software industry, makin
 
 AI content was overwhelming and the content was in most cases light or boring. The stocks of AI companies might be a game changer or a bubble.
 
-<iframe src="https://www.youtube-nocookie.com/embed/BlBiNUCmfuM?si=NOUYM5Bwu668mU7A" width="100%" height="560" title="Day 1 of the WeAreDevelopers World Congress 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/BlBiNUCmfuM?si=NOUYM5Bwu668mU7A" width="100%" height="560" title="Day 1 of the WeAreDevelopers World Congress 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
 
 ## My Event
 
@@ -67,7 +67,7 @@ This has been my custom event:
 
 - `We Develop the Future: WTF is Next?` Martin Wezowski - SAP
 
-<iframe src="https://www.youtube-nocookie.com/embed/MJxkJJo220c?si=BLyuwZO0BEqPjGql" width="100%" height="560" title="Day 2 of the WeAreDevelopers World Congress 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/MJxkJJo220c?si=BLyuwZO0BEqPjGql" width="100%" height="560" title="Day 2 of the WeAreDevelopers World Congress 2024" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
 
 ## A retrospective on the state of DevOps and Infrastructure Engineering in Italy compared to the rest of the world
 
