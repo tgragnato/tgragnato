@@ -194,21 +194,21 @@ L'esecuzione del test sull'**interfaccia di loopback** (`127.0.0.1`) è cruciale
 
 ## Risultati
 
-Average latency for 10 requests with latency 0 ms: 0.400000 ms
-Average latency for 100 requests with latency 0 ms: 0.024000 ms
-Average latency for 1000 requests with latency 0 ms: 0.003024 ms
-Average latency for 10 requests with latency 1 ms: 1.400000 ms
-Average latency for 100 requests with latency 1 ms: 1.804000 ms
-Average latency for 1000 requests with latency 1 ms: 1.889804 ms
-Average latency for 10 requests with latency 10 ms: 11.900000 ms
-Average latency for 100 requests with latency 10 ms: 11.869000 ms
-Average latency for 1000 requests with latency 10 ms: 11.936869 ms
-Average latency for 10 requests with latency 100 ms: 102.900000 ms
-Average latency for 100 requests with latency 100 ms: 103.599000 ms
-Average latency for 1000 requests with latency 100 ms: 102.555599 ms
-Average latency for 10 requests with latency 1000 ms: 1004.300000 ms
-Average latency for 100 requests with latency 1000 ms: 1013.343000 ms
-Average latency for 1000 requests with latency 1000 ms: 1003.964343 ms
+- Average latency for 10 requests with latency 0 ms: 0.400000 ms
+- Average latency for 100 requests with latency 0 ms: 0.024000 ms
+- Average latency for 1000 requests with latency 0 ms: 0.003024 ms
+- Average latency for 10 requests with latency 1 ms: 1.400000 ms
+- Average latency for 100 requests with latency 1 ms: 1.804000 ms
+- Average latency for 1000 requests with latency 1 ms: 1.889804 ms
+- Average latency for 10 requests with latency 10 ms: 11.900000 ms
+- Average latency for 100 requests with latency 10 ms: 11.869000 ms
+- Average latency for 1000 requests with latency 10 ms: 11.936869 ms
+- Average latency for 10 requests with latency 100 ms: 102.900000 ms
+- Average latency for 100 requests with latency 100 ms: 103.599000 ms
+- Average latency for 1000 requests with latency 100 ms: 102.555599 ms
+- Average latency for 10 requests with latency 1000 ms: 1004.300000 ms
+- Average latency for 100 requests with latency 1000 ms: 1013.343000 ms
+- Average latency for 1000 requests with latency 1000 ms: 1003.964343 ms
 
 > set xlabel 'Response Time' / set ylabel 'Average Latency' / set logscale x
 
