@@ -4182,8 +4182,8 @@ This drastically reduces the cost of mitigation, even when the attack is on laye
 ```
 iptables -A INPUT -p tcp --syn --dport 80 -m connlimit --connlimit-above 1 -j DROP
 iptables -A INPUT -p tcp --syn --dport 443 -m connlimit --connlimit-above 10 -j DROP
-nft add rule inet filter input tcp flags syn tcp dport 80 ct count over 1 ip saddr counter drop
-nft add rule inet filter input tcp flags syn tcp dport 443 ct count over 10 ip saddr counter drop
+nft add rule inet filter input tcp dport 80 tcp flags syn ct count over 1 drop
+nft add rule inet filter input tcp dport 443 tcp flags syn ct count over 10 drop
 ```
 
 As always, adding a cache and a rate limiter helps minimize the infrastructure cost needed to support the long tail of unfiltered requests.
