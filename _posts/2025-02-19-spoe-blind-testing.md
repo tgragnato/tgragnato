@@ -28,7 +28,7 @@ Il blind testing è una metodologia di valutazione delle prestazioni in cui i so
 
 Il test viene condotto senza che i partecipanti sappiano quali sono i funzionamenti interni del sistema che stanno effettivamente testando, assicurando così una valutazione imparziale delle performance.
 
-In questo caso specifico i risultati possono essere utili per confermare o smentire i valori recuperati di latenza recuperati tramite le misurazioni effettuate con l'exporter Prometheus.
+In questo caso specifico i risultati possono essere utili per confermare o smentire i valori di latenza recuperati tramite le misurazioni effettuate con l'exporter Prometheus.
 
 haproxy.cfg
 ```
