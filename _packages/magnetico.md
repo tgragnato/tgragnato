@@ -57,7 +57,7 @@ After setting it up, you should create a user, set a password, create a database
 - `CREATE USER magnetico WITH PASSWORD 'magnetico';`
 - `CREATE DATABASE magnetico OWNER magnetico;`
 - `\c magnetico`
-- `CREATE EXTENSION pg_trgm;`
+- `CREATE EXTENSION IF NOT EXISTS pg_trgm;`
 - `docker run --rm -it ghcr.io/tgragnato/magnetico:latest --help`
 - `docker run --rm -it -p 8080:8080/tcp ghcr.io/tgragnato/magnetico:latest --addr=0.0.0.0:8080 --database=postgres://magnetico:magnetico@localhost:5432/magnetico?sslmode=disable`
 - visit `http://localhost:8080`
@@ -136,9 +136,12 @@ USERNAME:$2y$12$YE01LZ8jrbQbx6c0s2hdZO71dSjn2p/O9XsYJpz.5968yCysUgiaG
 
 ## Why?
 
-BitTorrent, being a distributed P2P file sharing protocol, has long suffered because of the
-centralised entities that people depended on for searching torrents (websites) and for discovering
-other peers (trackers). Introduction of DHT (distributed hash table) eliminated the need for
-trackers, allowing peers to discover each other through other peers and to fetch metadata from the
-leechers & seeders in the network. **magnetico** is the finishing move that allows users to search
-for torrents in the network, hence removing the need for centralised torrent websites.
+BitTorrent, being a distributed P2P file sharing protocol, has long suffered because of the centralised entities that people depended on for searching torrents (websites) and for discovering other peers (trackers). Introduction of DHT (distributed hash table) eliminated the need for trackers, allowing peers to discover each other through other peers and to fetch metadata from the leechers & seeders in the network.
+
+**magnetico** is the finishing move that allows users to search for torrents in the network, hence removing the need for centralised torrent websites.
+
+The primary purpose for this fork extends beyond **_content discovery_** and building resilient infrastructure for information sharing that's **_resistant to censorship_** and single points of failure.
+
+The nodes in this fork actively respond to DHT queries they receive, **_contributing to the network_** rather than just passively crawling it.
+
+An interesting side effect of this operating mode is that it confuses DHT network scanners, **_hiding users' actual downloads in a cloud of 'ghost' replies_**, increasing the difficulty of aggregating such data into accurate tracking profiles.
