@@ -29,7 +29,7 @@
 
 - title: goflow
   text: The high-scalability sFlow/NetFlow/IPFIX collector used internally at Cloudflare [syslog transport]
-  href: https://github.com/tgragnato/goflow
+  href: https://tgragnato.it/goflow/
 
 - title: socialhub
   text: GraphQLHub demo
