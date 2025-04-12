@@ -10,3 +10,12 @@
 
 - text: Just keep making great shit, keep your costs in check, charge appropriate prices for your work, share as much as you can, and let the chips fail where they may.
   author: Jason Fried
+
+- text: >
+    Whenever you make an abstraction and you find that every time you do something and it's extremely complex, it's always because you got too clever to begin with.
+    This is a tale as old as time. Just program like you're an idiot. You're stupid. It's okay. Be stupid. Be like the rest of us and just be stupid.
+    Don't be clever. Don't come up with some cutesy way to generate all the greatest things you've ever done and don't worry this is super flexible and abstract.
+    No, you're too dumb. I'm too dumb. John Carmack's probably too dumb to do it too. It's okay, just make it simple, one dimensional.
+    Solve the problem at hand, don't solve tomorrow's problems because you don't know what they are and you're not that good at it anyways.
+    That's the secret. I'm always stupid. That's funny I'm always wrecked.
+  author: ThePrimeagen
