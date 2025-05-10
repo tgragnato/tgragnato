@@ -28,8 +28,9 @@ Questo migliora la creatività, la risoluzione dei problemi e il morale compless
 ### Allineamento strategico
 
 Quando un team comprende e si connette agli obiettivi più ampi, ogni membro è motivato a contribuire al successo collettivo.
-L'allineamento strategico garantisce che tutti lavorino verso una direzione comune, evitando sprechi di risorse e conflitti di priorità.
+Questo è il cosiddetto allineamento strategico.
 
+Garantisce che tutti lavorino verso una direzione comune, evitando sprechi di risorse e conflitti di priorità.
 Questo fattore è cruciale per mantenere la coerenza e massimizzare l'impatto del lavoro del team.
 
 ### Carico di lavoro bilanciato
@@ -53,7 +54,7 @@ Questo richiede una buona comunicazione, esperienza con gli strumenti ed i proce
 ### Sicurezza e Cambiamento
 
 La consapevolezza che i requisiti sono sempre in cambiamento continuo, e che le decisioni prese anni prima devono essere rivalutate è fondamentale.
-Quando questo viene visto come un'opportunità per migliorare, una inutile resistenza è evitata.
+Abbracciare questo assunto può aiutare a prevenire inutili resistenze.
 
 Questo atteggiamento è spesso supportato da una cultura di fiducia e sicurezza psicologica, dove c'è libertà di sperimentare e imparare dai propri errori.
 Una valutazione continua degli obiettivi attuali implica una naturale resistenza al subire passivamente i cambiamenti dovuti alla Legge di Conway.
