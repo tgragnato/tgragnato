@@ -21,7 +21,7 @@ Documentation available at [pkg.go.dev](https://pkg.go.dev/tgragnato.it/snowflak
 [![Go Report Card](https://goreportcard.com/badge/github.com/tgragnato/snowflake)](https://goreportcard.com/report/github.com/tgragnato/snowflake)
 [![codecov](https://codecov.io/gh/tgragnato/snowflake/branch/main/graph/badge.svg)](https://codecov.io/gh/tgragnato/snowflake)
 
-- golang 1.22+ & bumped dependencies
+- golang 1.24+ & bumped dependencies
 - custom transport for broker negotiation (TLS 1.3 with selected ciphersuites & groups, MultiPath TCP)
 - custom DTLS fingerprint, different from any popular WebRTC implementation
 - use the Setting Engine to reduce MulticastDNS noise
