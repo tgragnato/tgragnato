@@ -19,7 +19,7 @@ Documentation available at [pkg.go.dev](https://pkg.go.dev/tgragnato.it/magnetic
 [![Go](https://github.com/tgragnato/magnetico/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/tgragnato/magnetico/actions/workflows/go.yml)
 [![CodeQL](https://github.com/tgragnato/magnetico/actions/workflows/codeql.yml/badge.svg?branch=main)](https://github.com/tgragnato/magnetico/actions/workflows/codeql.yml)
 [![Go Report Card](https://goreportcard.com/badge/github.com/tgragnato/magnetico)](https://goreportcard.com/report/github.com/tgragnato/magnetico)
-[![codecov](https://codecov.io/gh/tgragnato/magnetico/branch/main/graph/badge.svg)](https://codecov.io/gh/tgragnato/magnetico)
+[![Codecov](https://codecov.io/gh/tgragnato/magnetico/branch/main/graph/badge.svg)](https://codecov.io/gh/tgragnato/magnetico)
 
 magnetico is the first autonomous (self-hosted) BitTorrent DHT search engine suite that is *designed for end-users*. The suite consists of a single binary with two components:
 
