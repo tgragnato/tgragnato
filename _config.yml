@@ -30,7 +30,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - CNAME
-  - Dockerfile
   - LICENSE
   - README.md
 include:
