@@ -1,18 +1,13 @@
 ---
 sitemap: false
 ---
-{% assign posts = site.posts | where_exp:'post','post.sitemap != false' %}
 const urlsToCache = [
-  '/manifest.json',
-  '/style.css',
-  '/fonts/GrechenFuemen-Regular.woff2',
-  '/fonts/square-github.svg',
-  '/fonts/square-hn.svg',
-  '/fonts/square-linkedin.svg',
-  '/fonts/square-signal.svg',
-  '/fonts/tor.svg',
-{% for post in posts %}  '{{ post.url }}'{% unless forloop.last %},{% endunless %}
+{% for file in site.static_files %}{% unless file.path contains '/samples/' %}  '{{ file.path }}',
+{% endunless %}{% endfor %}
+{% for page in site.pages %}  '{{ page.url }}',
 {% endfor %}
+{% for post in site.posts %}  '{{ post.url }}'{% unless forloop.last %},
+{% endunless %}{% endfor %}
 ];
 const CACHE_EPOCH = '{{ "now" | date: "%s" }}';
 
