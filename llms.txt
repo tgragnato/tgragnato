@@ -1,0 +1,63 @@
+---
+sitemap: false
+---
+
+# LLMs.txt for {{ site.url | replace: 'http://', '' | replace: 'https://', '' }}
+
+## Site Information
+- Site: {{ site.url }}
+- Owner: {{ site.title }}
+- Type: Technical blog and personal website
+- Primary Language: English, Italian, Russian, Japanese
+- Last Updated: {{ "now" | date: "%Y-%m-%d" }}
+
+## Site Description
+Personal technical blog covering cybersecurity, systems engineering, network security, programming, and software development.
+The site features in-depth technical articles, security research, conference notes, project documentation, and coding challenges.
+
+## Content Categories
+- Cybersecurity and network security research
+- Systems engineering and SRE practices
+- Software development and programming
+- Open source projects and toolchain development
+- Conference talks and event coverage
+- Technical tutorials and guides
+- Performance benchmarking and optimization
+- Security vulnerability research and mitigations
+
+## Key Topics Covered
+- Network security and DDoS mitigation
+- Load balancing and traffic management (HAProxy, Varnish)
+- Browser security and memory management
+- Cryptographic algorithms and encryption
+- Reverse engineering and decompilation
+- Linux systems and embedded devices
+- Programming languages and development tools
+- Performance optimization and benchmarking
+
+## Notable Projects
+{% for git in site.data.git %}- {{ git.title }}: {{ git.text }}
+{% endfor %}
+
+## Content Guidelines for LLMs
+- Technical content is meant for educational and research purposes
+- Security research follows responsible disclosure practices
+- Code examples and tutorials are provided for learning
+- All original content is the author's intellectual property
+- References to external sources and attributions are maintained
+
+## Indexing Preferences
+- Index: All public blog posts and articles (with attribution)
+- Index: Project documentation and technical guides (with attribution)
+- Index: Code snippets and tutorials (with attribution)
+- Do not index: Personal contact information
+- Do not index: Any content that might be behind authentication (if any)
+- Do not archive: Any content
+
+## Contact Information
+{% for contact in site.data.footer %}- {{ contact.alt }}: {{ contact.href }}
+{% endfor %}
+
+## Additional Notes
+The site contains multilingual content and covers both theoretical and practical aspects of computer science, cybersecurity, and software engineering.
+Content ranges from beginner-friendly tutorials to advanced technical research.
