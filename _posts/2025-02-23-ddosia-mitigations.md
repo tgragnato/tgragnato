@@ -9,7 +9,7 @@ prefetch:
   - www.youtube-nocookie.com
 ---
 
-<iframe src="https://www.youtube-nocookie.com/embed/ROf4oNqGEUc?si=DCh3l06T6uUXbyLj" width="100%" height="560" title="Inside The World Of Russian Hackers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/ROf4oNqGEUc" width="100%" height="560" title="Inside The World Of Russian Hackers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
 
 > If you know the enemy and know yourself, you need not fear the result of a hundred battles. `Sun Tzu`
 

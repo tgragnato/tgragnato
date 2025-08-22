@@ -14,7 +14,7 @@ The D-Link DNS-323 is a two-bay NAS device that was first introduced around 2006
 
 The device was designed for home and small office use, providing file-sharing capabilities across a local network or even over the internet.
 
-<iframe src="https://www.youtube-nocookie.com/embed/bIX-VBUvCtY?si=XCT4l4gxkGBcNRqa" width="100%" height="560" title="D-LINK DNS-323 NAS & DGL-4500 Xtreme N Gaming Router (NCIX Tech Tips #25" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/bIX-VBUvCtY" width="100%" height="560" title="D-LINK DNS-323 NAS & DGL-4500 Xtreme N Gaming Router (NCIX Tech Tips #25" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
 
 The DNS-323 became popular among tech enthusiasts due to its Linux-based firmware and relatively open hardware design, which made it a prime candidate for hacking and customization.
 
