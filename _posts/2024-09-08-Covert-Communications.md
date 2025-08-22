@@ -13,7 +13,7 @@ prefetch:
 
 I'm posting this to publish data without editorializing it. Much has already been written and said on the subject. These are binary and/or code artifacts.
 
-<iframe src="https://www.youtube-nocookie.com/embed/uh_q02eefFM?si=9tUtOcq5YaDJljtb" width="100%" height="560" title="The Mistake That Got So Many CIA Agents Killed in China 🎙 Darknet Diaries Ep. 75: Compromised Commsr" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
+<iframe src="https://www.youtube-nocookie.com/embed/uh_q02eefFM" width="100%" height="560" title="The Mistake That Got So Many CIA Agents Killed in China 🎙 Darknet Diaries Ep. 75: Compromised Commsr" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
 
 ## JAR artifacts
 
