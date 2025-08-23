@@ -4,11 +4,11 @@ sitemap: false
 
 {% for bot in site.data.bots %}
 User-Agent: {{ bot }}{% endfor %}
+Allow: /
+
+User-agent: *
 Disallow: /
 DisallowAITraining: /
 Allow: /$
-
-User-agent: *
-Allow: /
 
 Sitemap: {{ site.url }}/sitemap.xml
