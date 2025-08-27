@@ -3,6 +3,8 @@ title: Grizzly Steppe
 description: Samples from Russian cyber operations
 layout: default
 lang: en
+prefetch:
+  - www.youtube-nocookie.com
 ---
 
 <iframe src="https://www.youtube-nocookie.com/embed/ZhfI0EboPU0" width="100%" height="560" title="Russia’s Most Wanted Hackers" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" crossorigin="anonymous" frameborder="0" allowfullscreen></iframe>
