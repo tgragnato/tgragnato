@@ -50,23 +50,20 @@ Here we'll look at how to construct a European version of a portfolio with facto
 It's an **imperfect and lazy** portfolio that utilizes globally diversified index funds plus factor tilts, particularly for Size and Value, with an embedded **home bias**.
 
 - **_50% EXUS_** / Xtrackers MSCI World ex USA UCITS ETF 1C / IE0006WW1TQ4 / Ter: 0,15% p.a.
-- **_30% AVWS_** / Avantis Global Small Cap Value UCITS ETF USD Acc / IE0003R87OG3 / Ter: 0.39% p.a.
-  - Alternative **_15% ZPRX_** / SPDR MSCI Europe Small Cap Value Weighted UCITS ETF / IE00BSPLC298 / Ter: 0,30% p.a.
-  - Alternative **_15% ZPRV_** / SPDR MSCI USA Small Cap Value Weighted UCITS ETF / IE00BSPLC413/ Ter: 0,30% p.a.
-- **_10% USDV_** / SPDR S&P US Dividend Aristocrats UCITS ETF / IE00B6YX5D40 / Ter: 0,35% p.a.
-  - Alternative **_10% SPXH_** / Amundi S&P 500 II UCITS ETF EUR Hedged Dist / LU0959211243 / Ter: 0,07% p.a.
-- **_10% EMDV_** / SPDR S&P Emerging Markets Dividend Aristocrats UCITS ETF (Dist) / IE00B6YX5B26 / Ter: 0.55% p.a.
-  - Alternative **_10% EMXC_** / Amundi MSCI Emerging Ex China UCITS ETF Acc / LU2009202107 / Ter: 0,15% p.a.
+- **_10% AVWS_** / Avantis Global Small Cap Value UCITS ETF USD Acc / IE0003R87OG3 / Ter: 0.39% p.a.
+- **_10% ZPRX_** / SPDR MSCI Europe Small Cap Value Weighted UCITS ETF / IE00BSPLC298 / Ter: 0,30% p.a.
+- **_10% ZPRV_** / SPDR MSCI USA Small Cap Value Weighted UCITS ETF / IE00BSPLC413 / Ter: 0,30% p.a.
+- **_10% YGLD_** / IncomeShares Gold+ Yield ETP / XS2852999775 / Ter: 0,35% p.a.
+- **_10% YSLV_** / IncomeShares Silver+ Yield ETP / XS3068774614 / Ter: 0,35% p.a.
+- **_0% EMXC_** / Amundi MSCI Emerging Ex China UCITS ETF Acc / LU2009202107 / Ter: 0,15% p.a.
 
-Average total expense ratio:
-- original: 0.15 * 0.50 + 0.39 * 0.30 + 0.35 * 0.10 + 0.55 * 0.10 = 0.282% p.a.
-- alternative: 0.15 * 0.50 + 0.30 * 0.15 + 0.30 * 0.15 + 0.07 * 0.10 + 0.15 * 0.10 = 0.187% p.a.
+Average total expense ratio: 0.15 * 0.50 + 0.39 * 0.10 + 0.30 * 0.10 + 0.30 * 0.10 + 0.35 * 0.10 + 0.35 * 0.10 = 0.244% p.a.
 
 Even if market timing is avoided, choosing to overweight certain factors can be an implicit form of timing, especially if allocations are changed over time or in response to recent performance.
 
-A European “home bias” may reduce diversification and increase portfolio-specific risk compared to a purely global exposure.
+A European “home bias” may reduce diversification and increase portfolio-specific risk compared to a purely global exposure. When adopting value and size factors, some sector or geographic concentrations will occur.
 
-Even when adopting value and size factors, some sector or geographic concentrations will occur.
+Including covered call ETPs on precious metals is generally not considered a sound financial strategy. Covered calls tend to underperform over the long term. This allocation may only be beneficial if you specifically require this type of dividend for tax reasons (e.g. preferring other forms of income over capital gains).
 
 ## References
 
