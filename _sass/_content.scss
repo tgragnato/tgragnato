@@ -1,0 +1,305 @@
+h2,
+h3,
+.title,
+.subtitle {
+  word-break: break-word;
+  font-family: "GrechenFuemen", serif;
+}
+
+h2:not(:last-child),
+h3:not(:last-child),
+.title:not(:last-child),
+.subtitle:not(:last-child) {
+  margin-bottom: 1.5rem;
+}
+
+h2,
+h3,
+.title {
+  color: var(--text-strong);
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.subtitle {
+  color: var(--text);
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.content {
+  line-height: 1.65;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+}
+
+.content li + li {
+  margin-top: 0.25em;
+}
+
+.content p:not(:last-child),
+.content dl:not(:last-child),
+.content ol:not(:last-child),
+.content ul:not(:last-child),
+.content blockquote:not(:last-child),
+.content pre:not(:last-child),
+.content table:not(:last-child) {
+  margin-bottom: 1em;
+}
+
+.content h1,
+.content h2,
+.content h3,
+.content h4,
+.content h5,
+.content h6 {
+  color: var(--text-strong);
+  font-weight: 600;
+  line-height: 1.125;
+}
+
+.content h1 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+}
+
+.content h1:not(:first-child) {
+  margin-top: 1em;
+}
+
+.content h2 {
+  font-size: 1.75em;
+  margin-bottom: 0.5714em;
+}
+
+.content h2:not(:first-child) {
+  margin-top: 1.1428em;
+}
+
+.content h3 {
+  font-size: 1.5em;
+  margin-bottom: 0.6666em;
+}
+
+.content h3:not(:first-child) {
+  margin-top: 1.3333em;
+}
+
+.content h4 {
+  font-size: 1.25em;
+  margin-bottom: 0.8em;
+}
+
+.content h5 {
+  font-size: 1.125em;
+  margin-bottom: 0.8888em;
+}
+
+.content h6 {
+  font-size: 1em;
+  margin-bottom: 1em;
+}
+
+.content blockquote {
+  background-color: var(--bg-muted);
+  border-left: 5px solid var(--border);
+  border-radius: $radius;
+  padding: 1.25em 1.5em;
+}
+
+.content ol,
+.content ul,
+.content dd {
+  margin-left: 2em;
+}
+
+.content ol {
+  list-style-position: outside;
+  list-style-type: decimal;
+  margin-top: 1em;
+}
+
+.content ul {
+  list-style: disc outside;
+  margin-top: 1em;
+}
+
+.content ul ul {
+  list-style-type: circle;
+  margin-top: 0.5em;
+}
+
+.content ul ul ul {
+  list-style-type: square;
+}
+
+.content figure {
+  margin-left: 2em;
+  margin-right: 2em;
+  text-align: center;
+}
+
+.content figure:not(:first-child) {
+  margin-top: 2em;
+}
+
+.content figure:not(:last-child) {
+  margin-bottom: 2em;
+}
+
+.content figure img {
+  display: inline-block;
+}
+
+.content figure figcaption {
+  font-style: italic;
+}
+
+.content sup,
+.content sub {
+  font-size: 75%;
+}
+
+.content table {
+  display: block;
+  -webkit-overflow-scrolling: touch;
+  overflow-x: auto;
+  width: 100%;
+}
+
+.content table tbody,
+.content table thead,
+.content table tfoot {
+  width: 100%;
+}
+
+.content td,
+.content th {
+  border: 1px solid var(--border);
+  border-width: 0 0 1px;
+  min-width: 8ch;
+  padding: 0.5em 0.75em;
+  vertical-align: top;
+  word-break: break-word;
+}
+
+.content pre,
+.highlight {
+  border: 1px solid var(--border);
+  border-radius: $radius;
+}
+
+.content pre {
+  margin-top: 1.1rem;
+}
+
+.highlight {
+  background-color: var(--bg-muted);
+  overflow-x: auto;
+}
+
+.highlight pre {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  margin: 0;
+  padding: 1.1rem 1.25rem;
+}
+
+.content th {
+  color: var(--text-strong);
+}
+
+.content thead td,
+.content thead th {
+  border-width: 0 0 2px;
+  color: var(--text-strong);
+}
+
+.content tfoot td,
+.content tfoot th {
+  border-width: 2px 0 0;
+  color: var(--text-strong);
+}
+
+.content tbody tr:last-child td,
+.content tbody tr:last-child th {
+  border-bottom-width: 0;
+}
+
+.image {
+  display: block;
+  position: relative;
+}
+
+.image img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+.image.is-32x32 {
+  height: 32px;
+  min-height: 32px;
+  min-width: 32px;
+  object-fit: contain;
+  width: 32px;
+}
+
+.button {
+  align-items: center;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: $radius-small;
+  color: var(--text-strong);
+  cursor: pointer;
+  display: inline-flex;
+  font-size: 1rem;
+  justify-content: center;
+  line-height: 1.5;
+  padding: calc(0.5em - 1px) 1em;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+button.button,
+input.button {
+  appearance: none;
+}
+
+select.button {
+  appearance: auto;
+  padding-right: 1.75em;
+}
+
+.button:hover,
+.button:focus {
+  border-color: var(--border-strong);
+  color: var(--text-strong);
+}
+
+.button.is-primary {
+  background-color: var(--primary);
+  border-color: transparent;
+  color: var(--primary-contrast);
+}
+
+.button.is-primary:hover,
+.button.is-primary:focus {
+  background-color: var(--primary-hover);
+}
+
+.m-auto {
+  margin: auto !important;
+}
+
+.is-marginless {
+  margin: 0 !important;
+}
+
+.is-paddingless {
+  padding: 0 !important;
+}

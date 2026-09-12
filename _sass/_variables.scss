@@ -1,0 +1,33 @@
+$bp-tablet: 769px;
+$bp-desktop: 1024px;
+$bp-widescreen: 1216px;
+
+$gap: 32px;
+$column-gap: 0.75rem;
+
+$radius-small: 2px;
+$radius: 4px;
+
+:root {
+  color-scheme: dark;
+
+  --bg: hsl(0 0% 0%);
+  --bg-elevated: hsl(0 0% 2%);
+  --bg-muted: hsl(0 0% 4%);
+
+  --text: hsl(0 0% 86%);
+  --text-strong: hsl(0 0% 92%);
+  --text-light: hsl(0 0% 71%);
+
+  --border: hsl(0 0% 14%);
+  --border-strong: hsl(0 0% 29%);
+
+  --link: hsl(0 0% 98%);
+  --accent: hsl(348 86% 61%);
+
+  --primary: hsl(0 0% 21%);
+  --primary-hover: hsl(0 0% 16%);
+  --primary-contrast: hsl(0 0% 100%);
+
+  --code-inline: hsl(348 76% 56%);
+}

@@ -1,0 +1,207 @@
+@font-face {
+  font-family: "GrechenFuemen";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("GrechenFuemen"), local("GrechenFuemen-Regular"), url("fonts/GrechenFuemen-Regular.woff2") format("woff2");
+}
+
+html,
+body,
+p,
+ol,
+ul,
+li,
+dl,
+dt,
+dd,
+blockquote,
+figure,
+fieldset,
+legend,
+textarea,
+pre,
+iframe,
+hr,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+ul {
+  list-style: none;
+}
+
+button,
+input,
+select,
+textarea {
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+  background-color: var(--bg);
+  color: var(--text);
+  font-size: 16px;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+article,
+aside,
+figure,
+footer,
+header,
+hgroup,
+section {
+  display: block;
+}
+
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+
+body {
+  color: var(--text);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-decoration-color: var(--accent);
+}
+
+a strong {
+  color: currentColor;
+}
+
+a:hover {
+  color: var(--link);
+}
+
+code,
+pre {
+  font-family: monospace;
+  -moz-osx-font-smoothing: auto;
+  -webkit-font-smoothing: auto;
+}
+
+code {
+  background-color: var(--bg-muted);
+  color: var(--code-inline);
+  font-size: 0.875em;
+  font-weight: 400;
+  padding: 0.25em 0.5em;
+}
+
+hr {
+  background-color: var(--bg-muted);
+  border: 0;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0;
+}
+
+img,
+video {
+  height: auto;
+  max-width: 100%;
+}
+
+iframe {
+  border: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline;
+}
+
+small {
+  font-size: 0.875em;
+}
+
+span {
+  font-style: inherit;
+  font-weight: inherit;
+}
+
+strong {
+  color: var(--text-strong);
+  font-weight: 700;
+}
+
+fieldset {
+  border: 0;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  background-color: var(--bg-muted);
+  color: var(--text);
+  font-size: 0.875em;
+  overflow-x: auto;
+  padding: 1.25rem 1.5rem;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+pre code {
+  background-color: transparent;
+  color: currentColor;
+  font-size: 1em;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+  vertical-align: top;
+}
+
+th:not([align]),
+td:not([align]) {
+  text-align: inherit;
+}
