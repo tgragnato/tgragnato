@@ -18,7 +18,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Setup Ruby
         uses: ruby/setup-ruby@d781c1b4ed31764801bfae177617bb0446f5ef8d # v1.218.0
@@ -50,7 +50,7 @@ jobs:
     steps:
 
       - name: Checkout repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
         with:
           fetch-depth: ${{ github.event.pull_request.commits }}
           ref: ${{ github.event.pull_request.head.sha }}
