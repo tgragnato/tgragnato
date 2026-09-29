@@ -8,6 +8,19 @@ layout: compress
     <body>
         {% include header.html %}
         <section class="content">
+{% if page.collection == 'posts' and page.ref %}
+{% assign translations = site.posts | where: 'ref', page.ref %}
+{% if translations.size > 1 %}
+            <nav class="post-language-switcher" aria-label="Available translations">
+                <span>Read this article in:</span>
+{% for translation in translations %}
+{% unless translation.url == page.url %}
+                <a lang="{{ translation.lang }}" hreflang="{{ translation.lang }}" href="{{ translation.url }}">{{ translation.lang | upcase }}</a>
+{% endunless %}
+{% endfor %}
+            </nav>
+{% endif %}
+{% endif %}
             {{ content }}
         </section>
         {% include footer.html %}

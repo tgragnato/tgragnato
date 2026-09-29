@@ -30,11 +30,7 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 
 ## Words
 
-{% for post in site.posts %}
-{% unless post.tag %}
-[{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
-{% endunless %}
-{% endfor %}
+{% include post-list.html %}
 {% for page in site.html_pages %}
 {% if page.url != '/404.html' and page.url != '/' %}
 [日付不明 - `{{ page.title }}`{% if page.index_description %} - {{ page.index_description }}{% elsif page.description %} - {{ page.description }}{% endif %}]({{ page.url }})
@@ -55,25 +51,4 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 
 {% for quote in site.data.quotes %}
 > {{ quote.text }} `{{ quote.author }}`
-{% endfor %}
-
-
----
-
-## Advent Of Code 2024
-
-{% for post in site.posts %}
-{% if post.tag == "aoc24" %}
-[{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
-{% endif %}
-{% endfor %}
-
----
-
-## Advent Of Code 2023
-
-{% for post in site.posts %}
-{% if post.tag == "aoc23" %}
-[{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }})
-{% endif %}
 {% endfor %}

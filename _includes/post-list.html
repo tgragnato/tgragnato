@@ -1,0 +1,29 @@
+{% if include.breadcrumb %}
+{% for post in site.posts %}
+{% if post.url != page.url %}
+{% case post.lang %}
+{% when 'it' %}{% assign flag = '🇮🇹' %}
+{% when 'en' %}{% assign flag = '🇬🇧' %}
+{% when 'ru' %}{% assign flag = '🇷🇺' %}
+{% when 'ja' %}{% assign flag = '🇯🇵' %}
+{% else %}{% assign flag = '🏳️' %}
+{% endcase %}
+        <p itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+            <a itemprop="item" href="{{ post.url }}"><span itemprop="name">{{ post.date | date: "%d-%m-%Y" }} - <code class="language-plaintext highlighter-rouge">{{ post.title }}</code>{% if post.description %} - {{ post.description }}{% endif %}</span></a> {{ flag }}
+            <meta itemprop="position" content="{{ breadcrumbListCounter }}">
+        </p>
+{% assign breadcrumbListCounter = breadcrumbListCounter | plus: 1 %}
+{% endif %}
+{% endfor %}
+{% else %}
+{% for post in site.posts %}
+{% case post.lang %}
+{% when 'it' %}{% assign flag = '🇮🇹' %}
+{% when 'en' %}{% assign flag = '🇬🇧' %}
+{% when 'ru' %}{% assign flag = '🇷🇺' %}
+{% when 'ja' %}{% assign flag = '🇯🇵' %}
+{% else %}{% assign flag = '🏳️' %}
+{% endcase %}
+[{{ post.date | date: "%d-%m-%Y" }} - `{{ post.title }}`{% if post.description %} - {{ post.description }}{% endif %}]({{ post.url }}) {{ flag }}
+{% endfor %}
+{% endif %}

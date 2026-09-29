@@ -30,6 +30,12 @@
     <meta property="og:url" content="{{ site.url }}{{ page.url }}">
     <meta property="og:locale" content="{{ page.lang | default: site.lang | default: 'en' }}">
     <link rel="canonical" href="{{ site.url }}{{ page.url }}">
+{% if page.collection == 'posts' and page.ref %}
+{% assign translations = site.posts | where: 'ref', page.ref %}
+{% for translation in translations %}
+    <link rel="alternate" hreflang="{{ translation.lang }}" href="{{ translation.url | absolute_url }}">
+{% endfor %}
+{% endif %}
 {% for address in site.data.prefetch %}
     <link rel="dns-prefetch" href="https://{{address}}/">
 {% endfor %}
