@@ -44,7 +44,7 @@
 {% endfor %}
     <meta http-equiv="x-dns-prefetch-control" content="on">
 {% for asset in site.data.preload %}
-    <link rel="preload" href="{{ asset.href }}" as="{{ asset.as }}">
+    <link rel="preload" href="{{ asset.href }}" as="{{ asset.as }}"{% if asset.as == 'font' %} crossorigin="anonymous"{% endif %}>
 {% endfor %}
     <link rel="stylesheet" href="/style.css">
     <link rel="icon" type="image/x-icon" href="/icons/favicon.ico">

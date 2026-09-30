@@ -2,6 +2,12 @@
 - href: /style.css
   as: style
 
+- href: /fonts/IBMPlexSans-latin.woff2
+  as: font
+
+- href: /fonts/PermanentMarker-latin.woff2
+  as: font
+
 - href: /fonts/GrechenFuemen-Regular.woff2
   as: font
 

@@ -1,5 +1,10 @@
+{% assign site_domain = site.url | remove_first: 'https://' | remove_first: 'http://' %}
+{% assign title_class = 'display-title' %}
+{% if page.title contains site.title or page.title contains site_domain %}
+    {% assign title_class = 'brand-title' %}
+{% endif %}
 <header>
-    <h1>{{ page.title | escape }}</h1>
+    <h1 class="{{ title_class }}">{{ page.title | escape }}</h1>
     <p class="subtitle">{{ page.description }}</p>
 {% if page.collection == 'posts' %}
     {% if page.date %}<p class="subtitle">{{ page.date | date: "%d-%m-%Y" }}</p>{% endif %}
