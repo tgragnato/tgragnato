@@ -45,7 +45,7 @@ The site features in-depth technical articles, security research, conference not
 ## Indexing Preferences
 - Index: All public blog posts and articles (with attribution)
 - Index: Project documentation and technical guides (with attribution)
-- Index: Code snippets and tutorials (with attribution)
+- Index: Code examples and tutorials (with attribution)
 - Do not index: Personal contact information
 - Do not index: Any content that might be behind authentication (if any)
 - Do not archive: Any content

@@ -1,6 +1,16 @@
 ---
-title: Suricata
+title: A Personal Suricata Policy Snapshot
+title_marker: Suricata
+description: Historical network-policy and signature rules, with the assumptions and operational risks made explicit
+layout: default
+lang: en
 ---
+
+This is a snapshot of a personal Suricata ruleset, not a general-purpose rules file. It mixes protocol policy (what to allow, alert on, or block), local network assumptions, and signatures for specific vulnerabilities and peer-to-peer protocols.
+
+That mixture matters: a `drop` rule is an operational decision, not just a detection. Several rules here are broad, some depend on the network layout, and blocking protocols such as DNS or SSH can interrupt legitimate services. Some signatures are sourced from Emerging Threats; their references and metadata are part of the rule and should be preserved.
+
+Treat this as historical material. Before using any rule, check it against the Suricata version and the actual network policy, then test in alert-only mode on a representative capture or staging sensor. Do not load this snapshot directly into an inline production sensor.
 
 ```
 # TLS

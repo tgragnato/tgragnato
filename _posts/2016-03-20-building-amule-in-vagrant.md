@@ -1,6 +1,14 @@
 ---
-title: aMule
+title: Building aMule in a Disposable Vagrant VM
+title_marker: Vagrant
+description: An archived Debian and VirtualBox recipe for configuring and compiling aMule from a mounted source tree
+layout: default
+lang: en
 ---
+
+This Vagrantfile describes a disposable Debian build environment for aMule. It installs the native build dependencies, runs the project's `autogen.sh` and `configure` scripts against the source tree mounted at `/vagrant`, then invokes `make` there.
+
+The recipe records the build options and dependency set used at the time; it does not pin package versions, and the old `debian/testing64` box and package names may no longer resolve. Treat it as a historical build note, not a current installation guide. Rebuilding old software is best done in an isolated VM, with the source revision and build dependencies recorded explicitly.
 
 ```
 Vagrant.configure("2") do |config|

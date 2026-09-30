@@ -1,6 +1,14 @@
 ---
-title: Haversine
+title: Estimating Service Coverage with the Haversine Formula
+title_marker: Haversine
+description: A PHP example that ranks shoppers by straight-line distance from nearby locations
+layout: default
+lang: en
 ---
+
+This PHP example computes the great-circle distance between latitude/longitude pairs, then treats a location as covered when it is within 10,000 metres. The tests apply that rule to a small set of locations and shoppers and calculate a coverage percentage for each shopper.
+
+The result is straight-line distance over a spherical Earth model, not driving distance or travel time. The Earth-radius constant and formula are approximations, so a production service-area decision would need suitable tolerances and tests against known coordinate pairs. The current tests mostly check broad properties and an aggregate count rather than verifying expected distances individually.
 
 ```php
 <?php

@@ -1,6 +1,14 @@
 ---
-title: Elasticsearch Log Analysis
+title: Enriching HAProxy Logs with GeoIP and Elasticsearch
+title_marker: Log enrichment
+description: A Go ingestion sketch that parses HAProxy records, adds GeoIP and ASN data, then indexes events
+layout: default
+lang: en
 ---
+
+This Go program sketches a log-enrichment pipeline: it parses HAProxy log lines, looks up country, location, and ASN data in MaxMind databases, then indexes a structured document in Elasticsearch. The record includes connection details alongside geographic and autonomous-system metadata.
+
+This is a prototype, not a resilient ingestion service. It parses the log format with positional string splits, continues after some lookup and parsing errors, ignores indexing responses, and does not handle backpressure or retries. The Elasticsearch and GeoIP client versions and database files must match the environment where it is run.
 
 ```go
 package main

@@ -1,6 +1,16 @@
 ---
-title: Mosaico Paradox Database Dumper
+title: Dumping Legacy Paradox Databases with Python
+title_marker: Paradox
+description: A small Python 2 batch exporter for inspecting Paradox database files
+layout: default
+lang: en
 ---
+
+This is a small batch wrapper around `pyparadox`: it walks an input directory, reads `.DB` files, and writes their field names, types, and records as a human-readable text dump.
+
+The output is YAML-like, not a fidelity-preserving database export. It is useful for inspection, but should not be treated as a round-trip format. The included library is Python 2 code; its string and encoding assumptions mean it cannot be run unchanged with current Python. The source credits Grigory Petrov and carries a GPLv3 notice, which should stay attached to the code.
+
+The copyright notice dates this snapshot to 2016. The wrapper is intentionally left as it was: the interesting part is the practical path from an obsolete binary data format to something that can be inspected with ordinary text tools.
 
 ```python
 #!/usr/bin/env python

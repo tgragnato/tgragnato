@@ -1,6 +1,14 @@
 ---
-title: InstallAPK
+title: Installing APKs on Multiple Android Devices with ADB
+title_marker: ADB
+description: A small JavaFX and Ant tool for installing selected APK files across connected Android devices
+layout: default
+lang: en
 ---
+
+This archived utility combines a JavaFX file picker with an Ant task that invokes `adb` once per connected device. The task submits installs to a thread pool, so a collection of emulators or test phones can receive the same APK at roughly the same time.
+
+The code reflects an older Android tooling stack and is not ready to run unchanged. Device-list parsing is fragile, the zero-device case creates a thread pool with no workers, and cancellation in the file chooser is not handled. The Ant task is also credited to Daniel Dyer in its source; that attribution should remain with the code.
 
 ```java
 import java.io.File;

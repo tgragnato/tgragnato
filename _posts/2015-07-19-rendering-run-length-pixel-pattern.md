@@ -1,6 +1,14 @@
 ---
-title: Pixel madness
+title: Rendering a Run-Length Encoded Pixel Pattern
+title_marker: Run-length encoding
+description: A tiny Python script that expands monochrome pixel runs into a text image
+layout: default
+lang: en
 ---
+
+The data below describes each row as alternating runs such as `0x3+1x1`: a value followed by the number of pixels to repeat. The Python script expands those runs into a plain-text grid, drawing zeroes as `X` and ones as spaces.
+
+The output filename ends in `.bin`, but the program writes printable characters and newlines, not binary pixel data. Without the original source image or puzzle context, the pattern's subject is unknown; this post documents the encoding and renderer rather than guessing what the picture represents.
 
 ```
 0x3+1x1+0x1+0x1+0x7+1x2+0x15+1x1+0x8+1x1+0x8+1x1+0x1+1x1+0x1+1x1+0x1+1x1+0x1+1x1+0x3+1x1+0x1+1x1+0x3+1x1+0x1+1x4+0x2+1x1+0x25

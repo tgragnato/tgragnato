@@ -1,6 +1,14 @@
 ---
-title: bin2iso19b_linux.c
+title: Extracting Tracks from BIN/CUE CD Images
+title_marker: BIN/CUE
+description: An archived Linux-oriented bin2iso program for converting raw CD tracks to ISO and WAV files
+layout: default
+lang: en
 ---
+
+This legacy C program reads a CUE sheet alongside a raw BIN image and extracts tracks as ISO or WAV files. The options cover individual tracks, pregap handling, Mode 1 and Mode 2 sectors, and an attempt to create a CUE sheet from an existing image.
+
+The source banner credits version 1.9b to Bob Doiron; this post preserves that attribution and does not claim authorship. The code predates current toolchains and makes assumptions about sector layouts and input validity. Treat it as a historical reference, verify the source and its reuse terms, and work on copies of disc images rather than originals.
 
 ```c
 #include <stdio.h>

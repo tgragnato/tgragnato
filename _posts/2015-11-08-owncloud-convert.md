@@ -1,13 +1,18 @@
 ---
-title: Owncloud Convert
+title: A One-Click FFmpeg Converter for ownCloud
+title_marker: ownCloud
+description: A historical ownCloud app for converting stored media, and the shell-safety lessons in its implementation
+layout: default
+lang: en
 ---
 
-Converts videos stored in Owncloud at the click of a button.
-Simply :
-- mouse over a video file
-- select the Convert button
-- choose a format
-- GO !
+This archived app added a **Convert** action to the ownCloud file list. A user could choose a media format and ask the server to run FFmpeg on a file already stored in their account.
+
+The implementation is a small piece of glue between the ownCloud Files API, `ffprobe`, and FFmpeg. It tries to copy compatible H.264/AAC streams instead of encoding them again, and uses `-movflags faststart` for MP4 output.
+
+It is also a useful snapshot of what I would approach differently today. The PHP code builds shell command strings from paths received in an AJAX request; quoting those values does not make them safe shell arguments. The detached `nohup` process also gives the app no reliable job status or error reporting. A modern version should validate paths against the user's authorized files, invoke FFmpeg without a shell, and track the conversion as a job.
+
+The code below targets the legacy ownCloud app API (minimum version 7). It is preserved as historical code, not as an installation guide.
 
 Licensed under the GNU AGPL version 3 or later
 

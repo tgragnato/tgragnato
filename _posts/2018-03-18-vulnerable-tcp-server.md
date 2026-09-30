@@ -1,6 +1,16 @@
 ---
-title: Vuln Server
+title: An Intentionally Vulnerable TCP Server
+title_marker: TCP
+description: A small socket-programming lab showing how unsafe input handling becomes a memory-safety problem
+layout: default
+lang: en
 ---
+
+These are historical lab examples of a simple TCP service, shown in Windows and POSIX variants. Their value is as a code-reading exercise: follow bytes from `recv()` into a fixed-size buffer, then watch what happens when the code assumes the input is shorter, terminated, or safe to print.
+
+Several examples contain distinct bugs. One copies as many as 2047 received bytes into a 1024-byte stack buffer; another can write past the end of its heap buffer when terminating a full read. The authentication example also passes input directly to `printf`, treating it as a format string. These are useful demonstrations, not implementation patterns to reuse.
+
+The servers bind to all interfaces in some variants. Do not run them on a reachable network; use an isolated lab. The original code is retained below as an artifact, without implying that it is a complete or safe server.
 
 ```c
 #include <stdio.h>

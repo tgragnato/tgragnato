@@ -1,6 +1,14 @@
 ---
-title: mdadm Recovery
+title: A RAID6 Recovery Attempt with mdadm
+title_marker: RAID recovery
+description: An archived Go experiment for testing candidate disk orders, with important data-preservation caveats
+layout: default
+lang: en
 ---
+
+This Go experiment enumerates candidate device orders for a six-member RAID6 array with one missing member, asks `mdadm` to assemble each candidate, and tries to mount the result. It captures a narrow recovery attempt, not a general RAID-repair procedure: the device list, array assumptions, and mount point are hard-coded.
+
+Do not run this against original disks. `--assume-clean` relies on the existing parity and layout being correct, and `mdadm --create` can write metadata. Although the array is requested read-only, the mount command does not explicitly request a read-only mount. Work from verified images or clones, confirm the original geometry and metadata, and have a recovery plan before testing any candidate ordering.
 
 ```go
 package main

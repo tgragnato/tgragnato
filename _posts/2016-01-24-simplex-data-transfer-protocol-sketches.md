@@ -1,6 +1,14 @@
 ---
-title: Simplex protocol
+title: Sketching Simplex Data-Transfer Protocols in C
+title_marker: Protocol sketches
+description: A small sequence of sender and receiver examples, useful for discussing acknowledgements and incomplete state handling
+layout: default
+lang: en
 ---
+
+These C fragments sketch a progression from one-way data transfer to a sender and receiver that wait for events. The frame and packet definitions, along with the network and physical-layer functions, are supplied by an external simulator; this file is not a complete, standalone protocol implementation.
+
+The later example is intentionally a starting point, not a reliable protocol: it does not show acknowledgement processing, and the receiver sends a `frame` that has not been initialized. Treat the code as a prompt for reasoning about protocol state, retransmission, and frame ownership, not as code to compile or deploy unchanged.
 
 ```c
 #define MAX_PKT 1024

@@ -1,6 +1,14 @@
 ---
-title: Job stack
+title: A Go Job Queue, a Misnamed Stack, and a Race
+title_marker: Go concurrency
+description: A small producer-consumer example that exposes locking and ticker-lifecycle mistakes
+layout: default
+lang: en
 ---
+
+This Go experiment has one goroutine producing jobs and another consuming them. Despite the name `stack`, `pop` removes `jobs[0]`, so the data structure behaves as a FIFO queue.
+
+It is more useful today as a concurrency review than as a reusable queue. `pop` checks the slice before taking the mutex, so concurrent access can race with `push`; meanwhile, calling `time.Tick` inside each loop iteration creates new tickers instead of reusing one. The shutdown handshake is also harder to reason about than a context or a closed channel. These are compact examples of why synchronization must cover the whole state transition, not just the mutation.
 
 ```go
 type job string

@@ -37,9 +37,6 @@ include:
 
 collections:
 
-  snippets:
-    output: false
-
   packages:
     output: true
     permalink: /:name/

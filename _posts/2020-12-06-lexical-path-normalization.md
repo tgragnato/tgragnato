@@ -1,6 +1,14 @@
 ---
-title: Abstract Fs
+title: Lexically Normalizing Paths in PHP
+title_marker: PHP paths
+description: A small path abstraction with traversal handling, validation, and PHPUnit examples
+layout: default
+lang: en
 ---
+
+This PHP exercise models a path rooted at `/` without touching the real filesystem. `cd()` appends a relative path, validates the allowed segment names, and removes `name/..` pairs; the PHPUnit cases cover root handling, ordinary traversal, and attempts to escape above the root.
+
+That distinction is important: this is lexical normalization, not a filesystem sandbox. It does not resolve symbolic links or prove that a later filesystem operation stays beneath a trusted directory. The implementation also accepts only ASCII letters as directory names, so its rules are intentionally narrower than normal POSIX path semantics.
 
 ```php
 <?php
