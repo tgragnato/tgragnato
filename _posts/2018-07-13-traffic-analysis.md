@@ -1,5 +1,6 @@
 ---
 title: Traffic Analysis
+title_marker: Traffic
 description: Exfiltrating (meta)data while minimising lateral movements
 layout: default
 lang: en

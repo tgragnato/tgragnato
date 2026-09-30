@@ -1,5 +1,6 @@
 ---
 title: Mitigations for the NoName057(16) DDoSia Project
+title_marker: Mitigations
 description: Understanding the attack methodology and the source infrastructure to implement cost-effective mitigations
 layout: default
 lang: en

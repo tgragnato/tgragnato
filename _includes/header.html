@@ -4,7 +4,7 @@
     {% assign title_class = 'brand-title' %}
 {% endif %}
 <header>
-    <h1 class="{{ title_class }}">{{ page.title | escape }}</h1>
+    <h1 class="{{ title_class }}">{% if page.title_marker and page.title contains page.title_marker %}{% assign title_before = page.title | split: page.title_marker | first %}{% assign title_after = page.title | remove_first: title_before | remove_first: page.title_marker %}{{ title_before | escape }}<span class="title-marker">{{ page.title_marker | escape }}</span>{{ title_after | escape }}{% else %}{{ page.title | escape }}{% endif %}</h1>
     <p class="subtitle">{{ page.description }}</p>
 {% if page.collection == 'posts' %}
     {% if page.date %}<p class="subtitle">{{ page.date | date: "%d-%m-%Y" }}</p>{% endif %}

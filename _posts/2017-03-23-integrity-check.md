@@ -1,5 +1,6 @@
 ---
 title: macOS firmware integrity check
+title_marker: integrity
 description: Looking how Apple's security features are implemented across architectures
 layout: default
 lang: en

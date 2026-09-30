@@ -1,5 +1,6 @@
 ---
 title: D-Link botnet
+title_marker: botnet
 description: Extracting binaries from a botnet of compromised NAS devices
 layout: default
 lang: en

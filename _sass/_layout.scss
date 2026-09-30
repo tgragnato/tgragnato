@@ -54,6 +54,10 @@ header h1.display-title {
   font-family: "Permanent Marker", cursive;
 }
 
+header h1 .title-marker {
+  color: var(--accent);
+}
+
 header h1 {
   color: var(--text-strong);
   font-size: 2rem;

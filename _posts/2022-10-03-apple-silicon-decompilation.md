@@ -1,5 +1,6 @@
 ---
 title: Apple Silicon Decompilation
+title_marker: Decompilation
 description: When you wish you didn't know how to use a decompiler
 layout: default
 images:

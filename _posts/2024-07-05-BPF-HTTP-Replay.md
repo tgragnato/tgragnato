@@ -1,5 +1,6 @@
 ---
 title: BPF HTTP Replay
+title_marker: Replay
 description: Midpoint network interception for HTTP traffic mirroring
 layout: default
 lang: en

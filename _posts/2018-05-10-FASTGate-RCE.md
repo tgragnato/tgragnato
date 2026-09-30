@@ -1,5 +1,6 @@
 ---
 title: FASTGate-RCE
+title_marker: RCE
 description: Abusing DNS to exploit a command injection and obtain root
 layout: default
 lang: en

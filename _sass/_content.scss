@@ -110,6 +110,17 @@ h3,
   font-weight: 400;
 }
 
+.content h1 strong,
+.content h2 strong,
+.content h3 strong,
+.content h4 strong,
+.content h5 strong,
+.content h6 strong {
+  color: var(--accent);
+  font-family: "Permanent Marker", cursive;
+  font-weight: 600;
+}
+
 .content blockquote {
   background-color: var(--bg-muted);
   border-left: 5px solid var(--border);

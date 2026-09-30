@@ -1,5 +1,6 @@
 ---
 title: D-Link DNS-323 toolchain
+title_marker: toolchain
 description: An in-depth guide for DNS-323 hacking with patches, binaries, and helpful resources
 layout: default
 lang: en
