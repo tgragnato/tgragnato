@@ -39,14 +39,6 @@ PGP: A283 C77F BE2B 15D8 7EF4 16E9 B7E4 732B 4DE7 4631
 
 ---
 
-## Git
-
-{% for git in site.data.git %}
-[`{{ git.title }}` - {{ git.text }}]({{ git.href }})
-{% endfor %}
-
----
-
 ## Quotes
 
 {% for quote in site.data.quotes %}

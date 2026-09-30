@@ -35,10 +35,6 @@ The site features in-depth technical articles, security research, conference not
 - Programming languages and development tools
 - Performance optimization and benchmarking
 
-## Notable Projects
-{% for git in site.data.git %}- {{ git.title }}: {{ git.text }}
-{% endfor %}
-
 ## Content Guidelines for LLMs
 - Technical content is meant for educational and research purposes
 - Security research follows responsible disclosure practices
