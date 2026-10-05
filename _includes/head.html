@@ -85,6 +85,8 @@
     <script defer src="https://analytics.ahrefs.com/analytics.js" data-key="orE6TPmLONL/uIVgJdWwgg"></script>
 {% if page.go-import %}
     <meta name="go-import" content="{{ page.go-import }}">
+    {% assign import = page.go-import | split: ' ' %}
+    <meta http-equiv="refresh" content="0; url={{ import[2] }}">
 {% endif %}
 {% if page.go-source %}
     <meta name="go-source" content="{{ page.go-source }}">
