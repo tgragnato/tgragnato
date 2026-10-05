@@ -16,7 +16,7 @@ sitemap: false
     <url>
       <loc>{{ post.url | absolute_url | xml_escape }}</loc>
       <lastmod>{{ post.last_modified_at | default: post.date | date_to_xmlschema }}</lastmod>
-      <changefreq>monthly</changefreq>
+      <changefreq>{% assign post_ts = post.date | date: '%s' | plus: 0 %}{% assign now_ts = site.time | date: '%s' | plus: 0 %}{% assign one_year_ago = now_ts | minus: 31536000 %}{% assign this_month = site.time | date: '%Y-%m' %}{% assign post_month = post.date | date: '%Y-%m' %}{% if post_month == this_month %}daily{% elsif post_ts < one_year_ago %}yearly{% else %}monthly{% endif %}</changefreq>
       {% for image in post.images %}<image:image>
         <image:loc>{{ image.loc | absolute_url | xml_escape }}</image:loc>
         <image:title><![CDATA[{{ image.title | default: post.title }}]]></image:title>
