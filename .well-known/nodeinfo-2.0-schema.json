@@ -1,3 +1,6 @@
+---
+sitemap: false
+---
 {
   "$schema": "http://json-schema.org/draft-04/schema#",
   "id": "http://nodeinfo.diaspora.software/ns/schema/2.0#",
