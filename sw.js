@@ -2,11 +2,11 @@
 sitemap: false
 ---
 const urlsToCache = [
-{% for file in site.static_files %}{% unless file.path contains '/samples/' %}  '{{ file.path | relative_url | jsonify }}',
+{% for file in site.static_files %}{% unless file.path contains '/samples/' %}  {{ file.path | relative_url | jsonify }},
 {% endunless %}{% endfor %}
-{% for page in site.pages %}  '{{ page.url | relative_url | jsonify }}',
+{% for page in site.pages %}  {{ page.url | relative_url | jsonify }},
 {% endfor %}
-{% for post in site.posts %}  '{{ post.url | relative_url | jsonify }}'{% unless forloop.last %},
+{% for post in site.posts %}  {{ post.url | relative_url | jsonify }}{% unless forloop.last %},
 {% endunless %}{% endfor %}
 ];
 const CACHE_EPOCH = '{{ "now" | date: "%s" }}';
