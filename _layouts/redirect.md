@@ -1,3 +1,6 @@
+---
+layout: default
+---
 
 {% if page.go-import %}
 go-import: {{ page.go-import }}
