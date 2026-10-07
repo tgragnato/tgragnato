@@ -1,6 +1,6 @@
 ---
 title: Sketching Simplex Data-Transfer Protocols in C
-title_marker: Protocol sketches
+title_marker: Simplex
 description: A small sequence of sender and receiver examples, useful for discussing acknowledgements and incomplete state handling
 layout: default
 lang: en

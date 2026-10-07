@@ -1,5 +1,6 @@
 ---
 title: We Are Developers 2024
+title_marker: Developers
 description: 17-19 Jul 2024 Messe Berlin
 layout: default
 lang: en

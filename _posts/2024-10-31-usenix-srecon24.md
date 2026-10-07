@@ -1,5 +1,6 @@
 ---
 title: USENIX SREcon24 Europe/Middle East/Africa
+title_marker: SREcon24
 description: 29-31 Oct 2024 The Convention Centre Dublin
 layout: default
 lang: en

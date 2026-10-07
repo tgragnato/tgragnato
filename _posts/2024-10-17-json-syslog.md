@@ -1,5 +1,6 @@
 ---
 title: Parsing and Pretty-Printing JSON Log Payloads with a Go Syslog Server
+title_marker: JSON Log Payloads Syslog
 description: Learn how to set up a lightweight Go Syslog server using go-syslog to receive, extract, and format JSON-encoded log messages over UDP and TCP
 layout: default
 lang: en

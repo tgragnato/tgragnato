@@ -1,5 +1,6 @@
 ---
 title: Tactical Macro Derisking
+title_marker: Derisking
 description: Systematic risk analysis and asset allocation
 layout: default
 lang: en

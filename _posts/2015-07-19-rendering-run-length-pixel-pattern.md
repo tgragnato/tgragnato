@@ -1,6 +1,6 @@
 ---
 title: Rendering a Run-Length Encoded Pixel Pattern
-title_marker: Run-length encoding
+title_marker: Run-length
 description: A tiny Python script that expands monochrome pixel runs into a text image
 layout: default
 lang: en

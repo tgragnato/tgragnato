@@ -6,11 +6,9 @@ layout: default
 lang: en
 ---
 
-This is a small batch wrapper around `pyparadox`: it walks an input directory, reads `.DB` files, and writes their field names, types, and records as a human-readable text dump.
+This is a small batch wrapper around `pyparadox`: it walks an input directory, opens the `.DB` files it finds, and dumps their field names, types, and records as plain text.
 
-The output is YAML-like, not a fidelity-preserving database export. It is useful for inspection, but should not be treated as a round-trip format. The included library is Python 2 code; its string and encoding assumptions mean it cannot be run unchanged with current Python. The source credits Grigory Petrov and carries a GPLv3 notice, which should stay attached to the code.
-
-The copyright notice dates this snapshot to 2016. The wrapper is intentionally left as it was: the interesting part is the practical path from an obsolete binary data format to something that can be inspected with ordinary text tools.
+The output is YAML-ish, not a proper database export. The code is Python 2: its string and encoding assumptions are old enough that it won't run unchanged on a current Python installation.
 
 ```python
 #!/usr/bin/env python

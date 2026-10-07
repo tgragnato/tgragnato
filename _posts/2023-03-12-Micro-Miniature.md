@@ -1,5 +1,6 @@
 ---
 title: Микро Миниатюра / Micro Miniatura
+title_marker: Миниатюра
 description: Транзисторные Усилители / Amplificatori e Transistor
 layout: default
 lang: ru

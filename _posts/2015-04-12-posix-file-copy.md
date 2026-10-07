@@ -1,6 +1,6 @@
 ---
 title: A Minimal File Copier with POSIX System Calls
-title_marker: POSIX I/O
+title_marker: POSIX
 description: A small C example using open, read, write, and creat, with an important short-write caveat
 layout: default
 lang: en

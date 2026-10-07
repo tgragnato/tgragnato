@@ -6,9 +6,9 @@ layout: default
 lang: en
 ---
 
-This Vagrantfile describes a disposable Debian build environment for aMule. It installs the native build dependencies, runs the project's `autogen.sh` and `configure` scripts against the source tree mounted at `/vagrant`, then invokes `make` there.
+This Vagrantfile describes a disposable Debian build environment for aMule. It installs the native dependencies, runs `autogen.sh` and `configure` against the source tree mounted at `/vagrant`, and then runs `make`.
 
-The recipe records the build options and dependency set used at the time; it does not pin package versions, and the old `debian/testing64` box and package names may no longer resolve. Treat it as a historical build note, not a current installation guide. Rebuilding old software is best done in an isolated VM, with the source revision and build dependencies recorded explicitly.
+The package names and build options are the ones used at the time. Nothing is pinned, and the old debian/testing64 box may not exist anymore. So I wouldn't use this as an installation recipe today. It's mostly useful as a record of how I was testing and building aMule back then.
 
 ```
 Vagrant.configure("2") do |config|

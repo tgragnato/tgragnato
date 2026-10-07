@@ -1,5 +1,6 @@
 ---
 title: Factor ETF Portfolio
+title_marker: Portfolio
 description: Smart-beta investing the European way
 layout: default
 lang: en

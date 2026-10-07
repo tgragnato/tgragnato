@@ -1,6 +1,6 @@
 ---
 title: Enriching HAProxy Logs with GeoIP and Elasticsearch
-title_marker: Log enrichment
+title_marker: HAProxy Logs
 description: A Go ingestion sketch that parses HAProxy records, adds GeoIP and ASN data, then indexes events
 layout: default
 lang: en

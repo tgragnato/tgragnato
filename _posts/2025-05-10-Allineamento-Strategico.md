@@ -1,5 +1,6 @@
 ---
 title: Allineamento Strategico
+title_marker: Allineamento
 description: Grande parte del successo nella gestione di un buon team sta nella selezione. Scegli le persone giuste!
 layout: default
 lang: it
